@@ -25,39 +25,28 @@ So, if you've ever dreamt of creating the next big thing in the decentralized wo
 
 Join us for this dynamic Tezos journey, where you'll not only learn but also actively participate in shaping the decentralized future. The possibilities are limitless, and your imagination is your only constraint.
 
-🚀 Let's ignite the decentralized revolution on Tezos! 🚀
-
-
-
-
-
-
-
-
-🚀 And Much, Much More: From smart contracts to governance mechanisms, we've got a treasure trove of Tezos knowledge to share!
-
-💡 Why Tezos? 💡
-
-Tezos, with its self-amending blockchain and innovative features, stands at the forefront of blockchain technology. Its unique approach to on-chain governance, scalability, and sustainability makes it the most exciting platform to explore and develop new projects on.
-
 👩‍🏫 Our Expert Instructors: 👨‍🏫
 
 You'll be guided by seasoned experts who have a passion for blockchain and a knack for simplifying complex concepts. Their energy and enthusiasm are contagious, making learning a truly exhilarating experience.
 
 💥 Get Ready to Ignite Your Passion for Tezos! 💥
 
-Whether you're a developer, investor, entrepreneur, or just someone curious about the blockchain revolution, this tutorial is tailor-made for you. By the end of this journey, you'll not only understand Tezos but also be equipped with the knowledge to make informed decisions in the rapidly evolving blockchain landscape.
+Whether you're a developer or entrepreneur, or just someone curious about the blockchain revolution, this tutorial is tailor-made for you. By the end of this journey, you'll not only understand Tezos but also be equipped with the knowledge to make informed decisions in the rapidly evolving blockchain landscape.
 
 So, grab your virtual seats, fuel up on curiosity, and let's embark on this Tezos adventure together! 🌐🚀
 
 Get ready to unlock the power of Tezos and redefine what's possible in the world of blockchain. The future is decentralized, and you're about to become a part of it!
 
-🌟 Welcome to the Tezos Blockchain Tutorial Extravaganza – Let's Shape the Future! 🌟
+🚀 Let's ignite the decentralized revolution on Tezos! 🚀
+
+🚀 And Much, Much More: From smart contracts to governance mechanisms, we've got a treasure trove of Tezos knowledge to share!
+
+
 
 ## Table of Content ##
-Ressources
+### Ressources
 
-Lesson 0: Welcome to the course
+#### Lesson 0: Welcome to the course
 
 Lesson 1: Tezos Makes it Possible 
   * Community Building
