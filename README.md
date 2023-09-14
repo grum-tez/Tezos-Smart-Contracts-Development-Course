@@ -61,9 +61,10 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 ## Table of Content ##
 
 ### Ressources
-* [Tezos](https://tezos.com/)
-* [OpenTezos](https://opentezos.com/)
-* [SmartPy](https://smartpy.io/)
+* [Tezos](https://tezos.com/): blockchain website
+* [OpenTezos](https://opentezos.com/): Explore the technical and economic concepts behind the Tezos Network
+* [SmartPy](https://smartpy.io/): A comprehensive solution for developing, testing, and deploying smart contracts on the Tezos blockchain
+* [Tezos Foundation Grant Program](https://tezos.foundation/): A key activity of the Tezos Foundation is to deploy resources to entities and initiatives that will help to ensure the long-term success of the Tezos blockchain
 ### Recommended Tools
 ### Prerequisites for this Course
 * Basic programming skills
@@ -91,15 +92,9 @@ You do not need:
   * Raising Funds:
      * [Cryptobees by Guerlain](https://objkt.com/collection/guerlain-reaverse)
   
-Lesson 2: 
 
-To accomplish this, we will use [SmartPy IDE](https://preview.smartpy.io/0.17.0-beta-02/docs/), an online python-syntax software that allows us to write and deploy smart contracts on the Tezos blockchain.
 
-## How the course will be structured
 
-This is a course that requires some effort from the learners as it is exercised based tutorial. The way it is structured is as follow: for each new concept, we will have an example and then there will be some exercice and practice with some code.
-
-## **Prerequisites for this Course**
 
 - Basic programming skills
 
