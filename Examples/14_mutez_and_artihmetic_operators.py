@@ -1,4 +1,5 @@
 import smartpy as sp
+from utils import utils
 
 @sp.module
 def main():
@@ -30,10 +31,10 @@ def main():
             # and then sp.fst to get the first element of the pair and sp.snd to get the rest
 
 
-@sp.add_test(name="testing operations")
+@sp.add_test(name="Testing operations")
 def test():
     c1 = main.ComputingTez()
-    sc = sp.test_scenario(main)
+    sc = sp.test_scenario([utils,main])
     sc += c1
     c1.add(x = 5, y = 3)
     c1.sub(x = 5, y = 3)
