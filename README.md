@@ -74,8 +74,10 @@ You do not need:
 
 
 #### Lesson 0: Welcome to the course
-
 #### Lesson 1: Tezos Makes it Possible 
+#### Lesson 2: Understanding Tezos
+
+### Lesson 1: Tezos Makes it Possible 
   * Community Building
     * [Manchester United](https://collectibles.manutd.com/) 
     * [Mclaren Racing Team](https://collectibles.mclaren.com/)
@@ -91,14 +93,26 @@ You do not need:
      * [Plenty Network](https://plenty.network/)
   * Raising Funds:
      * [Cryptobees by Guerlain](https://objkt.com/collection/guerlain-reaverse)
+
+### Lesson 2: Understanding Tezos
+* Introduction to the Tezos Blockchain
+* History of Tezos
+* Tezos, Tez, XTZ
+* Overview of the Key Elements of Tezos
+ * Accounts
+ * Transactions
+ * Smart Contracts
+ * Blockchain
+ * Wallets
+ * Nodes
+ * Bakers
+
+
+
+
+
+
+
+
   
 
-
-
-
-- Basic programming skills
-
-You **do not** need:
-
-- Python knowledge - it is helpful but not required
-- Prior blockchain experience
