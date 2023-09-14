@@ -27,18 +27,18 @@ def main():
             self.data.owner2 = owner2
     
         @sp.entry_point
-        def buyNFT(self, nft_address):
+        def buy_nft(self, nft_address):
             assert (sp.sender == self.data.owner1) or (sp.sender == self.data.owner2)
             c = sp.contract(sp.unit, nft_address, entrypoint="buy").unwrap_some()
             sp.transfer((), sp.amount, c)
         
         @sp.entrypoint
-        def setNFTPrice(self, nft_address, new_price):
+        def set_nft_price(self, nft_address, new_price):
             assert (sp.sender == self.data.owner1) or (sp.sender == self.data.owner2)
             nft_contract = sp.contract(sp.mutez, nft_address, entrypoint="set_price").unwrap_some()
             sp.transfer(new_price, sp.tez(0), nft_contract)
 
-@sp.add_test(name='Testing set_price and buy')
+@sp.add_test(name="Testing set_price and buy")
 def test():
    alice = sp.test_account("alice").address
    bob = sp.test_account("bob").address
@@ -51,13 +51,13 @@ def test():
    scenario.h3(" Testing set_price entrypoint")
    #testing set price
    c1.set_price(sp.mutez(7000000)).run(sender = alice)
-   c2.buyNFT(c1.address).run(sender = bob, amount=sp.tez(7))
+   c2.buy_nft(c1.address).run(sender = bob, amount=sp.tez(7))
    c1.set_price(sp.mutez(7000000)).run(sender = eve, valid = False)
    scenario.verify(c1.data.price != sp.mutez(6000000))
    scenario.verify(c1.data.price == sp.mutez(7000000))
-   c2.buyNFT(c1.address).run(sender = eve, amount=sp.tez(7), valid = False)
-   c2.buyNFT(c1.address).run(sender = alice, amount=sp.tez(6), valid = False)
-   c2.setNFTPrice(nft_address = c1.address, new_price = sp.tez(50)).run(sender= eve)
+   c2.buy_nft(c1.address).run(sender = eve, amount=sp.tez(7), valid = False)
+   c2.buy_nft(c1.address).run(sender = alice, amount=sp.tez(6), valid = False)
+   c2.set_nft_price(nft_address = c1.address, new_price = sp.tez(50)).run(sender= eve)
     #verify that the owner of the NFT is our NFTJointAccount contract
    scenario.verify(c1.data.price == sp.tez(50))
    scenario.verify(c1.data.owner == c2.address)
