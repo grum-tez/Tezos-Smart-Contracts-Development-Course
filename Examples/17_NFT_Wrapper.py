@@ -31,13 +31,13 @@ def main():
             
     
         @sp.entrypoint
-        def buyNFT(self, nft_address):
+        def buy_nft(self, nft_address):
             assert sp.sender == self.data.owner_wrapper
             nft_contract = sp.contract(sp.unit, nft_address, entrypoint="buy").unwrap_some()
             sp.transfer((), sp.amount, nft_contract)
                         
         @sp.entrypoint
-        def setPrice(self, new_price):
+        def set_price(self, new_price):
             assert sp.sender == self.data.owner_wrapper
             self.data.price = new_price
     
@@ -50,7 +50,7 @@ def main():
             self.data.owner_wrapper = sp.sender
             
         @sp.entrypoint
-        def setAllowSale(self, new_boolean):
+        def set_allow_sale(self, new_boolean):
             assert sp.sender == self.data.owner_wrapper
             self.data.allowSales = new_boolean
     
@@ -73,14 +73,14 @@ def test():
    c1.set_price(new_price = sp.mutez(7000000), deadline = sp.timestamp(100)).run(sender = bob, valid = False)
    c1.set_price(new_price = sp.mutez(7000000), deadline = sp.timestamp(100)).run(sender = alice)
    scenario.h3("testing buy NFT from Wrapper")
-   c2.buyNFT(c1.address).run(sender = bob, amount=sp.tez(7), now = sp.timestamp(50))
+   c2.buy_nft(c1.address).run(sender = bob, amount=sp.tez(7), now = sp.timestamp(50))
    scenario.verify(c1.data.owner == c2.address)
    scenario.h3("testing allowSales")
-   c2.setAllowSale(False).run(sender = eve, valid = False)
-   c2.setAllowSale(False).run(sender = bob)
+   c2.set_allow_sale(False).run(sender = eve, valid = False)
+   c2.set_allow_sale(False).run(sender = bob)
    scenario.h3("testing setPrice NFT Wrapper")
-   c2.setPrice(sp.tez(50)).run(sender = eve, valid = False)
-   c2.setPrice(sp.tez(50)).run(sender = bob)
+   c2.set_price(sp.tez(50)).run(sender = eve, valid = False)
+   c2.set_price(sp.tez(50)).run(sender = bob)
    scenario.verify(c2.data.price == sp.tez(50))
    scenario.verify(c2.data.owner_wrapper == bob)
    scenario.h3("trying to buy nft from NFTforSale while not possible")
