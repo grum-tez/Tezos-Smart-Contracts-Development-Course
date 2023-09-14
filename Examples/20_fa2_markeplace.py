@@ -16,14 +16,14 @@ def main():
         
         def __init__(self):
             self.data.tokens = sp.big_map()
-            self.data.nextTokenID = sp.nat(1)
+            self.data.next_token_id = sp.nat(1)
 
         @sp.entrypoint
         def mint(self, metadata):
             operators = sp.set()
             sp.cast(operators, sp.set[operator_type])
-            self.data.tokens[self.data.nextTokenID] = sp.record(owner = sp.sender, metadata = metadata, operators = sp.set())
-            self.data.nextTokenID += 1
+            self.data.tokens[self.data.next_token_id] = sp.record(owner = sp.sender, metadata = metadata, operators = sp.set())
+            self.data.next_token_id += 1
 
         @sp.entrypoint
         def balance_of(self, callback, requests):
@@ -76,16 +76,16 @@ def main():
         def __init__(self, contract_address):
             self.data.contract_address = contract_address
             self.data.offers = sp.big_map({})
-            self.data.nextOfferID = 1
+            self.data.next_offer_id = 1
      
         @sp.entrypoint
-        def new_offer(self, tokenID, price):
-           self.data.offers[self.data.nextOfferID] = sp.record(seller = sp.sender, tokenID = tokenID, price = price)
-           self.data.nextOfferID += 1
+        def new_offer(self, token_id, price):
+           self.data.offers[self.data.next_offer_id] = sp.record(seller = sp.sender, token_id = token_id, price = price)
+           self.data.next_offer_id += 1
         
         @sp.entrypoint
-        def buy(self, idOffer):
-            offer = self.data.offers[idOffer]
+        def buy(self, id_offer):
+            offer = self.data.offers[id_offer]
             assert offer.price == sp.amount
 
             token_contract = sp.contract(sp.list[sp.record(from_ = sp.address,
@@ -93,7 +93,7 @@ def main():
                                           self.data.contract_address,
                                           entrypoint="transfer").unwrap_some()
 
-            tx = sp.record(to_ = sp.sender, token_id = offer.tokenID, amount = sp.nat(1))
+            tx = sp.record(to_ = sp.sender, token_id = offer.token_id, amount = sp.nat(1))
             sp.cast(tx, transaction_type)
             sp.transfer([sp.record(from_ = sp.self_address(), txs = [tx])], # TODO: undertand what from_ is for
                         sp.tez(0),
@@ -115,7 +115,7 @@ def test():
     scenario += marketplace
     ledger.mint("Alice NFT 1").run(sender = alice)
     
-    marketplace.new_offer(tokenID = sp.nat(1), price = sp.tez(10)).run(sender = alice)
+    marketplace.new_offer(token_id = sp.nat(1), price = sp.tez(10)).run(sender = alice)
 
     #ledger.update_operators([sp.variant.add_operator(sp.record(owner = sp.alice, operator = marketplace.address, token_id = 1))])
     operator_data = sp.record(owner = alice.address, operator = marketplace.address, token_id = 1)
