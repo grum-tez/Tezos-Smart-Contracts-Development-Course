@@ -16,7 +16,7 @@ def main():
         assert (a < 10) and (a > 0), "Number strictly between 0 and 10"
         self.data.stored_value += a
       
-@sp.add_test(name = 'Add')
+@sp.add_test(name = "Add")
 def test():
    c1 = main.StoreValue()
    scenario = sp.test_scenario(main)
