@@ -32,19 +32,19 @@ def main():
             self.data.owner2 = owner2
     
         @sp.entrypoint
-        def buyNFT(self, nft_address):
+        def buy_nft(self, nft_address):
             assert (sp.sender == self.data.owner1) or (sp.sender == self.data.owner2)
             nft_contract = sp.contract(sp.unit, nft_address, entrypoint="buy").unwrap_some()
             sp.transfer((), sp.amount, nft_contract)
     
         @sp.entrypoint
-        def set_priceNFT(self, nft_address, new_price, deadline):
+        def set_price_nft(self, nft_address, new_price, deadline):
             assert (sp.sender == self.data.owner1) or (sp.sender == self.data.owner2)
             
             nft_contract = sp.contract(entrypoint_type, nft_address, entrypoint="set_price").unwrap_some()
             sp.transfer(sp.record(new_price = new_price, deadline = deadline), sp.tez(0), nft_contract)
 
-@sp.add_test(name='Testing set_price and buy')
+@sp.add_test(name="Testing set_price and buy")
 def test():
    alice = sp.test_account("alice").address
    bob = sp.test_account("bob").address
@@ -58,11 +58,11 @@ def test():
    scenario.h3(" Testing set_price entrypoint")
    #testing set price
    c1.set_price(new_price = sp.mutez(7000000), deadline = sp.timestamp(10)).run(sender = alice)
-   c2.buyNFT(c1.address).run(sender = bob, amount=sp.tez(5), valid=False)
-   c2.buyNFT(c1.address).run(sender = bob, amount=sp.tez(7), now = sp.timestamp(10))
+   c2.buy_nft(c1.address).run(sender = bob, amount=sp.tez(5), valid=False)
+   c2.buy_nft(c1.address).run(sender = bob, amount=sp.tez(7), now = sp.timestamp(10))
    c1.buy().run(sender = dan, amount = sp.mutez(7000000), now = sp.timestamp(11), valid = False)
-   c2.set_priceNFT(nft_address = c1.address, new_price = sp.tez(10), deadline = sp.timestamp(11)).run(sender = alice, valid = False)
-   c2.set_priceNFT(nft_address = c1.address, new_price = sp.tez(10), deadline = sp.timestamp(11)).run(sender = bob)
+   c2.set_price_nft(nft_address = c1.address, new_price = sp.tez(10), deadline = sp.timestamp(11)).run(sender = alice, valid = False)
+   c2.set_price_nft(nft_address = c1.address, new_price = sp.tez(10), deadline = sp.timestamp(11)).run(sender = bob)
    scenario.verify(c1.data.price == sp.tez(10))
-   c2.set_priceNFT(nft_address = c1.address, new_price = sp.tez(20), deadline = sp.timestamp(11)).run(sender = eve)
+   c2.set_price_nft(nft_address = c1.address, new_price = sp.tez(20), deadline = sp.timestamp(11)).run(sender = eve)
    scenario.verify(c1.data.price == sp.tez(20))
