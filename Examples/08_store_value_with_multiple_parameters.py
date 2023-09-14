@@ -15,11 +15,11 @@ def main():
             self.data.max_value = new_max_value
                 
         @sp.entrypoint
-        def addNumber(self, a):
+        def add_number(self, a):
             self.data.min_value += a
             self.data.max_value += a
             
-@sp.add_test(name = "testing")
+@sp.add_test(name = "Testing")
 def test():
         c1 = main.StoreValue(min_value = 0, max_value = 5)
         scenario = sp.test_scenario(main)
