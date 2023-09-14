@@ -17,7 +17,6 @@ def main():
     
        @sp.entrypoint
        def sub(self, b):
-           sp.cast(b, sp.nat)
            self.data.store_value -= b
 
 @sp.add_test(name = "Testing")
@@ -25,5 +24,5 @@ def test():
    scenario = sp.test_scenario(main)
    contract = main.StoreValue()
    scenario += contract
-   contract.add(sp.nat(5))
+   contract.add(5)
    contract.sub(5)
