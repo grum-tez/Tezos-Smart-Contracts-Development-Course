@@ -59,16 +59,37 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 
 
 ## Table of Content ##
+
 ### Ressources
+* [Tezos](https://tezos.com/)
+* [OpenTezos](https://opentezos.com/)
+* [SmartPy](https://smartpy.io/)
+### Recommended Tools
+### Prerequisites for this Course
+* Basic programming skills
+You do not need:
+* Python knowledge - it is helpful but not required
+* Prior blockchain experience
+
 
 #### Lesson 0: Welcome to the course
 
-Lesson 1: Tezos Makes it Possible 
+#### Lesson 1: Tezos Makes it Possible 
   * Community Building
+    * [Manchester United](https://collectibles.manutd.com/) 
+    * [Mclaren Racing Team](https://collectibles.mclaren.com/)
+    * [Team Vitality](https://rarible.com/vhive-wearables/items)
   * New Features in Gaming
+     * [Dogami](https://dogami.com/)
+     * [Stables]([https://dogami.com/](https://www.playstables.io/)
   * New Art Scene for Artists
+    * [Objkt](https://objkt.com/)
+    * [fxhash](https://www.fxhash.xyz/)
   * New Financial Products
-  * Raising Funds
+     * [Youves](https://youves.com/)
+     * [Plenty Network](https://plenty.network/)
+  * Raising Funds:
+     * [Cryptobees by Guerlain](https://objkt.com/collection/guerlain-reaverse)
   
 Lesson 2: 
 
