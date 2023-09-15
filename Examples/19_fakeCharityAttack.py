@@ -32,7 +32,7 @@ def main():
                         sp.tez(0),
                         charity_contract)
 
-@sp.add_test(name="Testing charity attack")
+@sp.add_test(name = "Testing charity attack")
 def test():
     admin = sp.test_account("admin").address
     attacker = sp.test_account("attacker").address
