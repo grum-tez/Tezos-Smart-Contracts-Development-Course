@@ -60,7 +60,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 
 ## 📚 Table of Content 📚 ## 
 
-### 📚 Resources
+### 📦 Resources
 * [Tezos](https://tezos.com/): the blockchain website
 * [OpenTezos](https://opentezos.com/): explore the technical and economic concepts behind the Tezos Network
 * [Tezos Foundation Grant Program](https://tezos.foundation/): a key activity of the Tezos Foundation is to deploy resources to entities and initiatives that will help to ensure the long-term success of the Tezos blockchain.
