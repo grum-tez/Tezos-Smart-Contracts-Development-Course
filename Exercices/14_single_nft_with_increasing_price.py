@@ -17,7 +17,7 @@ def main():
            self.data.price += sp.split_tokens(self.data.price, 10, 100) 
 
 
-@sp.add_test(name="Testing Update Price")
+@sp.add_test(name = "Testing Update Price")
 def test():
     alice = sp.test_account("alice").address
     bob = sp.test_account("bob").address
