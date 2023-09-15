@@ -37,7 +37,7 @@ def main():
         def del_operator(self, operator):
             self.data.operators[sp.sender].remove(operator)
     
-    class Liquidity_pool(sp.Contract):
+    class LiquidityPool(sp.Contract):
         def __init__(self, owner, ledger):
             self.data.ledger = ledger
             self.data.ledger_transfer = None
@@ -109,7 +109,7 @@ def main():
             trace(token_price)
             return token_price
 
-    class Flash_loanTez(sp.Contract):
+    class FlashLoanTez(sp.Contract):
         def __init__(self, owner, ledger, interest_rate):
             self.data.owner = owner
             self.data.interest_rate = interest_rate
@@ -154,7 +154,7 @@ def main():
             assert not self.data.in_progress
             sp.send(sp.sender, sp.balance)
     
-    class Flash_loan(sp.Contract):
+    class FlashLoan(sp.Contract):
         def __init__(self, owner, ledger, interest_rate):
             self.data.ledger = ledger
             self.data.owner = owner
@@ -299,7 +299,7 @@ def test():
     scenario += ledger
 
     
-    liquidity_pool = main.Liquidity_pool(owner = alice.address, ledger = ledger.address)
+    liquidity_pool = main.LiquidityPool(owner = alice.address, ledger = ledger.address)
     scenario += liquidity_pool
 
     ledger.add_operator(liquidity_pool.address).run(sender = alice)
@@ -308,7 +308,7 @@ def test():
     membership = main.Membership(membership_price = sp.tez(1000), owner = alice.address, ledger = ledger.address, liquidity_pool = liquidity_pool.address)
     scenario += membership
 
-    flash_loan = main.Flash_loanTez(owner = alice.address, ledger = ledger.address, interest_rate = 1)
+    flash_loan = main.FlashLoanTez(owner = alice.address, ledger = ledger.address, interest_rate = 1)
     scenario += flash_loan
     ledger.add_operator(flash_loan.address).run(sender = alice)
 
