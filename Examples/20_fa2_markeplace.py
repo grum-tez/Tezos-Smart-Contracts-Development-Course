@@ -102,7 +102,7 @@ def main():
             sp.send(offer.seller, offer.price)
 
 
-@sp.add_test(name="FA2 and basic marketplace")
+@sp.add_test(name = "FA2 and basic marketplace")
 def test():
     alice = sp.test_account("Alice")
     bob = sp.test_account("Bob")
