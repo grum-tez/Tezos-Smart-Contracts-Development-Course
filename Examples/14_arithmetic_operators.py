@@ -43,7 +43,7 @@ def main():
 
 
 
-@sp.add_test(name="testing operations")
+@sp.add_test(name = "Testing operations")
 def test():
     c1 = main.Calculator()
     sc = sp.test_scenario(main)
