@@ -42,7 +42,7 @@ def main():
             sp.send(item.seller, item.top_bid) # Bug 5
             self.data.tokens[item_id].owner = item.top_bidder # Bug 7
 
-@sp.add_test(name="Testing extortion attack")
+@sp.add_test(name = "Testing extortion attack")
 def test():
     seller1 = sp.test_account("seller1").address
     seller2 = sp.test_account("seller2").address
