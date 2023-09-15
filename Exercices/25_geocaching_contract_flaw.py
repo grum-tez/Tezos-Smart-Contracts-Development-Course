@@ -7,7 +7,7 @@ def main():
         def __init__(self, owner, deadline):
             self.data.treasures = sp.big_map({})
             self.data.score_per_player = sp.big_map({})
-            self.data.currentWinner = owner
+            self.data.current_winner = owner
             self.data.score_per_player[owner] = 0
             self.data.owner = owner
             self.data.deadline = deadline
@@ -30,14 +30,14 @@ def main():
             if not self.data.score_per_player.contains(sp.sender):
                 self.data.score_per_player[sp.sender] = 0
             self.data.score_per_player[sp.sender] += 1
-            if self.data.score_per_player[sp.sender] > self.data.score_per_player[self.data.currentWinner]:
-                self.data.currentWinner = sp.sender
+            if self.data.score_per_player[sp.sender] > self.data.score_per_player[self.data.current_winner]:
+                self.data.current_winner = sp.sender
 
         @sp.entrypoint
         def award_prize(self):
             assert sp.now >= self.data.deadline
             assert sp.sender == self.data.owner
-            sp.send(self.data.currentWinner, sp.balance)
+            sp.send(self.data.current_winner, sp.balance)
                    
 @sp.add_test(name = "Geocaching test")
 def test():
