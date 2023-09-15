@@ -58,7 +58,7 @@ def main():
         def default(self):
             assert self.data.allowSales == True
 
-@sp.add_test(name="test Wrapped Nft")
+@sp.add_test(name = "Test Wrapped Nft")
 def test():
    alice = sp.test_account("alice").address
    bob = sp.test_account("bob").address
