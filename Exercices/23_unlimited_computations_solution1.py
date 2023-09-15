@@ -11,7 +11,7 @@ def main():
 
         @sp.entrypoint
         def deposit(self, deadline):
-            deposit = sp.record(source=sp.sender, deadline=deadline, amount=sp.amount)
+            deposit = sp.record(source = sp.sender, deadline = deadline, amount = sp.amount)
             self.data.deposits[self.data.counter] = deposit
             self.data.counter += 1
 
@@ -28,7 +28,7 @@ def main():
             sp.send(sp.sender, total)
                    
 
-@sp.add_test(name='Testing extortion attack')
+@sp.add_test(name = "Testing extortion attack")
 def test():
     alice = sp.test_account("alice").address
     bob = sp.test_account("bob").address
