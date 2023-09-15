@@ -21,7 +21,7 @@ def main():
            sp.send(self.data.owner, self.data.price)
            self.data.owner = sp.sender
     
-@sp.add_test(name='Testing set_price and buy')
+@sp.add_test(name="Testing set_price and buy")
 def test():
     alice = sp.test_account("alice").address
     bob = sp.test_account("bob").address
