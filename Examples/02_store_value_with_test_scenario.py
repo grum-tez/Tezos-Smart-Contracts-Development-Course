@@ -6,7 +6,7 @@ def main():
         def __init__(self):
             self.data.stored_value = 42
 
-@sp.add_test(name="Testing")
+@sp.add_test(name = "Testing")
 def test():
     scenario = sp.test_scenario(main)
     contract = main.StoreValue()
