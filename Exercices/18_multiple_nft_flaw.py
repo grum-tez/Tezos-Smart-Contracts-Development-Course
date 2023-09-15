@@ -35,7 +35,7 @@ def main():
             #Increment nextID
             self.data.next_id += 1
 
-@sp.add_test(name="Test One")
+@sp.add_test(name = "Test One")
 def test():
     author = sp.test_account("author").address
     alice = sp.test_account("alice").address
