@@ -25,7 +25,7 @@ def main():
            self.data.messages[sp.sender] = data
     
        
-@sp.add_test(name="testing truly endless wall")
+@sp.add_test(name = "testing truly endless wall")
 def test():
     alice = sp.test_account("Alice").address
     bob = sp.test_account("Bob").address
