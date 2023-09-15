@@ -66,9 +66,13 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * [SmartPy](https://smartpy.io/): A comprehensive solution for developing, testing, and deploying smart contracts on the Tezos blockchain
 * [Tezos Foundation Grant Program](https://tezos.foundation/): A key activity of the Tezos Foundation is to deploy resources to entities and initiatives that will help to ensure the long-term success of the Tezos blockchain.
 ### Recommended Tools
+
 ### Prerequisites for this Course
+
 * Basic programming skills
-You do not need:
+
+  You do not need:
+  
 * Python knowledge - it is helpful but not required
 * Prior blockchain experience
 
