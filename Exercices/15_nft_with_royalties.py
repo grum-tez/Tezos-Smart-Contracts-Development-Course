@@ -24,14 +24,14 @@ def main():
             assert sp.sender == self.data.author, " not your money "
             sp.send(self.data.author, sp.balance)
 
-@sp.add_test(name='Testing')
+@sp.add_test(name="Testing")
 def test():
        alice = sp.test_account("alice").address
        bob = sp.test_account("bob").address
        eve = sp.test_account("eve").address
        author = sp.test_account("author").address
        c1 = main.NftForSale(owner = alice, metadata = "Gwen's nft", 
-       price=sp.mutez(5000000), author=author, author_rate = sp.mutez(1000000))
+       price=sp.mutez(5000000), author = author, author_rate = sp.mutez(1000000))
        scenario = sp.test_scenario(main)
        scenario +=c1
        scenario.verify(c1.data.price == sp.mutez(5000000) )
