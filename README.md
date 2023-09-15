@@ -60,32 +60,32 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 
 ## 📚 Table of Content 📚 ## 
 
-### Ressources
+### 📚 Resources
 * [Tezos](https://tezos.com/): the blockchain website
 * [OpenTezos](https://opentezos.com/): explore the technical and economic concepts behind the Tezos Network
 * [Tezos Foundation Grant Program](https://tezos.foundation/): a key activity of the Tezos Foundation is to deploy resources to entities and initiatives that will help to ensure the long-term success of the Tezos blockchain.
 
 
-### Recommended Tools
+### 🔧 Recommended Tools
 * [Kukai Wallet](https://wallet.kukai.app/): a specific Tezos Wallet
 * [SmartPy](https://smartpy.io/): a comprehensive solution for developing, testing, and deploying smart contracts on the Tezos blockchain
 * [Tezos Faucet](https://faucet.ghostnet.teztnets.xyz/): get Tez on the Ghostnet Network
 
-### Prerequisites for this Course
+### 📋 Prerequisites for this Course
 
 * Basic programming skills
 
   #### You do not need:
   
-* Python knowledge - it is helpful but not required
+* 🐍 Python Knowledge - it is helpful but not required
 * Prior blockchain experience
 
 
-#### Lesson 0: Welcome to the course
-#### Lesson 1: Tezos Makes it Possible 
-#### Lesson 2: Understanding Tezos
+#### Lesson 0: 🎉 Welcome to the Course
+#### Lesson 1: 💡 Tezos Makes it Possible
+#### Lesson 2: 🧠 Understanding Tezos
 
-### Lesson 1: Tezos Makes it Possible 
+### Lesson 1: 💡 Tezos Makes it Possible
   * Community Building
     * [Manchester United](https://collectibles.manutd.com/) 
     * [Mclaren Racing Team](https://collectibles.mclaren.com/)
@@ -102,18 +102,18 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
   * Raising Funds:
      * [Cryptobees by Guerlain](https://objkt.com/collection/guerlain-reaverse)
 
-### Lesson 2: Understanding Tezos
+### Lesson 2: 🧠 Understanding Tezos
 * Introduction to the Tezos Blockchain
 * History of Tezos
 * Tezos, Tez, XTZ
 * Overview of the Key Elements of Tezos
- * Accounts
- * Transactions
- * Smart Contracts
- * Blockchain
- * Wallets
- * Nodes
- * Bakers
+ ** Accounts
+ ** Transactions
+ ** Smart Contracts
+ ** Blockchain
+ ** Wallets
+ ** Nodes
+ ** Bakers
 
 
 
