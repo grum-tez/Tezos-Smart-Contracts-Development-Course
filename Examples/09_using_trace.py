@@ -13,7 +13,7 @@ def main():
            trace(self.data.nb_calls)
            #Check browser console to get the execution of the code
 
-@sp.add_test(name="Testing")
+@sp.add_test(name = "Testing")
 def test():
    scenario = sp.test_scenario(main)
    contract = main.CountTheCalls()
