@@ -58,7 +58,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 
 
 
-## Table of Content ##
+## 📚 Table of Content 📚 ## 
 
 ### Ressources
 * [Tezos](https://tezos.com/): the blockchain website
