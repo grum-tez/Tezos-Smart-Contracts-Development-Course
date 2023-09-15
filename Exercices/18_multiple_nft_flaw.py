@@ -35,15 +35,15 @@ def main():
             #Increment nextID
             self.data.next_id += 1
 
-@sp.add_test(name='Test One')
+@sp.add_test(name="Test One")
 def test():
-    author = sp.test_account('author').address
-    alice = sp.test_account('alice').address
-    bob = sp.test_account('bob').address
-    eve = sp.test_account('eve').address
+    author = sp.test_account("author").address
+    alice = sp.test_account("alice").address
+    bob = sp.test_account("bob").address
+    eve = sp.test_account("eve").address
     c1 = main.MultipleNftSingleContract(alice)
     scenario = sp.test_scenario(main)
     scenario += c1
-    c1.mint(metadata='second contract', price=sp.tez(2)).run(sender=author)
+    c1.mint(metadata="second contract", price=sp.tez(2)).run(sender=author)
     c1.buy(1).run(sender=bob, amount=sp.tez(2))
     scenario.verify(c1.balance == sp.tez(0))
