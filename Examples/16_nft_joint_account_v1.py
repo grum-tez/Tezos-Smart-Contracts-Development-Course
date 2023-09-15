@@ -38,7 +38,7 @@ def main():
             nft_contract = sp.contract(sp.mutez, nft_address, entrypoint="set_price").unwrap_some()
             sp.transfer(new_price, sp.tez(0), nft_contract)
 
-@sp.add_test(name="Testing set_price and buy")
+@sp.add_test(name = "Testing set_price and buy")
 def test():
    alice = sp.test_account("alice").address
    bob = sp.test_account("bob").address
