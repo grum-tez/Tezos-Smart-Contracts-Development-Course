@@ -22,7 +22,7 @@ def main():
            self.data.owner = sp.sender
            self.data.price = None
     
-@sp.add_test(name='Testing Update Price')
+@sp.add_test(name="Testing Update Price")
 def test():
     alice = sp.test_account('alice').address
     bob = sp.test_account('bob').address
