@@ -71,7 +71,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 
 * Basic programming skills
 
-  You do not need:
+  #### You do not need:
   
 * Python knowledge - it is helpful but not required
 * Prior blockchain experience
