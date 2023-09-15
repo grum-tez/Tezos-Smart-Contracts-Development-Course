@@ -61,11 +61,15 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 ## Table of Content ##
 
 ### Ressources
-* [Tezos](https://tezos.com/): blockchain website
-* [OpenTezos](https://opentezos.com/): Explore the technical and economic concepts behind the Tezos Network
-* [SmartPy](https://smartpy.io/): A comprehensive solution for developing, testing, and deploying smart contracts on the Tezos blockchain
-* [Tezos Foundation Grant Program](https://tezos.foundation/): A key activity of the Tezos Foundation is to deploy resources to entities and initiatives that will help to ensure the long-term success of the Tezos blockchain.
+* [Tezos](https://tezos.com/): the blockchain website
+* [OpenTezos](https://opentezos.com/): explore the technical and economic concepts behind the Tezos Network
+* [Tezos Foundation Grant Program](https://tezos.foundation/): a key activity of the Tezos Foundation is to deploy resources to entities and initiatives that will help to ensure the long-term success of the Tezos blockchain.
+
+
 ### Recommended Tools
+* [Kukai Wallet](https://wallet.kukai.app/): a specific Tezos Wallet
+* [SmartPy](https://smartpy.io/): a comprehensive solution for developing, testing, and deploying smart contracts on the Tezos blockchain
+* [Tezos Faucet](https://faucet.ghostnet.teztnets.xyz/): get Tez on the Ghostnet Network
 
 ### Prerequisites for this Course
 
