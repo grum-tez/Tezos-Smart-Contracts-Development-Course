@@ -104,5 +104,5 @@ def test():
     purchaser.addOffer(1).run(sender = alice, amount = sp.tez(100))
     purchaser.addOffer(2).run(sender = alice, amount = sp.tez(100))
     #purchaser.accept_offer(1).run(sender = attacker.address)
-
+ 
     attacker.attack(1)
