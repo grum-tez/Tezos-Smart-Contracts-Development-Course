@@ -17,7 +17,7 @@ def main():
            self.data.price += sp.split_tokens(self.data.price, 10, 100) 
 
 
-@sp.add_test(name='Testing Update Price')
+@sp.add_test(name="Testing Update Price")
 def test():
     alice = sp.test_account("alice").address
     bob = sp.test_account("bob").address
@@ -30,4 +30,3 @@ def test():
     c1.buy().run(sender = eve, amount = sp.mutez(5500000))
     c1.buy().run(sender = alice, amount = sp.mutez(6000000), valid = False)
     scenario.verify(c1.data.price == sp.mutez(6050000))
-
