@@ -17,7 +17,7 @@ def main():
            assert sp.sender == self.data.owner, "only owner can reset"
            self.data.store_value = 0
 
-@sp.add_test(name="Testing")
+@sp.add_test(name = "Testing")
 def test():
    alice = sp.test_account("Alice").address
    bob = sp.test_account("Bob").address
