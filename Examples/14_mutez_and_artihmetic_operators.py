@@ -31,7 +31,7 @@ def main():
             # and then sp.fst to get the first element of the pair and sp.snd to get the rest
 
 
-@sp.add_test(name="Testing operations")
+@sp.add_test(name = "Testing operations")
 def test():
     c1 = main.ComputingTez()
     sc = sp.test_scenario([utils,main])
