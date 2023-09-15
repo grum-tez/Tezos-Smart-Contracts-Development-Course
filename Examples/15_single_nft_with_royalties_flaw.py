@@ -22,7 +22,7 @@ def main():
            self.data.owner = sp.sender
 
 
-@sp.add_test(name='Testing')
+@sp.add_test(name = "Testing")
 def test():
        alice = sp.test_account("alice").address
        bob = sp.test_account("bob").address
