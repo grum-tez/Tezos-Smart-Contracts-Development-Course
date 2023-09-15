@@ -84,6 +84,11 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 #### Lesson 0: 🎉 Welcome to the Course
 #### Lesson 1: 💡 Tezos Makes it Possible
 #### Lesson 2: 🧠 Understanding Tezos
+#### Lesson 3: 🤝 First Interactions with the Tezos Blockchain
+#### Lesson 4: 🤔 Why Developing on Tezos?
+#### Lesson 5: 📝 Hands-On Smart Contracts with SmartPy
+#### Lesson 6: 🚀 Entrypoints and Testing
+
 
 ### Lesson 1: 💡 Tezos Makes it Possible
   * Community Building
@@ -107,13 +112,47 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * History of Tezos
 * Tezos, Tez, XTZ
 * Overview of the Key Elements of Tezos
- ** Accounts
- ** Transactions
- ** Smart Contracts
- ** Blockchain
- ** Wallets
- ** Nodes
- ** Bakers
+  * Accounts
+  * Transactions
+  * Smart Contracts
+  * Blockchain
+  * Wallets
+  * Nodes
+  * Bakers
+
+### Lesson 3: 🤝 First Interactions with the Tezos Blockchain
+* Wallet Set Up
+* Seed Phrase, Keys, Password
+* Funding your Account with “Fake” Tez
+* Transfer Tez between Accounts
+* Check Operations on Tezos Blockchain Explorers
+* Finality of Transactions
+
+
+### Lesson 4: 🤔 Why Developing on Tezos?
+* Benefits of Developing on Tezos
+* Being Part of the Tezos Ecosystem
+
+### Lesson 5: 📝 Hands-On Smart Contracts with SmartPy
+* Smart Contracts with SmartPy
+* Reminder: What is a Smart Contract
+* Smart Contract Structure & Deployment
+    * Syntax
+    * Indentation Syntax
+    * [Example: Store  Value Contract](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/01_store_value.py)
+    *  Adding a Test Scenario
+    *  [Adding a Test Scenario to Contract](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/02_store_value_with_test_scenario.py)
+* Write and Deploy your First Smart Contract
+* Deploy your Contract on Ghostnet
+* Eternity and Immutability
+
+
+### Lesson 6: 🚀 Entrypoints and Testing
+* Entrypoints
+* Accessing, Modifying the Storage
+* [Example: Flip Value Contract Accessing, Modifying the Storage](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/03_flip_value_with_entrypoint.py)
+
+
 
 
 
