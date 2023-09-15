@@ -8,7 +8,7 @@ def main():
            self.data.metadata = metadata
            self.data.price = price
            self.data.deadline = sp.timestamp(0)
-        
+         
     
        @sp.entrypoint
        def set_price(self, new_price, deadline):
