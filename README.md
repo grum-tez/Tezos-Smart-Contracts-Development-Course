@@ -88,6 +88,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 #### Lesson 4: 🤔 Why Developing on Tezos?
 #### Lesson 5: 📝 Hands-On Smart Contracts with SmartPy
 #### Lesson 6: 🚀 Entrypoints and Testing
+#### Lesson 7: 🔍 Types and Type Inference
 
 
 ### Lesson 1: 💡 Tezos Makes it Possible
@@ -152,9 +153,20 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Accessing, Modifying the Storage
 * [Example: Flip Value Contract Accessing, Modifying the Storage](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/03_flip_value_with_entrypoint.py)
 * Calling the Entrypoint from the Test
-* [Exemple Flip Value: Calling the Entrypoint from the Test](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/04_flip_value_entrypoint_call_in_test_scenario.py)
+* [Example Flip Value: Calling the Entrypoint from the Test](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/04_flip_value_entrypoint_call_in_test_scenario.py)
 * Automating Tests
-  * [Flip Value: checking the storage in the tests]()
+* Exercise: Count the Calls
+* [Solution: Count The Calls Solution](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/01_count_the_calls.py)
+* [Bonus: Count The Calls with Verifications](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/02_count_the_calls_with_verifications.py)
+* Real tests: Full List of What we Can Do
+* Importance of Testing
+* Syntax: Entrypoint with a Parameter
+* [Example: Store Value with Entrypoint with Parameter](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/05_store_value_with_one_parameter.py)
+* [Solution:]()
+
+### Lesson 7: 🔍 Types and Type Inference
+* Types: Int and Nat
+
 
 
 
