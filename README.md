@@ -151,6 +151,10 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Entrypoints
 * Accessing, Modifying the Storage
 * [Example: Flip Value Contract Accessing, Modifying the Storage](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/03_flip_value_with_entrypoint.py)
+* Calling the Entrypoint from the Test
+* [Exemple Flip Value: Calling the Entrypoint from the Test](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/04_flip_value_entrypoint_call_in_test_scenario.py)
+* Automating Tests
+  * [Flip Value: checking the storage in the tests]()
 
 
 
