@@ -171,8 +171,12 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * [Exercise: Find the Bug and Fix it](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/03_store_value_find_bug_and_fix_it.py)
 * No Overflows
 * Practical Limits and Storage Costs
-* <summary>Exercise : Store a Value</summary>
-* [Store Value with Entrypoint with Parameter]
+* <details>
+  <summary>Exercise : Store a Value</summary>
+  * [Store Value with Entrypoint with Parameter]
+</details>
+* 
+
 
 
 
