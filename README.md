@@ -98,7 +98,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
     * [Team Vitality](https://rarible.com/vhive-wearables/items)
   * New Features in Gaming
      * [Dogami](https://dogami.com/)
-     * [Stables]([https://dogami.com/](https://www.playstables.io/)
+     * [Stables](https://www.playstables.io/)
   * New Art Scene for Artists
     * [Objkt](https://objkt.com/)
     * [fxhash](https://www.fxhash.xyz/)
@@ -169,6 +169,10 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Type Inference
 * [Ways to Help Type Inference](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/06_store_value_help_type_inference.py)
 * [Exercise: Find the Bug and Fix it](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/03_store_value_find_bug_and_fix_it.py)
+* No Overflows
+* Practical Limits and Storage Costs
+* <summary>Exercise : Store a Value</summary>
+* [Store Value with Entrypoint with Parameter]
 
 
 
