@@ -156,8 +156,11 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * [Example Flip Value: Calling the Entrypoint from the Test](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/04_flip_value_entrypoint_call_in_test_scenario.py)
 * Automating Tests
 * Exercise: Count the Calls
-* [Solution: Count The Calls Solution](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/01_count_the_calls.py)
+* <details>
+   <summary> Solution</summary>
+   * [Solution: Count The Calls Solution](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/01_count_the_calls.py)
 * [Bonus: Count The Calls with Verifications](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/02_count_the_calls_with_verifications.py)
+ </details> 
 * Real tests: Full List of What we Can Do
 * Importance of Testing
 * Syntax: Entrypoint with a Parameter
@@ -172,10 +175,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * No Overflows
 * Practical Limits and Storage Costs
 * Exercise : Store Value with Entrypoint with Parameter
- <details>
-<summary>Solution: Store Value with Entrypoint with Parameter </summary>
-[Solution: Store Value with Entrypoint with Parameter](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/05_store_value_multiply_entrypoint.py)
-</details>
+* [Solution: Store Value with Entrypoint with Parameter](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/05_store_value_multiply_entrypoint.py)
 
 
 
