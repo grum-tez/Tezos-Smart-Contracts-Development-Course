@@ -90,6 +90,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 #### Lesson 6: 🚀 Entrypoints and Testing
 #### Lesson 7: 🔍 Types and Type Inference
 #### Lesson 8: 🧵 Strings
+#### Lesson 9: 🔐 Verifications
 
 
 ### Lesson 1: 💡 Tezos Makes it Possible
@@ -173,6 +174,19 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Practical Limits and Storage Costs
 * Exercise : Store Value with Entrypoint with Parameter
 * [Solution: Store Value with Entrypoint with Parameter](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/05_store_value_multiply_entrypoint.py)
+
+### Lesson 8: 🧵 Strings
+* Introduction to strings
+* Exercise: Endless Wall Contract
+* [Solution: Endless Wall](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/06_endless_wall_V1.py)
+
+### Lesson 9: 🔐 Verifications
+* Introduction to Verifications
+* Failures
+* Comparisons in SmartPy
+* Boolean Conditions in SmartPy
+* Failures Should be Tested
+* [Example: Adding Verification to Store Value](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/07_store_value_with_verifications.py)
 
 
 
