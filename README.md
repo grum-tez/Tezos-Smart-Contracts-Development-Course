@@ -89,6 +89,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 #### Lesson 5: 📝 Hands-On Smart Contracts with SmartPy
 #### Lesson 6: 🚀 Entrypoints and Testing
 #### Lesson 7: 🔍 Types and Type Inference
+#### Lesson 8: 🧵 Strings
 
 
 ### Lesson 1: 💡 Tezos Makes it Possible
