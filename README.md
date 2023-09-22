@@ -57,6 +57,8 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Refer to Documentation: Things are constantly being updated, so whenever our instructors open up some documentation, open it your end and maybe even have the code sample next to you.
 
 
+## TODO: ADD RECAP AT THE END OF EACH SECTION ##
+
 
 ## 📚 Table of Content 📚 ## 
 
@@ -91,6 +93,8 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 #### Lesson 7: 🔍 Types and Type Inference
 #### Lesson 8: 🧵 Strings
 #### Lesson 9: 🔐 Verifications
+#### Lesson 10: 🔄 Multiple Values in Storage & Parameter
+
 
 
 ### Lesson 1: 💡 Tezos Makes it Possible
@@ -187,6 +191,18 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Boolean Conditions in SmartPy
 * Failures Should be Tested
 * [Example: Adding Verification to Store Value](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/07_store_value_with_verifications.py)
+* Errors Don’t Have to Be Strings
+* Exercise: Endless Wall with Verifications
+* [Solution: Endless Wall with Verifications ](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/07_endless_wall_with_verification.py)
+* [Interact with Endless Wall Contract](https://better-call.dev/ghostnet/KT1H88Xwb4W3GiPz6AoChCzmNjHvfPc8suPu/operations)
+* Checking an Operation
+* Recap
+
+### Lesson 10: 🔄 Multiple Values in Storage & Parameter
+* Using trace()
+* Syntax: Multiple Values in Storage & Parameter
+* [Example: Multiple Values in Storage & Parameter]()
+
 
 
 
