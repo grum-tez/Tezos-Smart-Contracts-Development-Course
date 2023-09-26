@@ -3,6 +3,8 @@ import smartpy as sp
 @sp.module
 def main():
 
+#marketplace  in a unique contract
+    
     class NftMarketplace(sp.Contract):
         def __init__(self, fee_rate, admin ):
             self.data.fee_rate= fee_rate
