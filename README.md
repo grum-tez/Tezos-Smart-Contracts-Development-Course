@@ -278,7 +278,17 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Types: Arithmetic Operators
 * Type Conversions: Nat, Int & Mutez
 * [Example: Arithmetic Operators](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/14_arithmetic_operators.py)
-* [Example: Mutez and Arithmetic Operators]((https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/14_mutez_and_artihmetic_operators.py)))
+* [Example: Mutez and Arithmetic Operators](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/14_mutez_and_artihmetic_operators.py)
+* How to Compute a  Price Percentage in SmartPy?
+* [Example: Yield Farming Contract, First Defi Contract](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/15_yield_farming.py)
+* Exercise: NFT with an Increasing Price
+
+#####
+Slides 132
+Slides 133
+Slide 137
+Yield Farming contract: année bissextile
+####
 
 
 
