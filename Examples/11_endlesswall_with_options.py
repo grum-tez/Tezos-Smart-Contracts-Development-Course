@@ -17,21 +17,21 @@ def main():
            self.data.nb_calls += 1
            self.data.last_sender = sp.Some(sp.sender)  
   
-@sp.add_test(name = "Add my name")
+@sp.add_test()
 def test():
    alice=sp.test_account("Alice").address
    bob=sp.test_account("Bob").address
    eve=sp.test_account("Eve").address
    c1 = main.EndlessWall(initial_text = "Axel on Tezos forever", owner = alice)
-   scenario = sp.test_scenario(main)
+   scenario = sp.test_scenario("Test", main)
    scenario += c1
-   c1.write_message("Ana & Jack").run(sender = eve)
-   c1.write_message("freeCodeCamp").run(sender = bob)
+   c1.write_message("Ana & Jack", _sender = eve)
+   c1.write_message("freeCodeCamp", _sender = bob)
    scenario.verify(c1.data.wall_text == "Axel on Tezos forever, Ana & Jack forever, freeCodeCamp forever")
-   c1.write_message("freeCodeCamp").run(sender = bob, valid = False, exception="Do not spam the wall")
-   c1.write_message("this message is 31 letters long").run(sender = alice, valid = False)
+   c1.write_message("freeCodeCamp", _sender = bob, _valid = False, _exception = "Do not spam the wall")
+   c1.write_message("this message is 31 letters long", _sender = alice, _valid = False)
    #by default a transaction is valid, no need to add .run(valid = True) after testing a valid call
-   c1.write_message("LLL").run(sender = alice)
-   c1.write_message("this message is 30 characters ").run(sender = eve)
+   c1.write_message("LLL", _sender = alice)
+   c1.write_message("this message is 30 characters ", _sender = eve)
    scenario.verify(c1.data.nb_calls == 4)
     
