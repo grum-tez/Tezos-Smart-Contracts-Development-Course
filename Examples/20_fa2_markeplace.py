@@ -20,6 +20,7 @@ def main():
 
         @sp.entrypoint
         def mint(self, metadata):
+            sp.cast(metadata, sp.string)
             operators = sp.set()
             sp.cast(operators, sp.set[operator_type])
             self.data.tokens[self.data.next_token_id] = sp.record(owner = sp.sender, metadata = metadata, operators = sp.set())
@@ -102,23 +103,23 @@ def main():
             sp.send(offer.seller, offer.price)
 
 
-@sp.add_test(name = "FA2 and basic marketplace")
+@sp.add_test()
 def test():
     alice = sp.test_account("Alice")
     bob = sp.test_account("Bob")
     eve = sp.test_account("Eve")
     axel = sp.test_account("Axel")
-    scenario = sp.test_scenario(main)
+    scenario = sp.test_scenario("Test", main)
     ledger = main.FA2Token()
     scenario += ledger
     marketplace = main.Marketplace(ledger.address)
     scenario += marketplace
-    ledger.mint("Alice NFT 1").run(sender = alice)
+    ledger.mint("Alice NFT 1", _sender = alice)
     
-    marketplace.new_offer(token_id = sp.nat(1), price = sp.tez(10)).run(sender = alice)
+    marketplace.new_offer(token_id = sp.nat(1), price = sp.tez(10), _sender = alice)
 
     #ledger.update_operators([sp.variant.add_operator(sp.record(owner = sp.alice, operator = marketplace.address, token_id = 1))])
     operator_data = sp.record(owner = alice.address, operator = marketplace.address, token_id = 1)
-    ledger.update_operators([sp.variant("add_operator", operator_data)]).run(sender=alice)
+    ledger.update_operators([sp.variant("add_operator", operator_data)], _sender = alice)
 
-    marketplace.buy(1).run(sender = bob, amount = sp.tez(10))
+    marketplace.buy(1, _sender = bob, _amount = sp.tez(10))
