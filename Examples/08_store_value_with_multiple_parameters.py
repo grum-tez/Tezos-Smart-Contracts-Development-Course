@@ -6,6 +6,7 @@ def main():
     class StoreValue(sp.Contract):
         
         def __init__(self, min_value, max_value):
+            sp.cast(min_value, sp.int)
             self.data.min_value = min_value
             self.data.max_value = max_value
     
@@ -19,10 +20,10 @@ def main():
             self.data.min_value += a
             self.data.max_value += a
             
-@sp.add_test(name = "Testing")
+@sp.add_test()
 def test():
         c1 = main.StoreValue(min_value = 0, max_value = 5)
-        scenario = sp.test_scenario(main)
+        scenario = sp.test_scenario("Test", main)
         scenario += c1
         scenario.h3(" Setting Min and Max")
         c1.set(new_min_value = 5, new_max_value = 10)
@@ -31,9 +32,9 @@ def test():
         #show that you have errors when not naming params in entrypoint call
         #c1.set(5, 10)
         scenario.h3(" Testing Add Number and Verify")
-        c1.addNumber(20)
+        c1.add_number(20)
         scenario.verify(c1.data.min_value == 25)
         scenario.verify(c1.data.max_value == 30)
-        c1.addNumber(-50)
+        c1.add_number(-50)
         scenario.verify(c1.data.min_value == -25)
         scenario.verify(c1.data.max_value == -20)
