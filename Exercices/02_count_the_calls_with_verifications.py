@@ -11,9 +11,9 @@ def main():
        def make_call(self):
            self.data.nb_calls += 1
 
-@sp.add_test(name = "Testing")
+@sp.add_test()
 def test():
-   scenario = sp.test_scenario(main)
+   scenario = sp.test_scenario("Test", main)
    contract = main.CountTheCalls()
    scenario += contract
    scenario.verify(contract.data.nb_calls == 0)
