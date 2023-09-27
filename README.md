@@ -94,6 +94,8 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 #### Lesson 8: 🧵 Strings
 #### Lesson 9: 🔐 Verifications
 #### Lesson 10: 🔄 Multiple Values in Storage & Parameter
+#### Lesson 11 : 📜  Interlude: A Brief History of Smart Contracts
+#### Lesson 12: 🔀 Manipulating Addresses
 
 
 
@@ -199,9 +201,22 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Recap
 
 ### Lesson 10: 🔄 Multiple Values in Storage & Parameter
-* Using trace()
+* [Using trace()](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/09_using_trace.py)
 * Syntax: Multiple Values in Storage & Parameter
-* [Example: Multiple Values in Storage & Parameter]()
+* [Example: Multiple Values in Storage & Parameter](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/08_store_value_with_multiple_parameters.py)
+* [Exercise: Endless Wall with Counter](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/08_endless_wall_count_the_calls.py)
+
+### Lesson 11 : 📜 Interlude: A Brief History of Smart Contracts
+* History of Smart Contracts
+
+### Lesson 12: 🔀 Manipulating Addresses
+* Introduction to Manipulating Addresses
+* Addresses in SmartPy
+* Addresses in Tests
+* [Example: storeValue with addresses](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/09_store_value_only_owner_can_reset.py)
+
+
+
 
 
 
