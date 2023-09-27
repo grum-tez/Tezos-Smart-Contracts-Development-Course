@@ -22,18 +22,18 @@ def main():
            self.data.owner = sp.sender
 
 
-@sp.add_test(name = "Testing")
+@sp.add_test()
 def test():
        alice = sp.test_account("alice").address
        bob = sp.test_account("bob").address
        eve = sp.test_account("eve").address
        author = sp.test_account("author").address
-       c1 = main.SingleNftWithFlaw(owner = alice, metadata = "Gwen's first NFT", price = sp.mutez(5000000), author = author,)
-       scenario = sp.test_scenario(main)
+       c1 = main.SingleNftWithFlaw(owner = alice, metadata = "Gwen's first NFT", price = sp.mutez(5000000), author = author)
+       scenario = sp.test_scenario("Test", main)
        scenario +=c1    
        #testing buy entrypoint
        scenario.h3(" Testing buy entrypoint")
-       c1.buy().run(sender=bob, amount=sp.mutez(5000000))
+       c1.buy(_sender = bob, _amount = sp.mutez(5000000))
        scenario.verify(c1.balance == sp.mutez(0))
-       c1.buy().run(sender=eve, amount=sp.mutez(5500000))
+       c1.buy(_sender = eve, _amount = sp.mutez(5500000))
        scenario.verify(c1.balance == sp.mutez(0))
