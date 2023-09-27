@@ -49,7 +49,7 @@ def main():
         def default(self):
             pass
 
-@sp.add_test(name = "Yield Farming")
+@sp.add_test()
 def test():
     owner = sp.test_account("owner").address
     alice = sp.test_account("Alice").address
@@ -60,22 +60,22 @@ def test():
         delegate.public_key_hash: 0,
     }
     c1 = main.YieldFarming(owner = owner, lender = alice, annual_yield_rate = 4, ramp_up_duration = 3600*24*21)
-    scenario = sp.test_scenario(main)
+    scenario = sp.test_scenario("Test", main)
     scenario += c1
     scenario.h3("Testing default entrypoint")
-    c1.default().run(sender=owner, amount= sp.tez(5))
-    scenario.verify(c1.balance==sp.tez(5))
+    c1.default(_sender = owner, _amount = sp.tez(5))
+    scenario.verify(c1.balance == sp.tez(5))
     scenario.h3("Testing deposit entrypoint")
-    c1.deposit().run(sender=alice, amount = sp.tez(100))
+    c1.deposit(_sender = alice, _amount = sp.tez(100))
     scenario.verify(c1.data.deposit_amount == sp.tez(100))
-    scenario.verify(c1.balance==sp.tez(105))
-    c1.deposit().run(sender=alice, amount = sp.tez(100), valid = False)
+    scenario.verify(c1.balance == sp.tez(105))
+    c1.deposit(_sender = alice, _amount = sp.tez(100), _valid = False)
     scenario.h3("Testing withdraw entrypoint")
     scenario.h3("Testing owner_withdraw entrypoint")
-    c1.owner_withdraw(sp.tez(1)).run(sender=bob, valid = False)
-    c1.owner_withdraw(sp.mutez(1000001)).run(sender=owner, valid = False)
-    c1.owner_withdraw(sp.tez(1)).run(sender=owner)
+    c1.owner_withdraw(sp.tez(1), _sender = bob, _valid = False)
+    c1.owner_withdraw(sp.mutez(1000001), _sender = owner, _valid = False)
+    c1.owner_withdraw(sp.tez(1), _sender = owner)
     scenario.h3("Testing set delegate")
-    c1.set_delegate(sp.some(delegate.public_key_hash)).run(sender = owner, voting_powers = voting_powers)
-    c1.withdraw().run(sender=alice, now = sp.timestamp(3600*24*21 + 3600*24*365 ))
+    c1.set_delegate(sp.some(delegate.public_key_hash), _sender = owner, _voting_powers = voting_powers)
+    c1.withdraw(_sender = alice, _now = sp.timestamp(3600*24*21 + 3600*24*365 ))
     
