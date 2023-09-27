@@ -16,9 +16,9 @@ def main():
        def reset(self):
            self.data.stored_value = 0
 
-@sp.add_test(name = "Testing")
+@sp.add_test()
 def test():
-   scenario = sp.test_scenario(main)
+   scenario = sp.test_scenario("Test", main)
    contract = main.StoreValue()
    scenario += contract
    scenario.h3("Helping with type inference")
