@@ -38,26 +38,26 @@ def main():
             nft_contract = sp.contract(sp.mutez, nft_address, entrypoint="set_price").unwrap_some()
             sp.transfer(new_price, sp.tez(0), nft_contract)
 
-@sp.add_test(name = "Testing set_price and buy")
+@sp.add_test()
 def test():
    alice = sp.test_account("alice").address
    bob = sp.test_account("bob").address
    eve = sp.test_account("eve").address
    c1 = main.NftForSale(owner = alice, metadata = "Gwen's first NFT", price = sp.mutez(5000000))
    c2 = main.NFTJointAccount(bob, eve)
-   scenario = sp.test_scenario(main)
+   scenario = sp.test_scenario("Test", main)
    scenario +=c1
    scenario +=c2
    scenario.h3(" Testing set_price entrypoint")
    #testing set price
-   c1.set_price(sp.mutez(7000000)).run(sender = alice)
-   c2.buy_nft(c1.address).run(sender = bob, amount=sp.tez(7))
-   c1.set_price(sp.mutez(7000000)).run(sender = eve, valid = False)
+   c1.set_price(sp.mutez(7000000), _sender = alice)
+   c2.buy_nft(c1.address, _sender = bob, _amount = sp.tez(7))
+   c1.set_price(sp.mutez(7000000), _sender = eve, _valid = False)
    scenario.verify(c1.data.price != sp.mutez(6000000))
    scenario.verify(c1.data.price == sp.mutez(7000000))
-   c2.buy_nft(c1.address).run(sender = eve, amount=sp.tez(7), valid = False)
-   c2.buy_nft(c1.address).run(sender = alice, amount=sp.tez(6), valid = False)
-   c2.set_nft_price(nft_address = c1.address, new_price = sp.tez(50)).run(sender= eve)
+   c2.buy_nft(c1.address, _sender = eve, _amount = sp.tez(7), _valid = False)
+   c2.buy_nft(c1.address, _sender = alice, _amount = sp.tez(6), _valid = False)
+   c2.set_nft_price(nft_address = c1.address, new_price = sp.tez(50), _sender = eve)
     #verify that the owner of the NFT is our NFTJointAccount contract
    scenario.verify(c1.data.price == sp.tez(50))
    scenario.verify(c1.data.owner == c2.address)
