@@ -16,15 +16,15 @@ def main():
         assert (a < 10) and (a > 0), "Number strictly between 0 and 10"
         self.data.stored_value += a
       
-@sp.add_test(name = "Add")
+@sp.add_test()
 def test():
    c1 = main.StoreValue()
-   scenario = sp.test_scenario(main)
+   scenario = sp.test_scenario("Test add", main)
    scenario += c1
    scenario.h3("Testing add entrypoint")
    c1.add(1)
    c1.add(9)
    scenario.verify(c1.data.stored_value == 10)
    scenario.h3("Testing wrong conditions produce invalid transactions")
-   c1.add(10).run(valid = False)
-   c1.add(0).run(valid = False)
+   c1.add(10, _valid = False)
+   c1.add(0, _valid = False)
