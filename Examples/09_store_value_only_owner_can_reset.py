@@ -17,17 +17,17 @@ def main():
            assert sp.sender == self.data.owner, "only owner can reset"
            self.data.store_value = 0
 
-@sp.add_test(name = "Testing")
+@sp.add_test()
 def test():
    alice = sp.test_account("Alice").address
    bob = sp.test_account("Bob").address
    contract = main.StoreValue(owner = alice)
-   scenario = sp.test_scenario(main)
+   scenario = sp.test_scenario("Test", main)
    scenario += contract
    scenario.h3("Testing add entrypoint")
    contract.add(5)
    scenario.verify(contract.data.store_value == 47)
    scenario.h3("Testing reset entrypoint, only owner can reset")
-   contract.reset().run(sender = bob, valid = False)
-   contract.reset().run(sender = alice)
+   contract.reset(_sender = bob, _valid = False)
+   contract.reset(_sender = alice)
    scenario.verify(contract.data.store_value == 0)
