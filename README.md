@@ -94,8 +94,14 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 #### Lesson 8: 🧵 Strings
 #### Lesson 9: 🔐 Verifications
 #### Lesson 10: 🔄 Multiple Values in Storage & Parameter
-#### Lesson 11 : 📜  Interlude: A Brief History of Smart Contracts
+#### Lesson 11: 📜  Interlude: A Brief History of Smart Contracts
 #### Lesson 12: 🔀 Manipulating Addresses
+#### Lesson 13: 💻🔐🚀 Code Your own NFT Contract
+#### Lesson 14: 💰🔄🤝 Manipulating Tez and Adding Trust
+#### Lesson 15: 🔘📊🔀 Options
+#### Lesson 16: ⏰🔗 Blockchains and Time
+#### Lesson 17: ➕➖✖️➗ Arithmetic Operators
+
 
 
 
@@ -204,7 +210,8 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * [Using trace()](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/09_using_trace.py)
 * Syntax: Multiple Values in Storage & Parameter
 * [Example: Multiple Values in Storage & Parameter](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/08_store_value_with_multiple_parameters.py)
-* [Exercise: Endless Wall with Counter](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/08_endless_wall_count_the_calls.py)
+* Exercise: Endless Wall with Counter
+* [Solution: Endless Wall with Counter](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/08_endless_wall_count_the_calls.py)
 
 ### Lesson 11 : 📜 Interlude: A Brief History of Smart Contracts
 * History of Smart Contracts
@@ -214,6 +221,67 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Addresses in SmartPy
 * Addresses in Tests
 * [Example: storeValue with addresses](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/09_store_value_only_owner_can_reset.py)
+* Exercise: Endless Wall with Restrictions
+* [Solution: Endless Wall with Restrictions](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/09_endless_wall_restrictions.py)
+
+### Lesson 13: 💻🔐🚀 Code Your own NFT Contract
+* Smart Contracts are Powerful
+* NFT Concept
+* NFT Use Cases
+* Exercise: Create Your Own Single NFT
+  * Single NFT Hints
+* [Solultion Create Your Own Single NFT](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/10_single_basic_nft.py)
+* Beyond a Basic NFT Contract
+
+
+### Lesson 14: 💰🔄🤝 Manipulating Tez and Adding Trust
+* Tez as a Tool for Trust
+* Endless Wall with a Paywall
+* Sending Funds to a Smart Contract
+* Sending Tez: Transactions/Addresses
+* Testing Transfers of Tez
+* [Example: EndlessWall with Paywall](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/10_endlessWall_with_paywall.py)
+* Adding Buy Feature to Single NFT Contract
+* Trust Issue for Basic Transactions
+* How the Blockchain Solves Trust Issue?
+* Exercice: Adding Buy Feature to Single NFT Contract
+* [Solution: Adding Buy Feature to Single NFT Contract](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/11_single_nft_with_buy_V1.py)
+
+### Lesson 15: 🔘📊🔀 Options
+* Introduction to Options
+* Using Options
+* Syntax Options
+  * Creating an Option
+  * Comparing Options
+  * Opening an Option
+* Options in Tests
+* Type of an Option
+* Don’t Overuse Options
+* Use Options if There is no Better Choice
+* Exercise: NFT not for Sale
+* [Solution: NFT not for Sale](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/12_single_nft_with_buy_with_options.py)
+
+### Lesson 16: Blockchains and Time
+* Introduction to Blockchains and Time
+* The Time Dilemma
+* Timestamps
+* Timestamp Type
+* Syntax Timestamps
+* Timestamps and Testing
+* [Example: Endless Wall with Deadline](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/13_endlessWall_with_deadline.py)
+* Exercise: NFT with Time Restriction
+* [Solution: NFT with Time Restriction ](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/13_single_nft_with_timebuffer.py)
+* Recap: Benefits of a Smart Contract
+
+### Lesson 17: ➕➖✖️➗ Arithmetic Operators
+* Syntax: Arithmetic Operators
+* Types: Arithmetic Operators
+* Type Conversions: Nat, Int & Mutez
+* [Example: Arithmetic Operators](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/14_arithmetic_operators.py)
+* [Example: Mutez and Arithmetic Operators]((https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/14_mutez_and_artihmetic_operators.py)))
+
+
+
 
 
 
