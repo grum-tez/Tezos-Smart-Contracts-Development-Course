@@ -5,7 +5,7 @@ def main():
 
     class Calculator(sp.Contract):
         def __init__(self):
-            self.data.int_value = sp.to_int(1)
+            self.data.int_value = sp.int(1)
             self.data.nat_value = sp.nat(0)
         
         @sp.entrypoint
@@ -15,6 +15,7 @@ def main():
         
         @sp.entrypoint
         def sub(self, x, y):
+            sp.cast(x, sp.int)
             self.data.int_value = x - y
         
         @sp.entrypoint
@@ -28,6 +29,8 @@ def main():
             
         @sp.entrypoint
         def divide(self, x, y):
+            sp.cast(x, sp.nat)
+            sp.cast(y, sp.nat)
             self.data.nat_value = x / y
             #if both operands not the same type use sp.to_int(nat_value) or sp.ediv(x,y)
     
@@ -43,10 +46,10 @@ def main():
 
 
 
-@sp.add_test(name = "Testing operations")
+@sp.add_test()
 def test():
     c1 = main.Calculator()
-    sc = sp.test_scenario(main)
+    sc = sp.test_scenario("Test", main)
     sc += c1
     c1.add(x = 5, y = 3)
     c1.sub(x = 5, y = 3)
