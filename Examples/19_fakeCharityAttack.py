@@ -32,17 +32,17 @@ def main():
                         sp.tez(0),
                         charity_contract)
 
-@sp.add_test(name = "Testing charity attack")
+@sp.add_test()
 def test():
     admin = sp.test_account("admin").address
     attacker = sp.test_account("attacker").address
     charityFund = main.CharityFund(admin)
-    scenario = sp.test_scenario(main)
+    scenario = sp.test_scenario("Test", main)
     scenario += charityFund
-    charityFund.deposit().run(amount = sp.tez(10000), sender = admin)
+    charityFund.deposit(_sender = admin, _amount = sp.tez(10000))
 
     fakeCharity = main.FakeCharity(attacked_contract = charityFund.address, attacker = attacker)
     scenario += fakeCharity
-    charityFund.donate(donation = sp.tez(1), charity = fakeCharity.address).run(sender = admin)
+    charityFund.donate(donation = sp.tez(1), charity = fakeCharity.address, _sender = admin)
 
-    charityFund.deposit().run(amount = sp.tez(0), sender = admin)
+    charityFund.deposit(_sender = admin, _amount = sp.tez(0))
