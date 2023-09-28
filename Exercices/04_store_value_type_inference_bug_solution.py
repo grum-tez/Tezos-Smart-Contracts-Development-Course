@@ -17,9 +17,9 @@ def main():
            #sp.cast(b, sp.int)
            self.data.stored_value -= b
 
-@sp.add_test(name = "Testing")
+@sp.add_test()
 def test():
-   scenario = sp.test_scenario(main)
+   scenario = sp.test_scenario("Test", main)
    contract = main.StoreValue()
    scenario += contract
    scenario.h3(" Helping type inference ")
