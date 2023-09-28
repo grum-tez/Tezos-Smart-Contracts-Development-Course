@@ -21,19 +21,18 @@ def main():
            sp.send(self.data.owner, self.data.price)
            self.data.owner = sp.sender
     
-@sp.add_test(name = "Testing set_price and buy")
+@sp.add_test()
 def test():
     alice = sp.test_account("alice").address
     bob = sp.test_account("bob").address
     eve = sp.test_account("eve").address
-    c1 = main.NftForSale(owner = alice, metadata = "Gwen's first NFT", price = sp.mutez(5000000))
-    scenario = sp.test_scenario(main)
+    c1 = main.NftForSale(owner = alice, metadata = "My first NFT", price = sp.mutez(5000000))
+    scenario = sp.test_scenario("Test", main)
     scenario +=c1
-    scenario.h3(" Testing set_price entrypoint")
-    #testing set price
-    c1.set_price(sp.mutez(7000000)).run(sender = alice)
-    c1.set_price(sp.tez(5)).run(sender =  bob, valid = False)
-    #testing buy entrypoint
-    scenario.h3(" Testing buy entrypoint with correct and incorrect prices")
-    c1.buy().run(sender=bob, amount=sp.mutez(7000000))
-    c1.buy().run(sender=eve, amount=sp.tez(6), valid = False)
+    scenario.h3("Testing set_price entrypoint")
+    c1.set_price(sp.mutez(7000000), _sender = alice)
+    c1.set_price(sp.tez(5), _sender = bob, _valid = False)
+
+    scenario.h3("Testing buy entrypoint with correct and incorrect prices")
+    c1.buy(_sender = bob, _amount = sp.mutez(7000000))
+    c1.buy(_sender = eve, _amount=sp.tez(6), _valid = False)
