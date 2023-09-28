@@ -13,30 +13,29 @@ def main():
     
        @sp.entry_point
        def write_message(self, message):
-           assert (sp.len(message) <= 30) and (sp.len(message) >= 3), "invalid message size"
+           assert (sp.len(message) <= 30) and (sp.len(message) >= 3), "invalid length"
            assert self.data.last_sender != sp.sender, "Do not spam the wall"
            self.data.wall_text += ", " + message + " forever"
            self.data.nb_calls += 1
            self.data.last_sender = sp.sender
   
-@sp.add_test(name = "Add my name")
+@sp.add_test()
 def test():
    alice=sp.test_account("Alice").address
    bob=sp.test_account("Bob").address
    eve=sp.test_account("Eve").address
-   c1 = main.EndlessWall(initial_text = "Axel on Tezos forever", owner=alice)
-   scenario = sp.test_scenario(main)
+   c1 = main.EndlessWall(initial_text = "Hello", owner=alice)
+   scenario = sp.test_scenario("Test", main)
    scenario += c1
    scenario.h3("Testing write_message entrypoint ")
-   c1.write_message("Ana & Jack").run(sender = eve)
-   c1.write_message("freeCodeCamp").run(sender = bob)
-   scenario.verify(c1.data.wall_text == "Axel on Tezos forever, Ana & Jack forever, freeCodeCamp forever")
+   c1.write_message("Ana & Jack", _sender = eve)
+   c1.write_message("Tezos", _sender = bob)
+   scenario.verify(c1.data.wall_text == "Hello, Ana & Jack forever, Tezos forever")
    scenario.h3("Testing user cannot add twice in a row ")
-   c1.write_message("freeCodeCamp").run(sender = bob, valid = False)
-   c1.write_message("freeCodeCamp").run(sender = bob, valid = False)
+   c1.write_message("Tezos", _sender = bob, _valid = False)
+   c1.write_message("Tezos", _sender = bob, _valid = False)
    scenario.h3("Testing write_message size message on limits ")
-   c1.write_message("this message is 31 letters long").run(sender = alice, valid = False)
-   #by default a transaction is valid, no need to add .run(valid = True) after testing a valid call
-   c1.write_message("LLL").run(sender = alice)
-   c1.write_message("this message is 30 characters ").run(sender = eve)
+   c1.write_message("this message is 31 letters long", _sender = alice, _valid = False)
+   c1.write_message("LLL", _sender = alice)
+   c1.write_message("this message is 30 characters ", _sender = eve)
    scenario.verify(c1.data.nb_calls == 4)
