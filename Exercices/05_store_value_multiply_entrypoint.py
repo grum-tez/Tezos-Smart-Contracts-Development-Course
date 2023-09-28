@@ -19,10 +19,10 @@ def main():
        def multiply(self,factor):
            self.data.stored_value *= factor
 
-@sp.add_test(name = "Testing")
+@sp.add_test()
 def test():
    c1 = main.StoreValue()
-   scenario = sp.test_scenario(main)
+   scenario = sp.test_scenario("Test", main)
    scenario += c1
    scenario.h3("Testing add entrypoint")
    c1.add(5)
