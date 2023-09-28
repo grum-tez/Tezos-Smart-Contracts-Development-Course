@@ -19,10 +19,10 @@ def main():
        def sub(self, b):
            self.data.store_value -= b
 
-@sp.add_test(name = "Testing")
+@sp.add_test()
 def test():
-   scenario = sp.test_scenario(main)
+   scenario = sp.test_scenario("Test", main)
    contract = main.StoreValue()
    scenario += contract
-   contract.add(5)
+   contract.add(sp.nat(5))
    contract.sub(5)
