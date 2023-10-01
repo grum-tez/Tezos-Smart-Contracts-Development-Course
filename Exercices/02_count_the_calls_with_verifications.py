@@ -17,9 +17,8 @@ def test():
    contract = main.CountTheCalls()
    scenario += contract
    scenario.verify(contract.data.nb_calls == 0)
-   scenario.h3(" Testing verification and error ")
+   scenario.h2("Checking that calling make_call increments nb_calls")
    contract.make_call()
    scenario.verify(contract.data.nb_calls == 1)
-   #scenario.verify(contract.data.nb_calls == 2) #should pass error
    contract.make_call()
    scenario.verify(contract.data.nb_calls == 2)
