@@ -104,6 +104,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 #### Lesson 18: 🔄 Inter-Contract Calls
 #### Lesson 19: 📁 Records
 #### Lessson 20: 🗺️📊⛽ Maps, Big-Maps, Gas
+#### Lesson 21: 🔄💻📜 Other Smart Contracts Languages
 
 
 
@@ -322,11 +323,25 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Big_Maps to Avoid Gas Limits
 * [Example: Truly endless wall](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/17_true_endless_wall.py)
 * If/else
+* Exercise: Community Contract
+* [Solution: Community Contract]()
+* Exercise: Contract for multiple NFTs
+* Storage: Contract for Multiple NFTs
+* Code Structure: Contract for Multiple NFTs
+* [Solution: Contract for multiple NFTs](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/18_multiple_nft_flaw.py)
+* Flaw: Contract for Multiple NFTs
+* Storage: Contract for Multiple NFTs
+* Entrypoints: Contract for Multiple NFTs
+* [Solution: Contract for Multiple NFTs ](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/18_multiple_nft_with_fix.py)
+
+### Lesson 21: 🔄💻📜 Other Smart Contracts Languages
 
 
-##TODOS: MISSING: example 1 record: First Name, Last Name, Birthdate ##
+##TODOS: MISSING: example 1 record: First Name, Last Name, Birthdate from lesson 19 inter-contract call ##
 ##Todos: Missing: Exercise Records : Add a login that the user can change at most once a year
-This also means storing the address of each user##
+This also means storing the address of each user from lesson 19 inter-contract call ##
+
+##Todos: missing the exercise community contract from lesson 20##
 
 
 
