@@ -102,6 +102,12 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 #### Lesson 16: ⏰🔗 Blockchains and Time
 #### Lesson 17: ➕➖✖️➗ Arithmetic Operators
 #### Lesson 18: 🔄 Inter-Contract Calls
+#### Lesson 19: 📁 Records
+#### Lessson 20: 🗺️📊⛽ Maps, Big-Maps, Gas
+
+
+
+
 
 
 
@@ -292,15 +298,41 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 ### Lesson 18: 🔄 Inter-Contract Calls
 * Syntax: Inter-Contract Calls
 * [Example: NFT Joint Account](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/16_nft_joint_account_v1.py)
-* 
+* Other Flaws Linked to Inter-Contract Calls
+* Increasing Price /Royalties Contract Flaws
+* A Powerful Approach: Wrapping an NFT
+* NFTWrapper Contract Logic
+* Exercise: Implement NFTWrapper
+* [Solution: Implement NFTWrapper](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/17_NFT_Wrapper.py)
+
+### Lesson 19: 📁 Records
+* Introduction to Records
+* Syntax: Records
+* [Example 1: Records]()
+* [Example 2: NFT Joint Account with Records](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/16_nft_joint_account_with_record_deadline.py)
+* Exercise: Records
+* [Solution: Records]()
+* Layouts
+
+### Lessson 20: 🗺️📊⛽ Maps, Big-Maps, Gas
+* Introduction to Maps / Big_Maps
+* Syntax: Maps
+* Storage and Gas Costs/Issues
+* Some Sizes May Increase Indefinitely
+* Big_Maps to Avoid Gas Limits
+* [Example: Truly endless wall](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/17_true_endless_wall.py)
+* If/else
 
 
-#####
-Slides 132
-Slides 133
-Slide 137
-Yield Farming contract: année bissextile
-####
+##TODOS: MISSING: example 1 record: First Name, Last Name, Birthdate ##
+##Todos: Missing: Exercise Records : Add a login that the user can change at most once a year
+This also means storing the address of each user##
+
+
+
+
+
+
 
 
 
