@@ -335,8 +335,13 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * [Solution: Contract for Multiple NFTs ](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/18_multiple_nft_with_fix.py)
 
 ### Lesson 21: 🔄💻📜 Other Smart Contracts Languages
-* [Ligo](https://ligolang.org/?lang=jsligo)
 * [Archetype](https://archetype-lang.org/)
+* [Example: Auction Contract with Archetype](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/other_high_level_languages/archetype_auction_example.arl)
+* [Ligo](https://ligolang.org/?lang=jsligo)
+* [Example: Auction Contract with Ligo](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/other_high_level_languages/ligo_auction_example.jsligo)
+(https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/other_high_level_languages/archetype_auction_example.arl)
+* [SmartPy]([https://archetype-lang.org/](https://smartpy.io/))
+* [Example: Auction Contract with SmartPy](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/other_high_level_languages/smartpy_auction_example.py)
 
 
 ##TODOS: MISSING: example 1 record: First Name, Last Name, Birthdate from lesson 19 inter-contract call ##
