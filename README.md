@@ -279,9 +279,15 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Type Conversions: Nat, Int & Mutez
 * [Example: Arithmetic Operators](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/14_arithmetic_operators.py)
 * [Example: Mutez and Arithmetic Operators](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/14_mutez_and_artihmetic_operators.py)
+* Pairs
+* Type Conversions: Nat, Int & Mutez
 * How to Compute a  Price Percentage in SmartPy?
 * [Example: Yield Farming Contract, First Defi Contract](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/15_yield_farming.py)
 * Exercise: NFT with an Increasing Price
+* Default() Entrypoint
+* Exercise: Basic NFT with Royalties
+* [Solution: Basic NFT with Royalties](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/15_nft_with_royalties.py)
+
 
 #####
 Slides 132
