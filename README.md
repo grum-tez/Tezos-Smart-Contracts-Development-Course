@@ -84,27 +84,32 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 
 
 #### Lesson 0: 🎉 Welcome to the Course
-#### Lesson 1: 💡 Tezos Makes it Possible
-#### Lesson 2: 🧠 Understanding Tezos
-#### Lesson 3: 🤝 First Interactions with the Tezos Blockchain
-#### Lesson 4: 🤔 Why Developing on Tezos?
-#### Lesson 5: 📝 Hands-On Smart Contracts with SmartPy
-#### Lesson 6: 🚀 Entrypoints and Testing
-#### Lesson 7: 🔍 Types and Type Inference
-#### Lesson 8: 🧵 Strings
-#### Lesson 9: 🔐 Verifications
-#### Lesson 10: 🔄 Multiple Values in Storage & Parameter
-#### Lesson 11: 📜  Interlude: A Brief History of Smart Contracts
-#### Lesson 12: 🔀 Manipulating Addresses
-#### Lesson 13: 💻🔐🚀 Code Your own NFT Contract
-#### Lesson 14: 💰🔄🤝 Manipulating Tez and Adding Trust
-#### Lesson 15: 🔘📊🔀 Options
-#### Lesson 16: ⏰🔗 Blockchains and Time
-#### Lesson 17: ➕➖✖️➗ Arithmetic Operators
-#### Lesson 18: 🔄 Inter-Contract Calls
-#### Lesson 19: 📁 Records
-#### Lessson 20: 🗺️📊⛽ Maps, Big-Maps, Gas
-#### Lesson 21: 🔄💻📜 Other Smart Contracts Languages
+
+#### Tezos Basics
+* #### Lesson 1: 💡 Tezos Makes it Possible
+* #### Lesson 2: 🧠 Understanding Tezos
+* #### Lesson 3: 🤝 First Interactions with the Tezos Blockchain
+* #### Lesson 4: 🤔 Why Developing on Tezos?
+
+#### SmartPy Essentials
+* #### Lesson 5: 📝 Hands-On Smart Contracts with SmartPy
+* #### Lesson 6: 🚀 Entrypoints and Testing
+* #### Lesson 7: 🔍 Types and Type Inference
+* #### Lesson 8: 🧵 Strings
+* #### Lesson 9: 🔐 Verifications
+* #### Lesson 10: 🔄 Multiple Values in Storage & Parameter
+* #### Lesson 11: 📜  Interlude: A Brief History of Smart Contracts
+* #### Lesson 12: 🔀 Manipulating Addresses
+* #### Lesson 13: 💻🔐🚀 Code Your own NFT Contract
+* #### Lesson 14: 💰🔄🤝 Manipulating Tez and Adding Trust
+* #### Lesson 15: 🔘📊🔀 Options
+* #### Lesson 16: ⏰🔗 Blockchains and Time
+* #### Lesson 17: ➕➖✖️➗ Arithmetic Operators
+* #### Lesson 18: 🔄 Inter-Contract Calls
+* #### Lesson 19: 📁 Records
+* #### Lessson 20: 🗺️📊⛽ Maps, Big-Maps, Gas
+* #### Lesson 21: 🔄💻📜 Other Smart Contracts Languages
+* #### Lesson 22: 🌐📱🔗🏛️🚀 Decentralized Applications (dApps)
 
 
 
@@ -344,9 +349,13 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * [Example: Auction Contract with SmartPy](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/other_high_level_languages/smartpy_auction_example.py)
 
 
+### Lesson 22: 🌐📱🔗🏛️🚀 Decentralized Applications (dApps)
+
+
 ##TODOS: MISSING: example 1 record: First Name, Last Name, Birthdate from lesson 19 inter-contract call ##
 ##Todos: Missing: Exercise Records : Add a login that the user can change at most once a year
 This also means storing the address of each user from lesson 19 inter-contract call ##
+
 
 ##Todos: missing the exercise community contract from lesson 20##
 
