@@ -101,6 +101,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 #### Lesson 15: 🔘📊🔀 Options
 #### Lesson 16: ⏰🔗 Blockchains and Time
 #### Lesson 17: ➕➖✖️➗ Arithmetic Operators
+#### Lesson 18: 🔄 Inter-Contract Calls
 
 
 
@@ -287,6 +288,11 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Default() Entrypoint
 * Exercise: Basic NFT with Royalties
 * [Solution: Basic NFT with Royalties](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/15_nft_with_royalties.py)
+
+### Lesson 18: 🔄 Inter-Contract Calls
+* Syntax: Inter-Contract Calls
+* [Example: NFT Joint Account](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/16_nft_joint_account_v1.py)
+* 
 
 
 #####
