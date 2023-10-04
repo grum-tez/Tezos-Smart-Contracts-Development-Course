@@ -8,9 +8,9 @@ def main():
            self.data.stored_value = sp.nat(42)
     
        @sp.entrypoint
-       def add(self, a):
-          sp.cast(a, sp.nat)
-          self.data.stored_value += a
+       def add(self, added_value):
+          sp.cast(added_value, sp.nat)
+          self.data.stored_value += added_value
     
        @sp.entrypoint
        def reset(self):
