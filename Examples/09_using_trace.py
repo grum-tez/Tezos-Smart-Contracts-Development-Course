@@ -10,6 +10,7 @@ def main():
        @sp.entrypoint
        def make_call(self):
            self.data.nb_calls += 1
+           trace("nb_calls:")
            trace(self.data.nb_calls)
            #Check browser console to get the execution of the code
 
