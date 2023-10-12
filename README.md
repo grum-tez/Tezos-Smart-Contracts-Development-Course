@@ -99,9 +99,9 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * #### Lesson 9: 🔐 Verifications
 * #### Lesson 10: 🔄 Multiple Values in Storage & Parameter
 * #### Lesson 11: 📜  Interlude: A Brief History of Smart Contracts
-* #### Lesson 12: 🔀 Manipulating Addresses
-* #### Lesson 13: 💻🔐🚀 Code Your own NFT Contract
-* #### Lesson 14: 💰🔄🤝 Manipulating Tez and Adding Trust
+* #### Lesson 12: 🔀 Addresses
+* #### Lesson 13: 💻🔐🚀 Basic NFT Contract
+* #### Lesson 14: 💰🔄🤝 Tez & Trust
 * #### Lesson 15: 🔘📊🔀 Options
 * #### Lesson 16: ⏰🔗 Blockchains and Time
 * #### Lesson 17: ➕➖✖️➗ Arithmetic Operators
@@ -109,7 +109,15 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * #### Lesson 19: 📁 Records
 * #### Lessson 20: 🗺️📊⛽ Maps, Big-Maps, Gas
 * #### Lesson 21: 🔄💻📜 Other Smart Contracts Languages
-* #### Lesson 22: 🌐📱🔗🏛️🚀 Decentralized Applications (dApps)
+* #### Lesson 22: 🌐💻 Local Setup
+* #### Lesson 23: 🌐📱🔗🏛️🚀 Decentralized Applications (dApps)
+
+
+#### Advanced SmartPy concepts
+* #### Lesson 24: 📋🔄🔂 Lists and Loops
+* #### Lesson 25: 👀 Views
+* #### Lesson 26: 🛠️🖌️ Custom Types
+* #### Lesson 27: 📜🤝 Sets, Membership Contract
 
 
 
@@ -229,7 +237,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 ### Lesson 11 : 📜 Interlude: A Brief History of Smart Contracts
 * History of Smart Contracts
 
-### Lesson 12: 🔀 Manipulating Addresses
+### Lesson 12: 🔀 Addresses
 * Introduction to Manipulating Addresses
 * Addresses in SmartPy
 * Addresses in Tests
@@ -237,7 +245,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Exercise: Endless Wall with Restrictions
 * [Solution: Endless Wall with Restrictions](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/09_endless_wall_restrictions.py)
 
-### Lesson 13: 💻🔐🚀 Code Your own NFT Contract
+### Lesson 13: 💻🔐🚀 Basic NFT Contract
 * Smart Contracts are Powerful
 * NFT Concept
 * NFT Use Cases
@@ -247,7 +255,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Beyond a Basic NFT Contract
 
 
-### Lesson 14: 💰🔄🤝 Manipulating Tez and Adding Trust
+### Lesson 14: 💰🔄🤝Tez and Trust
 * Tez as a Tool for Trust
 * Endless Wall with a Paywall
 * Sending Funds to a Smart Contract
@@ -348,16 +356,48 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * [SmartPy]([https://archetype-lang.org/](https://smartpy.io/))
 * [Example: Auction Contract with SmartPy](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/other_high_level_languages/smartpy_auction_example.py)
 
+##TODOS: MISSING: example 1 record: First Name, Last Name, Birthdate from lesson 19 inter-contract call ##
+##Todos: Missing: Exercise Records : Add a login that the user can change at most once a year
+This also means storing the address of each user from lesson 19 inter-contract call ##
 
-### Lesson 22: 🌐📱🔗🏛️🚀 Decentralized Applications (dApps)
+### Lesson 22: 🌐💻 Local Setup
+* [SmartPy codespace installation](https://github.com/AxelRoffi/smartPyDC)
+  
+### Lesson 23: 🌐📱🔗🏛️🚀 Decentralized Applications (dApps)
+
+#### Lesson 24: 📋🔄🔂 Lists and Loops
+* Lists Syntax
+* For loop Syntax
+* When not to Use Lists
+* Alternative to lists
+* Alternative to Long Loops
+
+#### Lesson 25: 👀 Views
+* What Are On-Chain Views?
+* Syntax: On-Chain Views
+* On-Chain Views Used Off-Chain
+* Other (older) Types of Views
+
+#### Lesson 26: 🛠️🖌️ Custom Types(todo missing custom type example and exercise)
+* Introduction to Custom Types
+* Syntax Custom Types
+
+### Lesson 27: 📜🤝 Sets, Membership Contract
+* Introduction To Sets
+* Syntax: Sets
+* Exercise: Membership Contract
+** Membership Contract Structure
+
+
 
 
 ##TODOS: MISSING: example 1 record: First Name, Last Name, Birthdate from lesson 19 inter-contract call ##
 ##Todos: Missing: Exercise Records : Add a login that the user can change at most once a year
 This also means storing the address of each user from lesson 19 inter-contract call ##
-
-
 ##Todos: missing the exercise community contract from lesson 20##
+##Missing Lesson 25 example and exercise for Views##
+##Missing example and exercise for custom types##
+
 
 
 
