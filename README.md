@@ -118,6 +118,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * #### Lesson 25: 👀 Views
 * #### Lesson 26: 🛠️🖌️ Custom Types
 * #### Lesson 27: 📜🤝 Sets, Membership Contract
+* #### Lesson 28: 🔄 Variants
 
 
 
@@ -386,7 +387,16 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * Introduction To Sets
 * Syntax: Sets
 * Exercise: Membership Contract
-** Membership Contract Structure
+  * Membership Contract Structure
+* [Solution: Membership Contract](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Big_exercise/membership.py)
+* When not to Use Sets
+* Alternative to Sets
+
+### Lesson 28: 🔄 Variants
+* Simple Variants
+* Syntax: Variant
+* Variants and Type Inference
+* Match on Simple Variants
 
 
 
