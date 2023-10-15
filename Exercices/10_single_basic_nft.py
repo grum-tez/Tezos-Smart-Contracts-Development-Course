@@ -23,6 +23,9 @@ def test():
     scenario += c1
     scenario.h3("Testing transfer entrypoint")
     c1.transfer(bob, _sender = alice)
+    scenario.verify(c1.data.owner == bob)
+    scenario.verify(c1.data.metadata == "My first NFT")
     c1.transfer(eve, _sender = bob)
+    scenario.verify(c1.data.owner == eve)
     c1.transfer(alice, _sender = eve)
     scenario.verify(c1.data.owner == alice)
