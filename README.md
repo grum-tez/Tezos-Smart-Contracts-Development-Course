@@ -119,7 +119,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * #### Lesson 26: 🛠️🖌️ Custom Types
 * #### Lesson 27: 📜🤝 Sets, Membership Contract
 * #### Lesson 28: 🔄 Variants
-
+* #### Lesson 29: 🔗 + 🏦  = 🌐 FA2 Standard
 
 
 
