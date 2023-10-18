@@ -400,6 +400,36 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * [Example: Simple Variant]()
 * When to Use Simple Variants
 * [Example: When to Use Simple Variants]()
+* Exercise: Simple Variant
+* [Solution: Simple Variant]()
+* Variants with Parameters
+* Syntax: Variants with Parameters
+* Variants with Parameters: Checking the Value
+* Variants: Unwrapping the Parameter
+* Variants:  match/with and parameters
+* [Example: Variants with parameters]()
+* Recap Variant Syntax
+
+
+| Defining a variant type:    | sp.variant(VariantName1 = type, ...)|
+|-----------------------------| ------------------------------------|
+| Creating a value   | sp.variant.VariantName1()<br>sp.variant.VariantName2(value)<br>|
+| Checking if it’s a given variant| assert my_variant.is_variant.VariantName2()|
+| Extracting the value| value = my_variant.unwrap.VariantName2()|
+| Matching different cases| with sp.match(my_variant):<br>with sp.case.VariantName1:<br>result = 0<br>with sp.case.VariantName2 as value:<br>result = value|
+| In a test scenario (for now)
+| Creating a value| sp.variant("VariantName1", ())<br>sp.variant("VariantName2", value)|
+| Checking if it’s a given variant| assert my_variant.is_variant("VariantName2")|
+| Extracting the value| my_variant.open_variant("VariantName2")|
+
+ 
+ 
+
+ 
+
+
+
+
 
 
 
@@ -412,7 +442,10 @@ This also means storing the address of each user from lesson 19 inter-contract c
 ##Missing Lesson 25 example and exercise for Views##
 ##Missing example and exercise for custom types##
 ##Missing Simple Variant Example##
-##Missing Example: When to Use Simple Variants
+##Missing Simple Variant Exercise##
+##Missing Example: When to Use Simple Variants##
+##Missing Example: Variants with parameters##
+
 
 
 
