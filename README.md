@@ -397,6 +397,10 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * Syntax: Variant
 * Variants and Type Inference
 * Match on Simple Variants
+* [Example: Simple Variant]()
+* When to Use Simple Variants
+* [Example: When to Use Simple Variants]()
+
 
 
 
@@ -407,6 +411,8 @@ This also means storing the address of each user from lesson 19 inter-contract c
 ##Todos: missing the exercise community contract from lesson 20##
 ##Missing Lesson 25 example and exercise for Views##
 ##Missing example and exercise for custom types##
+##Missing Simple Variant Example##
+##Missing Example: When to Use Simple Variants
 
 
 
