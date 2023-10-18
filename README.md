@@ -409,6 +409,10 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * Variants:  match/with and parameters
 * [Example: Variants with parameters]()
 * Recap Variant Syntax
+* Variants with Parameters: When to Use
+* Variant Internal Representation
+* Exercise: Variant with parameters
+* [Solution: Variant with parameters]()
 
 
 | Defining a variant type:    | sp.variant(VariantName1 = type, ...)|
@@ -424,16 +428,7 @@ This also means storing the address of each user from lesson 19 inter-contract c
 
  
  
-
- 
-
-
-
-
-
-
-
-
+```
 
 ##TODOS: MISSING: example 1 record: First Name, Last Name, Birthdate from lesson 19 inter-contract call ##
 ##Todos: Missing: Exercise Records : Add a login that the user can change at most once a year
@@ -445,6 +440,9 @@ This also means storing the address of each user from lesson 19 inter-contract c
 ##Missing Simple Variant Exercise##
 ##Missing Example: When to Use Simple Variants##
 ##Missing Example: Variants with parameters##
+##Revoir Nouvelle syntaxe [exercise variant with parameters](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/28_01_variant_with_parameters.py)##
+
+```
 
 
 
