@@ -6,7 +6,7 @@ def main():
     class MultipleNftSingleContract(sp.Contract):
         def __init__(self):
             self.data.next_id = 1
-            self.data.tokens = sp.big_map ({})
+            self.data.tokens = sp.big_map({})
     
         @sp.entrypoint
         def buy(self, token_id):
@@ -18,6 +18,7 @@ def main():
             sp.send(token.author, author_fee)
             token.owner = sp.sender
             token.price += sp.split_tokens(token.price, 10, 100)
+            self.data.tokens[token_id] = token
     
         @sp.entrypoint
         def mint(self, metadata):
