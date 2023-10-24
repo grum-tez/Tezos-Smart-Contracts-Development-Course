@@ -353,7 +353,6 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * [Example: Auction Contract with Archetype](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/other_high_level_languages/archetype_auction_example.arl)
 * [Ligo](https://ligolang.org/?lang=jsligo)
 * [Example: Auction Contract with Ligo](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/other_high_level_languages/ligo_auction_example.jsligo)
-(https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/other_high_level_languages/archetype_auction_example.arl)
 * [SmartPy]([https://archetype-lang.org/](https://smartpy.io/))
 * [Example: Auction Contract with SmartPy](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/other_high_level_languages/smartpy_auction_example.py)
 
