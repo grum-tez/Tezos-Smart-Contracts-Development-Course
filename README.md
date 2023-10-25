@@ -513,6 +513,16 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * Randomness Flaws
 * Raffle: Basic Structure
 * Randomness: Using sp.now?
+* Randomness: Using Hashes?
+* Randomness: Mixing Random-ish Values?
+* Randomness: Using Oracles?
+* Randomness: Decentralized Approach?
+* Randomness: Commit & Reveal
+* Commit & Reveal: Flaw
+* Commit & Reveal: Forcing the Reveal
+* Commit & Reveal: Implementation
+* [Solution:  ](https://github.com/axelroffi/tezos-smart-contracts/blob/main/xercices/26_raffle_04.py)
+
 
 
 
