@@ -510,6 +510,7 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * Winning at any Price: DOS
 
 #### Lesson 35: 🎲🎟️🔒⌛ Randomness, Raffle Contract, Commit-Reveal, Timelock
+##TODO: Where to put Raffle_1, Raffle_2, Raffle_3
 * Randomness Flaws
 * Raffle: Basic Structure
 * Randomness: Using sp.now?
@@ -521,7 +522,7 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * Commit & Reveal: Flaw
 * Commit & Reveal: Forcing the Reveal
 * Commit & Reveal: Implementation
-* [Solution:  ](https://github.com/axelroffi/tezos-smart-contracts/blob/main/xercices/26_raffle_04.py)
+* [Solution:  ]()
 
 
 
