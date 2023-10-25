@@ -414,8 +414,9 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * [Solution: Variant with parameters]()
 
 
-| Defining a variant type:    | sp.variant(VariantName1 = type, ...)|
+|   Action  | Code|
 |-----------------------------| ------------------------------------|
+| Defining a variant type: | sp.variant(VariantName1 = type, ...)|
 | Creating a value   | sp.variant.VariantName1()<br>sp.variant.VariantName2(value)<br>|
 | Checking if it’s a given variant| assert my_variant.is_variant.VariantName2()|
 | Extracting the value| value = my_variant.unwrap.VariantName2()|
