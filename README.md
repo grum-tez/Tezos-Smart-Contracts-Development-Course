@@ -113,13 +113,23 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * #### Lesson 23: 🌐📱🔗🏛️🚀 Decentralized Applications (dApps)
 
 
-#### Advanced SmartPy concepts
+#### Advanced SmartPy Concepts
 * #### Lesson 24: 📋🔄🔂 Lists and Loops
 * #### Lesson 25: 👀 Views
 * #### Lesson 26: 🛠️🖌️ Custom Types
 * #### Lesson 27: 📜🤝 Sets, Membership Contract
 * #### Lesson 28: 🔄 Variants
 * #### Lesson 29: 🔗 + 🏦  = 🌐 FA2 Standard
+* #### Lesson 30: 🖼️📦💱📱 NFT Marketplace dApp
+* #### Lesson 31: 🔮📜🗳️📊🏛️ Oracles
+
+#### Flaws and Best Practices
+* #### Lesson 32: 🥇💔👉🏻 First Flaws
+* #### Lesson 33: 💰📜🤝 Micropayments Contract
+* #### Lesson 34: 🌍🔍 Geocaching
+* #### Lesson 35: 🎲🎟️🔒⌛ Randomness, Raffle Contract, Commit-Reveal, Timelock
+
+  
 
 
 
@@ -425,6 +435,100 @@ This also means storing the address of each user from lesson 19 inter-contract c
 | Creating a value| sp.variant("VariantName1", ())<br>sp.variant("VariantName2", value)|
 | Checking if it’s a given variant| assert my_variant.is_variant("VariantName2")|
 | Extracting the value| my_variant.open_variant("VariantName2")|
+
+### Lesson 29: 🔗 + 🏦  = 🌐 FA2 Standard
+* What Are Standards and FA2 Contracts?
+* FA2 Standard
+* FA2 Implementation: Storage
+* FA2 Standard: balance_of
+* FA2 Standard: Transfer
+* FA2 Standard: update_operator
+* FA2 Standard: Errors
+* [FA2 Contract](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/20_fa2_markeplace.py)
+* [Tzip 4 Views](https://tzip.tezosagora.org/proposal/tzip-4/)
+* [FA2 Standard: Template Implementation NFT Minimal](https://smartpy.io/ide?template=fa2_nft_minimal.py)
+
+### Lesson 30: 🖼️📦💱📱 NFT Marketplace dApp
+* NFT marketplace
+*
+
+### Lesson 31: 🔮📜🗳️📊🏛️ Oracles
+* The Need for Off-Chain Data
+* Fetching Off-Chain Data Wouldn't work
+* Injecting Off-Chain Data by Calling Smart Contracts
+* Setting up your own Off-Chain Service
+* Letting the Source Send the Data
+* Injecting Data Signed by the Source
+* Trusted Execution Environments (TEEs)
+* Strong Incentives to Inject Incorrect Data
+* Avoiding a Single Source or Transmitter
+* Combining multiple versions of the data
+* Harbinger Oracle Contract
+* [Oracle Example](https://github.com/tacoinfra/harbinger-contracts/blob/master/oracle.py)
+* Oracle Example Logic
+* [Oracle Example Normalizer](https://github.com/tacoinfra/harbinger-contracts/blob/master/normalizer.py)
+* Oracle Normalizer Logic
+* [More Information on Oracles](https://opentezos.com/smart-contracts/oracles/)
+
+## Flaws and Best Practices
+### Lesson 32: 🥇💔👉🏻 First Flaws
+* Using Source Instead of Sender for Authentication
+* Transferring Tez in a Call that Should Benefits Others
+* Performing Unlimited Computations
+    * [Exercise: Performing Unlimited Computations, Find the Flaw](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/23_unlimited_computations_flaw.py)
+    * [Solution 1: Performing Unlimited Computations ](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/23_unlimited_computations_solution1.py)
+    * [Final Solution: Performing Unlimited Computations ](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/23_unlimited_computations_solution2.py)
+
+### Lesson 33: 💰📜🤝 Micropayments Contract
+* Micropayments Contract Problem
+* Micropayments Contract Solution
+* Signing Data and verifying signed data
+* Signing Data and Verifying Signed Data Syntax
+    
+  | Action  | Code |
+  |-----------|----------|
+  | pack() | packed_data = sp.pack(typed_data)|
+  | unpack() | typed_data = sp.unpack(packed_data, type_of_data).unwrap_some() |
+  |make_signature() | signature = sp.make_signature(alice.secret_key, packed_data) |
+  | check_signature() | signature = sp.make_signature(alice.secret_key, packed_data) |
+
+* [Code: Micropayments Contract with Flaw](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/24_micropayments_flaw.py)
+* [Solution: Micropayments Contract ](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/24_micropayments_solution2.py)
+
+### Lesson 34: 🌍🔍 Geocaching
+* Geocaching Game
+* Checking passwords without storing them
+* Using Hashing to Secure Passwords
+* [Geocaching contract: Find the Flaws](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/25_geocaching_contract_flaw.py)
+  * Geocaching flaw 1: stuck funds
+* [Geocaching contract: Find the Flaws ](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/25_geocaching_flaw_claim_prize.py)
+    * Geocaching Flaw 2: Stolen Prize
+* BPEV Flaws
+* Protecting Against BPEV Flaws
+* [Geocaching with Flaws](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/25_geocaching_flaw_claim_prize.py)
+* Winning at any Price
+* Winning at any Price: DOS
+
+#### Lesson 35: 🎲🎟️🔒⌛ Randomness, Raffle Contract, Commit-Reveal, Timelock
+* Randomness Flaws
+* Raffle: Basic Structure
+* Randomness: Using sp.now?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
  
  
