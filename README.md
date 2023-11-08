@@ -545,7 +545,6 @@ This also means storing the address of each user from lesson 19 inter-contract c
  
 ```
 
-##TODOS: MISSING: example 1 record: First Name, Last Name, Birthdate from lesson 19 inter-contract call ##
 ##Todos: Missing: Exercise Records : Add a login that the user can change at most once a year
 This also means storing the address of each user from lesson 19 inter-contract call ##
 ##Todos: missing the exercise community contract from lesson 20##
