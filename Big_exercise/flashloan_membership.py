@@ -113,19 +113,19 @@ def main():
         def default(self):
             pass
 
-@sp.add_test(name = "Testing truly endless wall")
+@sp.add_test()
 def test():
     alice = sp.test_account("alice")
     bob = sp.test_account("bob")
-    scenario = sp.test_scenario(main)
+    scenario = sp.test_scenario("Test", main)
 
-    membership = main.Membership(membership_threshold = sp.tez(10000))
+    membership = main.Membership(sp.tez(10000))
     scenario += membership
 
     flash_loan = main.Flash_loanTez(owner = alice.address, interest_rate = 1)
     scenario += flash_loan
-    flash_loan.deposit().run(sender = alice, amount = sp.tez(100000))
+    flash_loan.deposit(_sender = alice, _amount = sp.tez(100000))
     
     attacker = main.Attacker(membership = membership.address, flash_loan = flash_loan.address, membership_threshold = sp.tez(10000))
     scenario += attacker
-    attacker.impersonate_rich_person().run(sender = bob, amount = sp.tez(500))
+    attacker.impersonate_rich_person(_sender = bob, _amount = sp.tez(500))
