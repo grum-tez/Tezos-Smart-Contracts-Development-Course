@@ -3,8 +3,6 @@ import smartpy as sp
 @sp.module
 def main():
 
-    paramType:type = sp.record(source = sp.address, destination = sp.address, amount = sp.nat)
-
     class FlashLoanTez(sp.Contract):
         def __init__(self, owner, interest_rate):
             self.data.owner = owner
