@@ -526,6 +526,21 @@ This also means storing the address of each user from lesson 19 inter-contract c
 
 
 
+#### Lesson :  💸⚡🔗💰 Defi, Flash Loans
+* Exercise:  How to Impersonate a Rich Person?
+* Solution 1: Borrow some Tez?
+* Solution 2: Use Collateral
+* Lending Without Collateral
+* Using a Single Transaction
+* Flash Loan
+* Exercise: Flash Loan Structure
+* [Solution: Membership Contract](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Big_exercise/01_membership.pyig_exercise/flashloan_membership.py)
+* [Solution: Flash Loan Membership](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Big_exercise/02_flashloan_membership.py)
+* [Solution: Liquidity Pool](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Big_exercise/03_liquidity_pool.py)
+* [Solution: Ledger Contract](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Big_exercise/04_ledger.py)
+* [Solution: Membership Attack](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Big_exercise/05_attack_membership.py)
+
+
 
 
 
