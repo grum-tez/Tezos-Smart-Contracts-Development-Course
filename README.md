@@ -6,7 +6,7 @@ Are you ready to dive headfirst into the exciting world of blockchain technology
 ## 🔗 What's on the Agenda? 🔗
 
 ### 📌 Blockchain Basics:
-Let's start from the ground up and demystify the blockchain concept. Whether you're a beginner or a blockchain enthusiast, we've got something for everyone.
+We will start from the ground up and demystify the blockchain concept. Whether you're a beginner or a blockchain enthusiast, we've got something for everyone.
 
 ### ⛓️ Proof of Stake (PoS): 
 Ever wondered how Tezos maintains its secure and energy-efficient network? Uncover the inner workings of Proof of Stake consensus and learn how you can become a part of it.
