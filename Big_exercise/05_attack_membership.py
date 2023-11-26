@@ -8,7 +8,7 @@ def main():
     class Ledger(sp.Contract):
         def __init__(self, owner, total_supply):
             self.data.balances = sp.big_map({ owner : total_supply })
-            self.data.operators = sp.big_map({ owner: sp.set(owner)})
+            self.data.operators = sp.big_map({ owner: { owner } })
           
     
         @sp.entrypoint
@@ -19,7 +19,7 @@ def main():
             if not self.data.balances.contains(destination):
                 self.data.balances[destination] = sp.nat(0)
                 if not self.data.operators.contains(sp.sender):
-                    self.data.operators[destination] = sp.set(destination)
+                    self.data.operators[destination] = { destination }
             self.data.balances[destination] += amount
 
         @sp.onchain_view
@@ -30,7 +30,7 @@ def main():
         @sp.entrypoint
         def add_operator(self, operator):
             if not self.data.operators.contains(sp.sender):
-                self.data.operators[sp.sender] = sp.set(sp.sender)
+                self.data.operators[sp.sender] = { sp.sender }
             self.data.operators[sp.sender].add(operator)
 
         @sp.entrypoint
@@ -289,11 +289,11 @@ def main():
         def default(self):
             pass
 
-@sp.add_test(name = "Testing truly endless wall")
+@sp.add_test()
 def test():
     alice = sp.test_account("alice")
     bob = sp.test_account("bob")
-    scenario = sp.test_scenario(main)
+    scenario = sp.test_scenario("Test", main)
     ledger = main.Ledger(owner = alice.address, total_supply = 1000000)
 
     scenario += ledger
@@ -302,23 +302,23 @@ def test():
     liquidity_pool = main.LiquidityPool(owner = alice.address, ledger = ledger.address)
     scenario += liquidity_pool
 
-    ledger.add_operator(liquidity_pool.address).run(sender = alice)
-    liquidity_pool.provide_liquidity(2000).run(sender = alice, amount = sp.tez(2000))
+    ledger.add_operator(liquidity_pool.address, _sender = alice)
+    liquidity_pool.provide_liquidity(2000, _sender = alice, _amount = sp.tez(2000))
     
     membership = main.Membership(membership_price = sp.tez(1000), owner = alice.address, ledger = ledger.address, liquidity_pool = liquidity_pool.address)
     scenario += membership
 
     flash_loan = main.FlashLoanTez(owner = alice.address, ledger = ledger.address, interest_rate = 1)
     scenario += flash_loan
-    ledger.add_operator(flash_loan.address).run(sender = alice)
+    ledger.add_operator(flash_loan.address, _sender = alice)
 
-    flash_loan.deposit().run(sender = alice, amount = sp.tez(100000))
+    flash_loan.deposit(_sender = alice, _amount = sp.tez(100000))
     
     attacker = main.Attacker(ledger = ledger.address, liquidity_pool = liquidity_pool.address, membership = membership.address, flash_loan = flash_loan.address, membership_price = sp.tez(1000))
     scenario += attacker
-    ledger.transfer(source = alice.address, destination = attacker.address, amount = 2000).run(sender = alice)
-    ledger.add_operator(liquidity_pool.address).run(sender = attacker.address)
-    ledger.add_operator(flash_loan.address).run(sender = attacker.address)
-    ledger.add_operator(membership.address).run(sender = attacker.address)
+    ledger.transfer(source = alice.address, destination = attacker.address, amount = 2000, _sender = alice)
+    ledger.add_operator(liquidity_pool.address, _sender = attacker.address)
+    ledger.add_operator(flash_loan.address, _sender = attacker.address)
+    ledger.add_operator(membership.address, _sender = attacker.address)
     
-    attacker.attack().run(sender = bob, amount = sp.tez(500))
+    attacker.attack(_sender = bob, _amount = sp.tez(500))
