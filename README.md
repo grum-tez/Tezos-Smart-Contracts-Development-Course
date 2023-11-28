@@ -129,6 +129,18 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * #### Lesson 34: 🌍🔍 Geocaching
 * #### Lesson 35: 🎲🎟️🔒⌛ Randomness, Raffle Contract, Commit-Reveal, Timelock
 
+
+#### DeFi Contracts, More Flaws
+* ### Lesson: 💸⚡🔗💰 Flash Loan
+* ### Lesson: 💱💰🔁 Fungible Tokens
+* ### Lesson: 💹💼🔀 Trading Tokens
+* ### Lesson: 📉📈🤝 Arbitrage
+* ### Lesson: 🕹️📈🔻 Manipulating Price
+
+
+
+
+
   
 
 
@@ -388,7 +400,7 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * On-Chain Views Used Off-Chain
 * Other (older) Types of Views
 
-#### Lesson 26: 🛠️🖌️ Custom Types(todo missing custom type example and exercise)
+### Lesson 26: 🛠️🖌️ Custom Types(todo missing custom type example and exercise)
 * Introduction to Custom Types
 * Syntax Custom Types
 
@@ -509,7 +521,7 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * Winning at any Price
 * Winning at any Price: DOS
 
-#### Lesson 35: 🎲🎟️🔒⌛ Randomness, Raffle Contract, Commit-Reveal, Timelock
+### Lesson 35: 🎲🎟️🔒⌛ Randomness, Raffle Contract, Commit-Reveal, Timelock
 ##TODO: Where to put Raffle_1, Raffle_2, Raffle_3
 * Randomness Flaws
 * Raffle: Basic Structure
@@ -526,7 +538,7 @@ This also means storing the address of each user from lesson 19 inter-contract c
 
 
 
-#### Lesson :  💸⚡🔗💰 Defi, Flash Loans
+### Lesson :  💸⚡🔗💰 Defi, Flash Loans
 * Exercise:  How to Impersonate a Rich Person?
 * Solution 1: Borrow some Tez?
 * Solution 2: Use Collateral
@@ -539,6 +551,25 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * [Solution: Liquidity Pool](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Big_exercise/03_liquidity_pool.py)
 * [Solution: Ledger Contract](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Big_exercise/04_ledger.py)
 * [Solution: Membership Attack](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Big_exercise/05_attack_membership.py)
+
+## DeFi Contracts, More Flaws
+### Lesson: 💱💰🔁 Fungible Tokens
+* What are Fungible Tokens?
+* Fungible Tokens Ledger
+* Spending Fungible Tokens
+* Exercise: Fungible Token
+
+### Lesson: 💹💼🔀 Trading Tokens
+* Trading Tokens
+* Trading Tokens at the Right Price
+* Liquidity Pool
+* Exchange Rate
+* Exercise: Liquidity Pool Contract
+  ** Exercise: Liquidity Pool Contract, Storage and Entry Points
+
+* ### Lesson: 📉📈🤝 Arbitrage
+* ### Lesson: 🕹️📈🔻 Manipulating Price
+
 
 
 
