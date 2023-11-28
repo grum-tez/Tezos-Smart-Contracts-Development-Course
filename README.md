@@ -565,7 +565,7 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * Liquidity Pool
 * Exchange Rate
 * Exercise: Liquidity Pool Contract
-  ** Exercise: Liquidity Pool Contract, Storage and Entry Points
+  * Exercise: Liquidity Pool Contract, Storage and Entry Points
 
 * ### Lesson: 📉📈🤝 Arbitrage
 * ### Lesson: 🕹️📈🔻 Manipulating Price
