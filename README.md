@@ -557,7 +557,8 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * What are Fungible Tokens?
 * Fungible Tokens Ledger
 * Spending Fungible Tokens
-* Exercise: Fungible Token
+* [Exercise: Fungible Tokens Starting Template](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/exercise_starting_template/fungible_tokens_Pay_EndlessWall_with_tokens.py)
+* [Solution: Fungible Tokens](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/32_fungible_tokens_pay_endless_wall.py)
 
 ### Lesson: 💹💼🔀 Trading Tokens
 * Trading Tokens
