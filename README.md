@@ -568,6 +568,8 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * Exchange Rate
 * Exercise: Liquidity Pool Contract
   * Exercise: Liquidity Pool Contract, Storage and Entry Points
+  * [Exercise: Liquidity Pool Starting Code](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/exercise_starting_templates/02_trading_tokens_liquidty_pool_starting_code.py)
+  * [Solution Trading Tokens]()
 
 * ### Lesson: 📉📈🤝 Arbitrage
 * ### Lesson: 🕹️📈🔻 Manipulating Price
