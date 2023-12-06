@@ -131,11 +131,11 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 
 
 #### DeFi Contracts, More Flaws
-* ### Lesson: 💸⚡🔗💰 Flash Loan
-* ### Lesson: 💱💰🔁 Fungible Tokens
-* ### Lesson: 💹💼🔀 Trading Tokens
-* ### Lesson: 📉📈🤝 Arbitrage
-* ### Lesson: 🕹️📈🔻 Manipulating Price
+* #### Lesson: 💸⚡🔗💰 Flash Loan
+* #### Lesson: 💱💰🔁 Fungible Tokens
+* #### Lesson: 💹💼🔀 Trading Tokens
+* #### Lesson: 📉📈🤝 Arbitrage
+* #### Lesson: 🕹️📈🔻 Manipulating Price
 
 
 
@@ -476,12 +476,6 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * Strong Incentives to Inject Incorrect Data
 * Avoiding a Single Source or Transmitter
 * Combining multiple versions of the data
-* Harbinger Oracle Contract
-* [Oracle Example](https://github.com/tacoinfra/harbinger-contracts/blob/master/oracle.py)
-* Oracle Example Logic
-* [Oracle Example Normalizer](https://github.com/tacoinfra/harbinger-contracts/blob/master/normalizer.py)
-* Oracle Normalizer Logic
-* [More Information on Oracles](https://opentezos.com/smart-contracts/oracles/)
 
 ## Flaws and Best Practices
 ### Lesson 32: 🥇💔👉🏻 First Flaws
