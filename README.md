@@ -471,6 +471,7 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * Setting up your own Off-Chain Service
 * Letting the Source Send the Data
 * Injecting Data Signed by the Source
+* [Exercise Oracle: Starting Template](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/exercise_starting_templates/05_oracle_starting_template.py)
 * Trusted Execution Environments (TEEs)
 * Strong Incentives to Inject Incorrect Data
 * Avoiding a Single Source or Transmitter
