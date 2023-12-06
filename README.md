@@ -462,7 +462,6 @@ This also means storing the address of each user from lesson 19 inter-contract c
 
 ### Lesson 30: 🖼️📦💱📱 NFT Marketplace dApp
 * NFT marketplace
-*
 
 ### Lesson 31: 🔮📜🗳️📊🏛️ Oracles
 * The Need for Off-Chain Data
@@ -472,6 +471,7 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * Letting the Source Send the Data
 * Injecting Data Signed by the Source
 * [Exercise Oracle: Starting Template](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/exercise_starting_templates/05_oracle_starting_template.py)
+* [Exercise: Oracle Solution](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/33_oracle_binarybets_solution.py)
 * Trusted Execution Environments (TEEs)
 * Strong Incentives to Inject Incorrect Data
 * Avoiding a Single Source or Transmitter
