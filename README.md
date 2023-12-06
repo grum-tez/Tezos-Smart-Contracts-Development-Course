@@ -578,7 +578,12 @@ This also means storing the address of each user from lesson 19 inter-contract c
 )
   
   ### Lesson: 🕹️📈🔻 Manipulating Price
-
+  * Multiple Tokens
+  * Flaw: Manipulating Prices
+  * Attack: Manipulating Prices
+  * [Exercise Manipulating Prices: Starting Code](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/exercise_starting_templates/04_manipulating_price_startint_code.py)
+  * [Exercise Manipulating Prices: Solution](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/32_04_manipulating_price_solution.py)
+  * Preventing Attacks
 
 
 
