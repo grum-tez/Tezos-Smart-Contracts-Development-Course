@@ -557,8 +557,8 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * What are Fungible Tokens?
 * Fungible Tokens Ledger
 * Spending Fungible Tokens
-* [Exercise: Fungible Tokens Starting Template](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/exercise_starting_template/fungible_tokens_Pay_EndlessWall_with_tokens.py)
-* [Solution: Fungible Tokens](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/32_fungible_tokens_pay_endless_wall.py)
+* [Exercise: Fungible Tokens Starting Template](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/exercise_starting_templates/01_fungible_tokens_pay_endlesswall_with_tokens)
+* [Solution: Fungible Tokens](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/32_01_fungible_tokens_pay_endless_wall.py)
 * Token Standards
 
 ### Lesson: 💹💼🔀 Trading Tokens
@@ -569,12 +569,13 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * Exercise: Liquidity Pool Contract
   * Exercise: Liquidity Pool Contract, Storage and Entry Points
   * [Exercise: Liquidity Pool Starting Code](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/exercise_starting_templates/02_trading_tokens_liquidty_pool_starting_code.py)
-  * [Solution Trading Tokens](Exercices/32_trading_tokens_liquidity_pool_solution.py)
+  * [Solution Trading Tokens]([Exercices/32_trading_tokens_liquidity_pool_solution.py](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/32_02_trading_tokens_liquidity_pool_solution.py))
 
   ### Lesson: 📉📈🤝 Arbitrage
   * Arbitrage Opportunity
   * [Exercise Arbitrage: Starting Template](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/exercise_starting_templates/03_arbitrage_starting_code.py)
-  * 
+  * [Solution: Arbitrage](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/32_03_arbitrage_solution.py
+)
   
   ### Lesson: 🕹️📈🔻 Manipulating Price
 
