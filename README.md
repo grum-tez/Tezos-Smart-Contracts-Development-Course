@@ -107,7 +107,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * #### Lesson: ➕➖✖️➗ Arithmetic Operators
 * #### Lesson: 🔄 Inter-Contract Calls
 * #### Lesson: 📁 Records
-* #### Lessson: 🗺️📊⛽ Maps, Big-Maps, Gas
+* #### Lesson: 🗺️📊⛽ Maps, Big-Maps, Gas
 * #### Lesson: 🔄💻📜 Other Smart Contracts Languages
 * #### Lesson: 🌐💻 Local Setup
 * #### Lesson: 🌐📱🔗🏛️🚀 Decentralized Applications (dApps)
