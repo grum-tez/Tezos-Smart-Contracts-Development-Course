@@ -133,8 +133,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * #### [Lesson: 💸⚡🔗💰 Flash Loan](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson----defi-flash-loans)
 * #### [Lesson: 💱💰🔁 Fungible Tokens](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--fungible-tokens-1)
 * #### [Lesson: 💹💼🔀 Trading Tokens](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--trading-tokens-1)
-* #### [Lesson: 📉📈🤝 Arbitrage](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--arbitrage-1
-)
+* #### [Lesson: 📉📈🤝 Arbitrage](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--arbitrage-1)
 * #### [Lesson: 🕹️📈🔻 Manipulating Price](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson-%EF%B8%8F-manipulating-price-1)
 
 ## Tezos Basics
