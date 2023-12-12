@@ -85,7 +85,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 
 #### Lesson 0: 🎉 Welcome to the Course
 
-#### Tezos Basics
+#### [Tezos Basics](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#tezos-basics-1)
 * #### [Lesson: 💡 Tezos Makes it Possible](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson-1--tezos-makes-it-possible-1)
 * #### [Lesson: 🧠 Understanding Tezos](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson-2--understanding-tezos-1)
 * #### [Lesson: 🤝 First Interactions with the Tezos Blockchain](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson-3--first-interactions-with-the-tezos-blockchain-1)
