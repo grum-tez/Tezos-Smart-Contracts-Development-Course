@@ -180,6 +180,9 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Benefits of Developing on Tezos
 * Being Part of the Tezos Ecosystem
 
+
+## SmartPy Essentials
+
 ### Lesson: 📝 Hands-On Smart Contracts with SmartPy
 * Smart Contracts with SmartPy
 * Reminder: What is a Smart Contract
