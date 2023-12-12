@@ -137,18 +137,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * #### Lesson: 📉📈🤝 Arbitrage
 * #### Lesson: 🕹️📈🔻 Manipulating Price
 
-
-
-
-
-  
-
-
-
-
-
-
-
+## Tezos Basics
 ### Lesson 1: 💡 Tezos Makes it Possible
   * Community Building
     * [Manchester United](https://collectibles.manutd.com/) 
