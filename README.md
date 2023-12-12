@@ -57,7 +57,6 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Refer to Documentation: Things are constantly being updated, so whenever our instructors open up some documentation, open it your end and maybe even have the code sample next to you.
 
 
-## TODO: ADD RECAP AT THE END OF EACH SECTION ##
 
 
 ## 📚 Table of Content 📚 ## 
@@ -87,9 +86,10 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 
 #### [Tezos Basics](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#tezos-basics-1)
 * #### [Lesson: 💡 Tezos Makes it Possible](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--tezos-makes-it-possible-1)
-* #### [Lesson: 🧠 Understanding Tezos]()
-* #### [Lesson: 🤝 First Interactions with the Tezos Blockchain]()
-* #### [Lesson: 🤔 Why Developing on Tezos?]()
+* #### [Lesson: 🧠 Understanding Tezos](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--understanding-tezos-1)
+* #### [Lesson: 🤝 First Interactions with the Tezos Blockchain](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--first-interactions-with-the-tezos-blockchain-1)
+* #### [Lesson: 🤔 Why Developing on Tezos?](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--why-developing-on-tezos-1
+)
 
 #### SmartPy Essentials
 * #### Lesson: 📝 Hands-On Smart Contracts with SmartPy
