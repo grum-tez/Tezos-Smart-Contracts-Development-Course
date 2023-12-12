@@ -533,6 +533,10 @@ This also means storing the address of each user from lesson 19 inter-contract c
 
 
 
+
+
+## DeFi Contracts, More Flaws
+
 ### Lesson :  💸⚡🔗💰 Defi, Flash Loans
 * Exercise:  How to Impersonate a Rich Person?
 * Solution 1: Borrow some Tez?
@@ -547,7 +551,7 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * [Solution: Ledger Contract](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Big_exercise/04_ledger.py)
 * [Solution: Membership Attack](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Big_exercise/05_attack_membership.py)
 
-## DeFi Contracts, More Flaws
+
 ### Lesson: 💱💰🔁 Fungible Tokens
 * What are Fungible Tokens?
 * Fungible Tokens Ledger
@@ -566,13 +570,13 @@ This also means storing the address of each user from lesson 19 inter-contract c
   * [Exercise: Liquidity Pool Starting Code](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/exercise_starting_templates/02_trading_tokens_liquidty_pool_starting_code.py)
   * [Solution Trading Tokens]([Exercices/32_trading_tokens_liquidity_pool_solution.py](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/32_02_trading_tokens_liquidity_pool_solution.py))
 
-  ### Lesson: 📉📈🤝 Arbitrage
+### Lesson: 📉📈🤝 Arbitrage
   * Arbitrage Opportunity
   * [Exercise Arbitrage: Starting Template](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/exercise_starting_templates/03_arbitrage_starting_code.py)
   * [Solution: Arbitrage](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/32_03_arbitrage_solution.py
 )
   
-  ### Lesson: 🕹️📈🔻 Manipulating Price
+### Lesson: 🕹️📈🔻 Manipulating Price
   * Multiple Tokens
   * Flaw: Manipulating Prices
   * Attack: Manipulating Prices
