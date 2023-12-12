@@ -112,15 +112,15 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * #### [Lesson: 🌐📱🔗🏛️🚀 Decentralized Applications (dApps)](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson-%EF%B8%8F-decentralized-applications-dapps-1)
 
 
-#### Advanced SmartPy Concepts
-* #### Lesson: 📋🔄🔂 Lists and Loops
-* #### Lesson: 👀 Views
-* #### Lesson: 🛠️🖌️ Custom Types
-* #### Lesson: 📜🤝 Sets, Membership Contract
-* #### Lesson: 🔄 Variants
-* #### Lesson: 🔗 + 🏦  = 🌐 FA2 Standard
-* #### Lesson: 🖼️📦💱📱 NFT Marketplace dApp
-* #### Lesson: 🔮📜🗳️📊🏛️ Oracles
+#### [Advanced SmartPy Concepts](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#advanced-smartpy-concepts)
+* #### [Lesson: 📋🔄🔂 Lists and Loops](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--lists-and-loops-1)
+* #### [Lesson: 👀 Views](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--views-1)
+* #### [Lesson: 🛠️🖌️ Custom Types](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--views-1)
+* #### [Lesson: 📜🤝 Sets, Membership Contract](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--sets-membership-contract-1)
+* #### [Lesson: 🔄 Variants](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--variants-1)
+* #### [Lesson: 🔗 + 🏦  = 🌐 FA2 Standard](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson-------fa2-standard-1)
+* #### [Lesson: 🖼️📦💱📱 NFT Marketplace dApp](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson-%EF%B8%8F-nft-marketplace-dapp-1)
+* #### [Lesson: 🔮📜🗳️📊🏛️ Oracles](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson-%EF%B8%8F%EF%B8%8F-oracles-1)
 
 #### Flaws and Best Practices
 * #### Lesson: 🥇💔👉🏻 First Flaws
