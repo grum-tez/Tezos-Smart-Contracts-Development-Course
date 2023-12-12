@@ -92,42 +92,42 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * #### [Lesson: 🤔 Why Developing on Tezos?](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson-4--why-developing-on-tezos-1)
 
 #### SmartPy Essentials
-* #### Lesson 5: 📝 Hands-On Smart Contracts with SmartPy
-* #### Lesson 6: 🚀 Entrypoints and Testing
-* #### Lesson 7: 🔍 Types and Type Inference
-* #### Lesson 8: 🧵 Strings
-* #### Lesson 9: 🔐 Verifications
-* #### Lesson 10: 🔄 Multiple Values in Storage & Parameter
-* #### Lesson 11: 📜  Interlude: A Brief History of Smart Contracts
-* #### Lesson 12: 🔀 Addresses
-* #### Lesson 13: 💻🔐🚀 Basic NFT Contract
-* #### Lesson 14: 💰🔄🤝 Tez & Trust
-* #### Lesson 15: 🔘📊🔀 Options
-* #### Lesson 16: ⏰🔗 Blockchains and Time
-* #### Lesson 17: ➕➖✖️➗ Arithmetic Operators
-* #### Lesson 18: 🔄 Inter-Contract Calls
-* #### Lesson 19: 📁 Records
-* #### Lessson 20: 🗺️📊⛽ Maps, Big-Maps, Gas
-* #### Lesson 21: 🔄💻📜 Other Smart Contracts Languages
-* #### Lesson 22: 🌐💻 Local Setup
-* #### Lesson 23: 🌐📱🔗🏛️🚀 Decentralized Applications (dApps)
+* #### Lesson: 📝 Hands-On Smart Contracts with SmartPy
+* #### Lesson: 🚀 Entrypoints and Testing
+* #### Lesson: 🔍 Types and Type Inference
+* #### Lesson: 🧵 Strings
+* #### Lesson: 🔐 Verifications
+* #### Lesson: 🔄 Multiple Values in Storage & Parameter
+* #### Lesson: 📜  Interlude: A Brief History of Smart Contracts
+* #### Lesson: 🔀 Addresses
+* #### Lesson: 💻🔐🚀 Basic NFT Contract
+* #### Lesson: 💰🔄🤝 Tez & Trust
+* #### Lesson: 🔘📊🔀 Options
+* #### Lesson: ⏰🔗 Blockchains and Time
+* #### Lesson: ➕➖✖️➗ Arithmetic Operators
+* #### Lesson: 🔄 Inter-Contract Calls
+* #### Lesson: 📁 Records
+* #### Lessson: 🗺️📊⛽ Maps, Big-Maps, Gas
+* #### Lesson: 🔄💻📜 Other Smart Contracts Languages
+* #### Lesson: 🌐💻 Local Setup
+* #### Lesson: 🌐📱🔗🏛️🚀 Decentralized Applications (dApps)
 
 
 #### Advanced SmartPy Concepts
-* #### Lesson 24: 📋🔄🔂 Lists and Loops
-* #### Lesson 25: 👀 Views
-* #### Lesson 26: 🛠️🖌️ Custom Types
-* #### Lesson 27: 📜🤝 Sets, Membership Contract
-* #### Lesson 28: 🔄 Variants
-* #### Lesson 29: 🔗 + 🏦  = 🌐 FA2 Standard
-* #### Lesson 30: 🖼️📦💱📱 NFT Marketplace dApp
-* #### Lesson 31: 🔮📜🗳️📊🏛️ Oracles
+* #### Lesson: 📋🔄🔂 Lists and Loops
+* #### Lesson: 👀 Views
+* #### Lesson: 🛠️🖌️ Custom Types
+* #### Lesson: 📜🤝 Sets, Membership Contract
+* #### Lesson: 🔄 Variants
+* #### Lesson: 🔗 + 🏦  = 🌐 FA2 Standard
+* #### Lesson: 🖼️📦💱📱 NFT Marketplace dApp
+* #### Lesson: 🔮📜🗳️📊🏛️ Oracles
 
 #### Flaws and Best Practices
-* #### Lesson 32: 🥇💔👉🏻 First Flaws
-* #### Lesson 33: 💰📜🤝 Micropayments Contract
-* #### Lesson 34: 🌍🔍 Geocaching
-* #### Lesson 35: 🎲🎟️🔒⌛ Randomness, Raffle Contract, Commit-Reveal, Timelock
+* #### Lesson: 🥇💔👉🏻 First Flaws
+* #### Lesson: 💰📜🤝 Micropayments Contract
+* #### Lesson: 🌍🔍 Geocaching
+* #### Lesson: 🎲🎟️🔒⌛ Randomness, Raffle Contract, Commit-Reveal, Timelock
 
 
 #### DeFi Contracts, More Flaws
@@ -138,7 +138,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * #### Lesson: 🕹️📈🔻 Manipulating Price
 
 ## Tezos Basics
-### Lesson 1: 💡 Tezos Makes it Possible
+### Lesson: 💡 Tezos Makes it Possible
   * Community Building
     * [Manchester United](https://collectibles.manutd.com/) 
     * [Mclaren Racing Team](https://collectibles.mclaren.com/)
@@ -155,7 +155,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
   * Raising Funds:
      * [Cryptobees by Guerlain](https://objkt.com/collection/guerlain-reaverse)
 
-### Lesson 2: 🧠 Understanding Tezos
+### Lesson: 🧠 Understanding Tezos
 * Introduction to the Tezos Blockchain
 * History of Tezos
 * Tezos, Tez, XTZ
@@ -168,7 +168,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
   * Nodes
   * Bakers
 
-### Lesson 3: 🤝 First Interactions with the Tezos Blockchain
+### Lesson: 🤝 First Interactions with the Tezos Blockchain
 * Wallet Set Up
 * Seed Phrase, Keys, Password
 * Funding your Account with “Fake” Tez
@@ -177,11 +177,11 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Finality of Transactions
 
 
-### Lesson 4: 🤔 Why Developing on Tezos?
+### Lesson: 🤔 Why Developing on Tezos?
 * Benefits of Developing on Tezos
 * Being Part of the Tezos Ecosystem
 
-### Lesson 5: 📝 Hands-On Smart Contracts with SmartPy
+### Lesson: 📝 Hands-On Smart Contracts with SmartPy
 * Smart Contracts with SmartPy
 * Reminder: What is a Smart Contract
 * Smart Contract Structure & Deployment
@@ -195,7 +195,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Eternity and Immutability
 
 
-### Lesson 6: 🚀 Entrypoints and Testing
+### Lesson: 🚀 Entrypoints and Testing
 * Entrypoints
 * Accessing, Modifying the Storage
 * [Example: Flip Value Contract Accessing, Modifying the Storage](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/03_flip_value_with_entrypoint.py)
@@ -210,7 +210,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Syntax: Entrypoint with a Parameter
 * [Example: Store Value with Entrypoint with Parameter](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/05_store_value_with_one_parameter.py)
 
-### Lesson 7: 🔍 Types and Type Inference
+### Lesson: 🔍 Types and Type Inference
 * Types: Int and Nat
 * Type Inference
 * [Ways to Help Type Inference](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/06_store_value_help_type_inference.py)
@@ -220,12 +220,12 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Exercise : Store Value with Entrypoint with Parameter
 * [Solution: Store Value with Entrypoint with Parameter](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/05_store_value_multiply_entrypoint.py)
 
-### Lesson 8: 🧵 Strings
+### Lesson: 🧵 Strings
 * Introduction to strings
 * Exercise: Endless Wall Contract
 * [Solution: Endless Wall](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/06_endless_wall_V1.py)
 
-### Lesson 9: 🔐 Verifications
+### Lesson: 🔐 Verifications
 * Introduction to Verifications
 * Failures
 * Comparisons in SmartPy
@@ -239,17 +239,17 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Checking an Operation
 * Recap
 
-### Lesson 10: 🔄 Multiple Values in Storage & Parameter
+### Lesson: 🔄 Multiple Values in Storage & Parameter
 * [Using trace()](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/09_using_trace.py)
 * Syntax: Multiple Values in Storage & Parameter
 * [Example: Multiple Values in Storage & Parameter](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/08_store_value_with_multiple_parameters.py)
 * Exercise: Endless Wall with Counter
 * [Solution: Endless Wall with Counter](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/08_endless_wall_count_the_calls.py)
 
-### Lesson 11 : 📜 Interlude: A Brief History of Smart Contracts
+### Lesson: 📜 Interlude: A Brief History of Smart Contracts
 * History of Smart Contracts
 
-### Lesson 12: 🔀 Addresses
+### Lesson: 🔀 Addresses
 * Introduction to Manipulating Addresses
 * Addresses in SmartPy
 * Addresses in Tests
@@ -257,7 +257,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Exercise: Endless Wall with Restrictions
 * [Solution: Endless Wall with Restrictions](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/09_endless_wall_restrictions.py)
 
-### Lesson 13: 💻🔐🚀 Basic NFT Contract
+### Lesson: 💻🔐🚀 Basic NFT Contract
 * Smart Contracts are Powerful
 * NFT Concept
 * NFT Use Cases
@@ -267,7 +267,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Beyond a Basic NFT Contract
 
 
-### Lesson 14: 💰🔄🤝Tez and Trust
+### Lesson: 💰🔄🤝Tez and Trust
 * Tez as a Tool for Trust
 * Endless Wall with a Paywall
 * Sending Funds to a Smart Contract
@@ -280,7 +280,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Exercice: Adding Buy Feature to Single NFT Contract
 * [Solution: Adding Buy Feature to Single NFT Contract](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/11_single_nft_with_buy_V1.py)
 
-### Lesson 15: 🔘📊🔀 Options
+### Lesson: 🔘📊🔀 Options
 * Introduction to Options
 * Using Options
 * Syntax Options
@@ -294,7 +294,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Exercise: NFT not for Sale
 * [Solution: NFT not for Sale](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/12_single_nft_with_buy_with_options.py)
 
-### Lesson 16: Blockchains and Time
+### Lesson: Blockchains and Time
 * Introduction to Blockchains and Time
 * The Time Dilemma
 * Timestamps
@@ -306,7 +306,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * [Solution: NFT with Time Restriction ](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/13_single_nft_with_timebuffer.py)
 * Recap: Benefits of a Smart Contract
 
-### Lesson 17: ➕➖✖️➗ Arithmetic Operators
+### Lesson: ➕➖✖️➗ Arithmetic Operators
 * Syntax: Arithmetic Operators
 * Types: Arithmetic Operators
 * Type Conversions: Nat, Int & Mutez
@@ -321,7 +321,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Exercise: Basic NFT with Royalties
 * [Solution: Basic NFT with Royalties](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/15_nft_with_royalties.py)
 
-### Lesson 18: 🔄 Inter-Contract Calls
+### Lesson: 🔄 Inter-Contract Calls
 * Syntax: Inter-Contract Calls
 * [Example: NFT Joint Account](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/16_nft_joint_account_v1.py)
 * Other Flaws Linked to Inter-Contract Calls
@@ -331,7 +331,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Exercise: Implement NFTWrapper
 * [Solution: Implement NFTWrapper](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Examples/17_NFT_Wrapper.py)
 
-### Lesson 19: 📁 Records
+### Lesson: 📁 Records
 * Introduction to Records
 * Syntax: Records
 * [Example 1: Records]()
@@ -340,7 +340,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * [Solution: Records]()
 * Layouts
 
-### Lessson 20: 🗺️📊⛽ Maps, Big-Maps, Gas
+### Lessson: 🗺️📊⛽ Maps, Big-Maps, Gas
 * Introduction to Maps / Big_Maps
 * Syntax: Maps
 * Storage and Gas Costs/Issues
@@ -359,7 +359,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * Entrypoints: Contract for Multiple NFTs
 * [Solution: Contract for Multiple NFTs ](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/18_multiple_nft_with_fix.py)
 
-### Lesson 21: 🔄💻📜 Other Smart Contracts Languages
+### Lesson: 🔄💻📜 Other Smart Contracts Languages
 * [Archetype](https://archetype-lang.org/)
 * [Example: Auction Contract with Archetype](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/other_high_level_languages/archetype_auction_example.arl)
 * [Ligo](https://ligolang.org/?lang=jsligo)
@@ -371,29 +371,29 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 ##Todos: Missing: Exercise Records : Add a login that the user can change at most once a year
 This also means storing the address of each user from lesson 19 inter-contract call ##
 
-### Lesson 22: 🌐💻 Local Setup
+### Lesson: 🌐💻 Local Setup
 * [SmartPy codespace installation](https://github.com/AxelRoffi/smartPyDC)
   
-### Lesson 23: 🌐📱🔗🏛️🚀 Decentralized Applications (dApps)
+### Lesson: 🌐📱🔗🏛️🚀 Decentralized Applications (dApps)
 
-#### Lesson 24: 📋🔄🔂 Lists and Loops
+#### Lesson: 📋🔄🔂 Lists and Loops
 * Lists Syntax
 * For loop Syntax
 * When not to Use Lists
 * Alternative to lists
 * Alternative to Long Loops
 
-#### Lesson 25: 👀 Views
+#### Lesson: 👀 Views
 * What Are On-Chain Views?
 * Syntax: On-Chain Views
 * On-Chain Views Used Off-Chain
 * Other (older) Types of Views
 
-### Lesson 26: 🛠️🖌️ Custom Types(todo missing custom type example and exercise)
+### Lesson: 🛠️🖌️ Custom Types(todo missing custom type example and exercise)
 * Introduction to Custom Types
 * Syntax Custom Types
 
-### Lesson 27: 📜🤝 Sets, Membership Contract
+### Lesson: 📜🤝 Sets, Membership Contract
 * Introduction To Sets
 * Syntax: Sets
 * Exercise: Membership Contract
@@ -402,7 +402,7 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * When not to Use Sets
 * Alternative to Sets
 
-### Lesson 28: 🔄 Variants
+### Lesson: 🔄 Variants
 * Simple Variants
 * Syntax: Variant
 * Variants and Type Inference
@@ -437,7 +437,7 @@ This also means storing the address of each user from lesson 19 inter-contract c
 | Checking if it’s a given variant| assert my_variant.is_variant("VariantName2")|
 | Extracting the value| my_variant.open_variant("VariantName2")|
 
-### Lesson 29: 🔗 + 🏦  = 🌐 FA2 Standard
+### Lesson: 🔗 + 🏦  = 🌐 FA2 Standard
 * What Are Standards and FA2 Contracts?
 * FA2 Standard
 * FA2 Implementation: Storage
@@ -449,10 +449,10 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * [Tzip 4 Views](https://tzip.tezosagora.org/proposal/tzip-4/)
 * [FA2 Standard: Template Implementation NFT Minimal](https://smartpy.io/ide?template=fa2_nft_minimal.py)
 
-### Lesson 30: 🖼️📦💱📱 NFT Marketplace dApp
+### Lesson: 🖼️📦💱📱 NFT Marketplace dApp
 * NFT marketplace
 
-### Lesson 31: 🔮📜🗳️📊🏛️ Oracles
+### Lesson: 🔮📜🗳️📊🏛️ Oracles
 * The Need for Off-Chain Data
 * Fetching Off-Chain Data Wouldn't work
 * Injecting Off-Chain Data by Calling Smart Contracts
@@ -467,7 +467,7 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * Combining multiple versions of the data
 
 ## Flaws and Best Practices
-### Lesson 32: 🥇💔👉🏻 First Flaws
+### Lesson: 🥇💔👉🏻 First Flaws
 * Using Source Instead of Sender for Authentication
 * Transferring Tez in a Call that Should Benefits Others
 * Performing Unlimited Computations
@@ -475,7 +475,7 @@ This also means storing the address of each user from lesson 19 inter-contract c
     * [Solution 1: Performing Unlimited Computations ](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/23_unlimited_computations_solution1.py)
     * [Final Solution: Performing Unlimited Computations ](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/23_unlimited_computations_solution2.py)
 
-### Lesson 33: 💰📜🤝 Micropayments Contract
+### Lesson: 💰📜🤝 Micropayments Contract
 * Micropayments Contract Problem
 * Micropayments Contract Solution
 * Signing Data and verifying signed data
@@ -491,7 +491,7 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * [Code: Micropayments Contract with Flaw](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/24_micropayments_flaw.py)
 * [Solution: Micropayments Contract ](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/24_micropayments_solution2.py)
 
-### Lesson 34: 🌍🔍 Geocaching
+### Lesson: 🌍🔍 Geocaching
 * Geocaching Game
 * Checking passwords without storing them
 * Using Hashing to Secure Passwords
@@ -505,7 +505,7 @@ This also means storing the address of each user from lesson 19 inter-contract c
 * Winning at any Price
 * Winning at any Price: DOS
 
-### Lesson 35: 🎲🎟️🔒⌛ Randomness, Raffle Contract, Commit-Reveal, Timelock
+### Lesson: 🎲🎟️🔒⌛ Randomness, Raffle Contract, Commit-Reveal, Timelock
 ##TODO: Where to put Raffle_1, Raffle_2, Raffle_3
 * Randomness Flaws
 * Raffle: Basic Structure
