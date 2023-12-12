@@ -90,26 +90,26 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * #### [Lesson: 🤝 First Interactions with the Tezos Blockchain](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--first-interactions-with-the-tezos-blockchain-1)
 * #### [Lesson: 🤔 Why Developing on Tezos?](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--why-developing-on-tezos-1)
 
-#### SmartPy Essentials
-* #### Lesson: 📝 Hands-On Smart Contracts with SmartPy
-* #### Lesson: 🚀 Entrypoints and Testing
-* #### Lesson: 🔍 Types and Type Inference
-* #### Lesson: 🧵 Strings
-* #### Lesson: 🔐 Verifications
-* #### Lesson: 🔄 Multiple Values in Storage & Parameter
-* #### Lesson: 📜  Interlude: A Brief History of Smart Contracts
-* #### Lesson: 🔀 Addresses
-* #### Lesson: 💻🔐🚀 Basic NFT Contract
-* #### Lesson: 💰🔄🤝 Tez & Trust
-* #### Lesson: 🔘📊🔀 Options
-* #### Lesson: ⏰🔗 Blockchains and Time
-* #### Lesson: ➕➖✖️➗ Arithmetic Operators
-* #### Lesson: 🔄 Inter-Contract Calls
-* #### Lesson: 📁 Records
-* #### Lesson: 🗺️📊⛽ Maps, Big-Maps, Gas
-* #### Lesson: 🔄💻📜 Other Smart Contracts Languages
-* #### Lesson: 🌐💻 Local Setup
-* #### Lesson: 🌐📱🔗🏛️🚀 Decentralized Applications (dApps)
+#### [SmartPy Essentials](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#smartpy-essentials)
+* #### Lesson: 📝 [Hands-On Smart Contracts with SmartPy](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--hands-on-smart-contracts-with-smartpy-1)
+* #### Lesson: 🚀 [Entrypoints and Testing](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--entrypoints-and-testing-1)
+* #### Lesson: 🔍 [Types and Type Inference](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--types-and-type-inference-1)
+* #### Lesson: 🧵 [Strings](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--strings-1)
+* #### Lesson: 🔐 [Verifications](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--verifications-1)
+* #### Lesson: 🔄 [Multiple Values in Storage & Parameter](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--multiple-values-in-storage--parameter-1)
+* #### Lesson: 📜 [Interlude: A Brief History of Smart Contracts](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson---interlude-a-brief-history-of-smart-contracts-1)
+* #### Lesson: 🔀 [Addresses](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--addresses-1)
+* #### Lesson: 💻🔐🚀 [Basic NFT Contract](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--basic-nft-contract-1)
+* #### Lesson: 💰🔄🤝 [Tez & Trust](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson-tez-and-trust)
+* #### Lesson: 🔘📊🔀 [Options](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--options-1)
+* #### Lesson: ⏰🔗 [Blockchains and Time](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson-blockchains-and-time)
+* #### Lesson: ➕➖✖️➗ [Arithmetic Operators](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson-%EF%B8%8F-arithmetic-operators-1)
+* #### Lesson: 🔄 [Inter-Contract Calls](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--inter-contract-calls-1)
+* #### Lesson: 📁 [Records](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--records-1)
+* #### Lesson: 🗺️📊⛽ [Maps, Big-Maps, Gas](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lessson-%EF%B8%8F-maps-big-maps-gas-1)
+* #### Lesson: 🔄💻📜 [Other Smart Contracts Languages](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--other-smart-contracts-languages-1)
+* #### Lesson: 🌐💻 [Local Setup](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--local-setup-1)
+* #### Lesson: 🌐📱🔗🏛️🚀 [Decentralized Applications (dApps)](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson-%EF%B8%8F-decentralized-applications-dapps-1)
 
 
 #### Advanced SmartPy Concepts
