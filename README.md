@@ -84,13 +84,13 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 
 #### 🎉 Welcome to the Course
 
-#### [Tezos Basics](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#tezos-basics-1)
+### [Tezos Basics](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#tezos-basics-1)
 * #### [Lesson: 💡 Tezos Makes it Possible](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--tezos-makes-it-possible-1)
 * #### [Lesson: 🧠 Understanding Tezos](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--understanding-tezos-1)
 * #### [Lesson: 🤝 First Interactions with the Tezos Blockchain](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--first-interactions-with-the-tezos-blockchain-1)
 * #### [Lesson: 🤔 Why Developing on Tezos?](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--why-developing-on-tezos-1)
 
-#### [SmartPy Essentials](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#smartpy-essentials)
+### [SmartPy Essentials](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#smartpy-essentials)
 * #### [Lesson: 📝 Hands-On Smart Contracts with SmartPy](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--hands-on-smart-contracts-with-smartpy-1)
 * #### [Lesson: 🚀 Entrypoints and Testing](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--entrypoints-and-testing-1)
 * #### [Lesson: 🔍 Types and Type Inference](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--types-and-type-inference-1)
@@ -112,7 +112,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * #### [Lesson: 🌐📱🔗🏛️🚀 Decentralized Applications (dApps)](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson-%EF%B8%8F-decentralized-applications-dapps-1)
 
 
-#### [Advanced SmartPy Concepts](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#advanced-smartpy-concepts)
+### [Advanced SmartPy Concepts](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#advanced-smartpy-concepts)
 * #### [Lesson: 📋🔄🔂 Lists and Loops](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--lists-and-loops-1)
 * #### [Lesson: 👀 Views](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--views-1)
 * #### [Lesson: 🛠️🖌️ Custom Types](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--views-1)
@@ -122,19 +122,20 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 * #### [Lesson: 🖼️📦💱📱 NFT Marketplace dApp](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson-%EF%B8%8F-nft-marketplace-dapp-1)
 * #### [Lesson: 🔮📜🗳️📊🏛️ Oracles](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson-%EF%B8%8F%EF%B8%8F-oracles-1)
 
-#### Flaws and Best Practices
-* #### Lesson: 🥇💔👉🏻 First Flaws
-* #### Lesson: 💰📜🤝 Micropayments Contract
-* #### Lesson: 🌍🔍 Geocaching
-* #### Lesson: 🎲🎟️🔒⌛ Randomness, Raffle Contract, Commit-Reveal, Timelock
+### [Flaws and Best Practices](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#flaws-and-best-practices-1)
+* #### [Lesson: 🥇💔👉🏻 First Flaws](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--first-flaws-1)
+* #### [Lesson: 💰📜🤝 Micropayments Contract](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--micropayments-contract-1)
+* #### [Lesson: 🌍🔍 Geocaching](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--geocaching-1)
+* #### [Lesson: 🎲🎟️🔒⌛ Randomness, Raffle Contract, Commit-Reveal, Timelock](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson-%EF%B8%8F-randomness-raffle-contract-commit-reveal-timelock-1)
 
 
-#### DeFi Contracts, More Flaws
-* #### Lesson: 💸⚡🔗💰 Flash Loan
-* #### Lesson: 💱💰🔁 Fungible Tokens
-* #### Lesson: 💹💼🔀 Trading Tokens
-* #### Lesson: 📉📈🤝 Arbitrage
-* #### Lesson: 🕹️📈🔻 Manipulating Price
+### [DeFi Contracts, More Flaws](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#defi-contracts-more-flaws-1)
+* #### [Lesson: 💸⚡🔗💰 Flash Loan](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson----defi-flash-loans)
+* #### [Lesson: 💱💰🔁 Fungible Tokens](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--fungible-tokens-1)
+* #### [Lesson: 💹💼🔀 Trading Tokens](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--trading-tokens-1)
+* #### [Lesson: 📉📈🤝 Arbitrage](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson--arbitrage-1
+)
+* #### [Lesson: 🕹️📈🔻 Manipulating Price](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/README.md#lesson-%EF%B8%8F-manipulating-price-1)
 
 ## Tezos Basics
 ### Lesson: 💡 Tezos Makes it Possible
