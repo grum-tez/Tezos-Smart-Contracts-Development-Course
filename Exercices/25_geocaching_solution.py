@@ -33,6 +33,8 @@ def main():
 
         @sp.entrypoint
         def commit_discover_treasure(self, id, commit_data):
+            sp.cast(id, sp.nat)
+            sp.cast(commit_data, sp.bytes)
             assert sp.sender != self.data.owner
             assert sp.now <= self.data.deadline_commit
             assert not self.data.commits.contains(commit_data)
@@ -82,48 +84,48 @@ def main():
             assert sp.sender == self.data.current_winner
             sp.send(sp.sender, sp.balance)
                    
-@sp.add_test(name = "Geocaching test")
+@sp.add_test()
 def test():
     alice = sp.test_account("alice").address
     bob = sp.test_account("bob").address
     carl = sp.test_account("carl").address
-    scenario = sp.test_scenario(main)
+    scenario = sp.test_scenario("Test", main)
     geocaching = main.Geocaching(alice, sp.timestamp(1000), sp.timestamp(2000), sp.timestamp(3000),sp.tez(1))
     scenario += geocaching
-    geocaching.create_treasure(sp.blake2b(sp.pack("secret password 1"))).run(sender = alice, amount = sp.tez(100))
-    geocaching.create_treasure(sp.blake2b(sp.pack("secret password 2"))).run(sender = alice)
-    geocaching.create_treasure(sp.blake2b(sp.pack("secret password 3"))).run(sender = alice)
+    geocaching.create_treasure(sp.blake2b(sp.pack("secret password 1")), _sender = alice, _amount = sp.tez(100))
+    geocaching.create_treasure(sp.blake2b(sp.pack("secret password 2")), _sender = alice)
+    geocaching.create_treasure(sp.blake2b(sp.pack("secret password 3")), _sender = alice)
 
-    geocaching.register_player().run(sender = bob, amount = sp.tez(1))
-    geocaching.register_player().run(sender = carl, amount = sp.tez(1))
+    geocaching.register_player(_sender = bob, _amount = sp.tez(1))
+    geocaching.register_player(_sender = carl, _amount = sp.tez(1))
     
     # Correct commit and reveal for password 1
     commit_1 = sp.blake2b(sp.pack(sp.record(password = sp.pack("secret password 1"), user = bob)))
-    geocaching.commit_discover_treasure(id = 1, commit_data = commit_1).run(sender = bob, now = sp.timestamp(100))
-    geocaching.reveal_discover_treasure(id = 1, password = sp.pack("secret password 1")).run(sender = bob, now = sp.timestamp(100))
+    geocaching.commit_discover_treasure(id = 1, commit_data = commit_1, _sender = bob, _now = sp.timestamp(100))
+    geocaching.reveal_discover_treasure(id = 1, password = sp.pack("secret password 1"), _sender = bob, _now = sp.timestamp(100))
 
     # Try invalid password
     commit_fake = sp.blake2b(sp.pack(sp.record(password = sp.pack("false password"), user = bob)))
-    geocaching.commit_discover_treasure(id = 2, commit_data = commit_fake).run(sender = bob, now = sp.timestamp(100))
-    geocaching.reveal_discover_treasure(id = 2, password = sp.pack("false password")).run(sender = bob, now = sp.timestamp(100))
-    geocaching.dispute_discovery(2).run(sender = carl)
+    geocaching.commit_discover_treasure(id = 2, commit_data = commit_fake, _sender = bob, _now = sp.timestamp(100))
+    geocaching.reveal_discover_treasure(id = 2, password = sp.pack("false password"), _sender = bob, _now = sp.timestamp(100))
+    geocaching.dispute_discovery(2, _sender = carl)
     
     # Try to reveal without a commit
-    geocaching.reveal_discover_treasure(id = 2, password = sp.pack("secret password 2")).run(sender = bob, now = sp.timestamp(100), valid = False)
+    geocaching.reveal_discover_treasure(id = 2, password = sp.pack("secret password 2"), _sender = bob, _now = sp.timestamp(100), _valid = False)
     
     commit_2 = sp.blake2b(sp.pack(sp.record(password = sp.pack("secret password 2"), user = carl)))
-    geocaching.commit_discover_treasure(id = 2, commit_data = commit_2).run(sender = carl, now = sp.timestamp(100))
+    geocaching.commit_discover_treasure(id = 2, commit_data = commit_2, _sender = carl, _now = sp.timestamp(100))
     # Wrong person tries to reveal
-    geocaching.reveal_discover_treasure(id = 2, password = sp.pack("secret password 2")).run(sender = bob, now = sp.timestamp(100), valid = False)
-    geocaching.reveal_discover_treasure(id = 2, password = sp.pack("secret password 2")).run(sender = carl, now = sp.timestamp(100))
+    geocaching.reveal_discover_treasure(id = 2, password = sp.pack("secret password 2"), _sender = bob, _now = sp.timestamp(100), _valid = False)
+    geocaching.reveal_discover_treasure(id = 2, password = sp.pack("secret password 2"), _sender = carl, _now = sp.timestamp(100))
 
     
     commit_3 = sp.blake2b(sp.pack(sp.record(password = sp.pack("secret password 3"), user = carl)))
-    geocaching.commit_discover_treasure(id = 2, commit_data = commit_3).run(sender = carl, now = sp.timestamp(100))
-    geocaching.reveal_discover_treasure(id = 3, password = sp.pack("secret password 3")).run(sender = carl, now = sp.timestamp(200))
-    geocaching.claim_prize().run(sender = alice, now = sp.timestamp(100), valid = False)
-    geocaching.claim_prize().run(sender = carl, now = sp.timestamp(1000), valid = False)
-    geocaching.claim_prize().run(sender = alice, now = sp.timestamp(1000), valid=False)
+    geocaching.commit_discover_treasure(id = 2, commit_data = commit_3, _sender = carl, _now = sp.timestamp(100))
+    geocaching.reveal_discover_treasure(id = 3, password = sp.pack("secret password 3"), _sender = carl, _now = sp.timestamp(200))
+    geocaching.claim_prize(_sender = alice, _now = sp.timestamp(100), _valid = False)
+    geocaching.claim_prize(_sender = carl, _now = sp.timestamp(1000), _valid = False)
+    geocaching.claim_prize(_sender = alice, _now = sp.timestamp(1000), _valid = False)
     
 
 
