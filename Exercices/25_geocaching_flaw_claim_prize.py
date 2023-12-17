@@ -36,26 +36,25 @@ def main():
         @sp.entrypoint
         def claim_prize(self):
             assert sp.now >= self.data.deadline
-            assert sp.sender == self.data.current_winner
             sp.send(sp.sender, sp.balance)
                    
-@sp.add_test(name = "Geocaching test")
+@sp.add_test()
 def test():
     alice = sp.test_account("alice").address
     bob = sp.test_account("bob").address
     carl = sp.test_account("carl").address
-    scenario = sp.test_scenario(main)
+    scenario = sp.test_scenario("Test", main)
     geocaching = main.Geocaching(alice, sp.timestamp(1000))
     scenario += geocaching
-    geocaching.create_treasure(sp.blake2b(sp.pack("secret password 1"))).run(sender = alice, amount = sp.tez(100))
-    geocaching.create_treasure(sp.blake2b(sp.pack("secret password 2"))).run(sender = alice)
-    geocaching.create_treasure(sp.blake2b(sp.pack("secret password 3"))).run(sender = alice)
-    geocaching.discover_treasure(id = 1, password = sp.pack("secret password 1")).run(sender = bob, now = sp.timestamp(100))
-    geocaching.discover_treasure(id = 2, password = sp.pack("false password")).run(sender = bob, now = sp.timestamp(100), valid = False)
-    geocaching.discover_treasure(id = 2, password = sp.pack("secret password 2")).run(sender = carl, now = sp.timestamp(100))
-    geocaching.discover_treasure(id = 3, password = sp.pack("secret password 3")).run(sender = carl, now = sp.timestamp(200))
-    geocaching.claim_prize().run(sender = carl, now = sp.timestamp(100), valid = False)
-    geocaching.claim_prize().run(sender = bob, now = sp.timestamp(1000), valid = False)
-    geocaching.claim_prize().run(sender = carl, now = sp.timestamp(1000))
+    geocaching.create_treasure(sp.blake2b(sp.pack("secret password 1")), _sender = alice, _amount = sp.tez(100))
+    geocaching.create_treasure(sp.blake2b(sp.pack("secret password 2")), _sender = alice)
+    geocaching.create_treasure(sp.blake2b(sp.pack("secret password 3")), _sender = alice)
+    geocaching.discover_treasure(id = 1, password = sp.pack("secret password 1"), _sender = bob, _now = sp.timestamp(100))
+    geocaching.discover_treasure(id = 2, password = sp.pack("false password"), _sender = bob, _now = sp.timestamp(100), _valid = False)
+    geocaching.discover_treasure(id = 2, password = sp.pack("secret password 2"), _sender = carl, _now = sp.timestamp(100))
+    geocaching.discover_treasure(id = 3, password = sp.pack("secret password 3"), _sender = carl, _now = sp.timestamp(200))
+    geocaching.claim_prize(_sender = carl, _now = sp.timestamp(100), _valid = False)
+    geocaching.claim_prize(_sender = bob, _now = sp.timestamp(1000), _valid = False)
+    geocaching.claim_prize(_sender = carl, _now = sp.timestamp(1000))
 
         
