@@ -61,40 +61,40 @@ def main():
             del self.data.players[id_player]
 
 # Tests
-@sp.add_test(name = "testing raffle")
+@sp.add_test()
 def test():
-    scenario = sp.test_scenario(main)
+    scenario = sp.test_scenario("Test", main)
     alice = sp.test_account("alice").address
     bob = sp.test_account("Bob").address
     eve = sp.test_account("Eve").address
     raffle = main.Raffle(sp.tez(1), sp.tez(1000), sp.timestamp(100), sp.timestamp(200))
     scenario += raffle
     scenario.h3("Bid phase")
-    raffle.bid(sp.blake2b(sp.pack(10001))).run(sender = alice, amount = sp.tez(1001), now = sp.timestamp(0))
+    raffle.bid(sp.blake2b(sp.pack(10001)), _sender = alice, _amount = sp.tez(1001), _now = sp.timestamp(0))
     scenario.verify(raffle.data.players[0].address == alice)
     scenario.verify(raffle.data.players[0].revealed == False)
     scenario.verify(raffle.data.nb_players == 1)
-    raffle.bid(sp.blake2b(sp.pack(10003))).run(sender = bob, amount = sp.tez(1001), now = sp.timestamp(0))
+    raffle.bid(sp.blake2b(sp.pack(10003)), _sender = bob, _amount = sp.tez(1001), _now = sp.timestamp(0))
     scenario.verify(raffle.data.players[1].address == bob)
     scenario.verify(raffle.data.players[1].revealed == False)
     scenario.verify(raffle.data.nb_players == 2)
-    raffle.bid(sp.blake2b(sp.pack(10004))).run(sender = eve, amount = sp.tez(1001), now = sp.timestamp(0))
+    raffle.bid(sp.blake2b(sp.pack(10004)), _sender = eve, _amount = sp.tez(1001), _now = sp.timestamp(0))
     scenario.verify(raffle.data.players[2].address == eve)
     scenario.verify(raffle.data.players[2].revealed == False)
     scenario.verify(raffle.data.nb_players == 3)
     #Test the reveal entrypoint
     scenario.h1("Reveal phase")
-    raffle.reveal(id_player=0, value=10001).run(sender = alice, now = sp.timestamp(150))
+    raffle.reveal(id_player=0, value=10001, _sender = alice, _now = sp.timestamp(150))
     scenario.verify(raffle.data.players[0].revealed == True)
-    raffle.reveal(id_player=1, value=10003).run(sender = bob, now = sp.timestamp(150))
+    raffle.reveal(id_player=1, value=10003, _sender = bob, _now = sp.timestamp(150))
     scenario.verify(raffle.data.players[1].revealed == True)
     scenario.verify(raffle.data.players[2].revealed == False)
     # Test the claim_prize entrypoint
     scenario.h1("Claim prize phase")
-    raffle.claim_prize().run(sender = alice, now = sp.timestamp(250))
-    raffle.claim_deposit(1).run(sender = bob, now = sp.timestamp(250))
-    raffle.claim_deposit(2).run(sender = eve, now = sp.timestamp(250), valid=False)
+    raffle.claim_prize(_sender = alice, _now = sp.timestamp(250))
+    raffle.claim_deposit(1, _sender = bob, _now = sp.timestamp(250))
+    raffle.claim_deposit(2, _sender = eve, _now = sp.timestamp(250), _valid = False)
     scenario.verify(raffle.balance == sp.tez(0))
     #Test the claim_deposit entrypoint
     scenario.h1("Claim deposit phase")
-    raffle.claim_deposit(0).run(sender = alice, valid=False)
+    raffle.claim_deposit(0, _sender = alice, _valid = False)
