@@ -21,7 +21,9 @@ def main():
         def bid(self, hash_value):
             assert sp.amount == self.data.bid_amount + self.data.deposit_amount
             assert sp.now < self.data.deadline_commit
-            self.data.players[self.data.nb_players] = sp.record(address = sp.sender, hash_value = hash_value, revealed = False)
+            self.data.players[self.data.nb_players] = sp.record(address = sp.sender,
+                                                                hash_value = hash_value,
+                                                                revealed = False)
             self.data.nb_players += 1
             self.data.total_deposits += self.data.deposit_amount
             self.data.total_bids += self.data.bid_amount
@@ -30,6 +32,7 @@ def main():
         def reveal(self, id_player, value):
             assert sp.now < self.data.deadline_reveal
             player = self.data.players[id_player]
+            assert not player.revealed
             assert player.hash_value == sp.blake2b(sp.pack(value))
             self.data.players[id_player].revealed = True
             self.data.total += value
