@@ -5,9 +5,9 @@ def main():
 
     class Auction(sp.Contract):
         def __init__(self):
-            self.data.auctions = {}
             self.data.tokens = {}
             self.data.token_id = 1
+            self.data.auctions = {}
 
         @sp.entrypoint
         def mint(self, metadata):
