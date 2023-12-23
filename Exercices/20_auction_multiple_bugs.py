@@ -5,40 +5,42 @@ def main():
 
     class Auction(sp.Contract):
         def __init__(self):
-            self.data.items = {}
+            self.data.auctions = {}
             self.data.tokens = {}
             self.data.token_id = 1
 
         @sp.entrypoint
         def mint(self, metadata):
+            sp.cast(metadata, sp.string)
             self.data.tokens[self.data.token_id] = sp.record(metadata = metadata, owner = sp.sender)
             self.data.token_id += 1
         
         @sp.entrypoint
-        def open_auction(self, item_id, deadline):
-            self.data.items[item_id] = sp.record(seller = sp.sender,
+        def open_auction(self, token_id, deadline):
+            sp.cast(deadline, sp.timestamp)
+            self.data.auctions[token_id] = sp.record(seller = sp.sender,
                                                 deadline = deadline,
                                                 top_bid = sp.tez(0),
                                                 top_bidder = sp.sender
                                                )
     
         @sp.entrypoint
-        def bid(self, item_id):
-            item = self.data.items[item_id]
-            assert sp.amount > item.top_bid
-            assert sp.now < item.deadline
-            sp.send(item.top_bidder, item.top_bid) # Bug 4
-            item.top_bid = sp.amount
-            item.top_bidder = sp.sender
-            self.data.items[item_id] = item
+        def bid(self, token_id):
+            auction = self.data.auctions[token_id]
+            assert sp.amount > auction.top_bid
+            assert sp.now < auction.deadline
+            sp.send(auction.top_bidder, auction.top_bid)
+            auction.top_bid = sp.amount
+            auction.top_bidder = sp.sender
+            self.data.auctions[token_id] = auction
 
         @sp.entrypoint
-        def claimtop_bid(self, item_id):
-            item = self.data.items[item_id]
-            assert sp.now >= item.deadline
-            assert sp.sender == item.seller # Potential bug 6 if missing
-            sp.send(item.seller, item.top_bid) # Bug 5
-            self.data.tokens[item_id].owner = item.top_bidder # Bug 7
+        def claimtop_bid(self, token_id):
+            auction = self.data.auctions[token_id]
+            assert sp.now >= auction.deadline
+            assert sp.sender == auction.seller
+            sp.send(auction.seller, auction.top_bid)
+            self.data.tokens[token_id].owner = auction.top_bidder
 
 @sp.add_test()
 def test():
@@ -49,8 +51,8 @@ def test():
     scenario = sp.test_scenario("Test", main)
     auctionContract = main.Auction()
     scenario += auctionContract
-    auctionContract.mint("Mon NFT").run(sender = seller1)
-    auctionContract.open_auction(item_id = 1, seller = seller1, deadline = sp.timestamp(100))
+    auctionContract.mint("Mon NFT", _sender = seller1)
+    auctionContract.open_auction(token_id = 1, deadline = sp.timestamp(100), _sender = seller1)
     auctionContract.bid(1, _sender = alice, _amount = sp.tez(1), _now = sp.timestamp(1))
     auctionContract.bid(1, _sender = bob, _amount = sp.tez(2), _now = sp.timestamp(2))
     auctionContract.claimtop_bid(1, _sender = seller1, _now = sp.timestamp(101))
