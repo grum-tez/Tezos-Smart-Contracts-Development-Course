@@ -12,6 +12,7 @@ def main():
         @sp.entrypoint
         def mint(self, metadata):
             sp.cast(metadata, sp.string)
+            assert sp.amount == sp.tez(1)
             self.data.tokens[self.data.token_id] = sp.record(metadata = metadata, owner = sp.sender)
             self.data.token_id += 1
         
@@ -51,7 +52,7 @@ def test():
     scenario = sp.test_scenario("Test", main)
     auctionContract = main.Auction()
     scenario += auctionContract
-    auctionContract.mint("Mon NFT", _sender = seller1)
+    auctionContract.mint("Mon NFT", _sender = seller1, _amount = sp.tez(1))
     auctionContract.open_auction(token_id = 1, deadline = sp.timestamp(100), _sender = seller1)
     auctionContract.bid(1, _sender = alice, _amount = sp.tez(1), _now = sp.timestamp(1))
     auctionContract.bid(1, _sender = bob, _amount = sp.tez(2), _now = sp.timestamp(2))
