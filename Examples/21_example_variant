@@ -1,0 +1,40 @@
+import smartpy as sp
+
+
+@sp.module
+def main():
+    
+    day_of_week:type = sp.variant(Monday = sp.unit,
+                                  Tuesday = sp.unit,
+                                  Wednesday = sp.unit,
+                                  Thursday = sp.unit,
+                                  Friday = sp.unit,
+                                  Saturday = sp.unit,
+                                  Sunday = sp.unit)
+
+    class Company(sp.Contract):
+        def __init__(self):
+            self.data.day = sp.variant.Tuesday()
+            sp.cast(self.data.day, day_of_week)
+
+        @sp.entrypoint
+        def work(self):
+            price = sp.tez(1)
+            if self.data.day == sp.variant.Sunday() or self.data.day == sp.variant.Saturday():
+                price = sp.tez(2)
+            assert sp.amount == price
+
+        @sp.entrypoint
+        def set_day(self, new_day):
+            self.data.day = new_day
+
+@sp.add_test()
+def test():
+    alice = sp.test_account("Alice")
+    scenario = sp.test_scenario("Test", main)
+    company = main.Company()
+    scenario += company
+    company.work(_amount = sp.tez(1))
+    company.set_day(sp.variant("Sunday", ()))
+    scenario.verify(company.data.day.is_variant("Sunday"))
+    company.work(_amount = sp.tez(2))
