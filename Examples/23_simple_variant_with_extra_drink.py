@@ -9,29 +9,29 @@ def main():
 
     class FavoriteDrinks(sp.Contract):
         def __init__(self):
-            self.data.favoriteDrinks = sp.big_map({})
+            self.data.favorite_drinks = sp.big_map({})
 
         @sp.entrypoint
-        def setFavorite(self, drink):
+        def set_favorite(self, drink):
             sp.cast(drink, drink_type)
-            self.data.favoriteDrinks[sp.sender] = drink
+            self.data.favorite_drinks[sp.sender] = drink
 
         @sp.onchain_view
         def favorite(self, user):
-            return self.data.favoriteDrinks[user]
+            return self.data.favorite_drinks[user]
     
     class Restaurant(sp.Contract):
-        def __init__(self, favoriteDrinksContract):
+        def __init__(self, favorite_drinks_contract):
             self.data.items = []
-            self.data.favoriteDrinksContract = favoriteDrinksContract
+            self.data.favorite_drinks_contract = favorite_drinks_contract
 
         @sp.entrypoint
-        def quickDrink(self):
-            drink = sp.view("favorite", self.data.favoriteDrinksContract, sp.sender, drink_type).unwrap_some()
+        def quick_drink(self):
+            drink = sp.view("favorite", self.data.favorite_drinks_contract, sp.sender, drink_type).unwrap_some()
             self.data.items.push(drink)            
         
         @sp.entrypoint
-        def orderDrink(self, drink):
+        def order_drink(self, drink):
             sp.cast(drink, drink_type)
             price = sp.tez(0)
             with sp.match(drink):
@@ -46,17 +46,17 @@ def main():
             self.data.items.push(drink)
             
     class RestaurantNew(sp.Contract):
-        def __init__(self, favoriteDrinksContract):
+        def __init__(self, favorite_drinks_contract):
             self.data.items = []
-            self.data.favoriteDrinksContract = favoriteDrinksContract
+            self.data.favorite_drinks_contract = favorite_drinks_contract
 
         @sp.entrypoint
-        def quickDrink(self):
-            drink = sp.view("favorite", self.data.favoriteDrinksContract, sp.sender, drink_type).unwrap_some()
+        def quick_drink(self):
+            drink = sp.view("favorite", self.data.favorite_drinksContract, sp.sender, drink_type).unwrap_some()
             self.data.items.push(drink)            
         
         @sp.entrypoint
-        def orderDrink(self, drink):
+        def order_drink(self, drink):
             sp.cast(drink, drink_type_new)
             price = sp.tez(0)
             with sp.match(drink):
@@ -70,23 +70,23 @@ def main():
             assert sp.amount == price
             self.data.items.push(drink)
 
-@sp.add_test(name = "Restaurant Time")
+@sp.add_test()
 def test():
     alice = sp.test_account("Alice")
-    scenario = sp.test_scenario(main)
-    cFavorites = main.FavoriteDrinks()
-    scenario += cFavorites
-    cFavorites.setFavorite(sp.variant("Coca", ())).run(sender = alice)   
-    c1 = main.Restaurant(cFavorites.address)
+    scenario = sp.test_scenario("Test", main)
+    c_favorites = main.FavoriteDrinks()
+    scenario += c_favorites
+    c_favorites.set_favorite(sp.variant("Coca", ()), _sender = alice)   
+    c1 = main.Restaurant(c_favorites.address)
     scenario += c1
     scenario.h3("J'ai faim")
-    c1.orderDrink(sp.variant("Water", ()))
-    c1.orderDrink(sp.variant("Coca", ())).run(valid = False)
-    c1.orderDrink(sp.variant("Coca", ())).run(amount = sp.tez(1), valid = True)    
-    c1.orderDrink(sp.variant("Fanta", ())).run(valid = False)
-    c1.orderDrink(sp.variant("Fanta", ())).run(amount = sp.tez(2), valid = True)
-    c1.quickDrink().run(sender = alice)
+    c1.order_drink(sp.variant("Water", ()))
+    c1.order_drink(sp.variant("Coca", ()), _valid = False)
+    c1.order_drink(sp.variant("Coca", ()), _amount = sp.tez(1), _valid = True)    
+    c1.order_drink(sp.variant("Fanta", ()), _valid = False)
+    c1.order_drink(sp.variant("Fanta", ()), _amount = sp.tez(2), _valid = True)
+    c1.quick_drink(_sender = alice)
     
-    c1 = main.RestaurantNew(cFavorites.address)
+    c1 = main.RestaurantNew(c_favorites.address)
 
    
