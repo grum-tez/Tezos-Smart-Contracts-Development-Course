@@ -17,7 +17,7 @@ def main():
         Meeting = sp.record(floor = sp.nat, room = sp.string)
     )
 
-    class EmplyeeStatus(sp.Contract):
+    class EmployeeStatus(sp.Contract):
         def __init__(self, owner, boss):
             self.data.status = sp.variant.Available()
             self.data.owner = owner
@@ -63,7 +63,7 @@ def test():
     bob = sp.test_account("Bob")
     eve = sp.test_account("Eve")
     scenario = sp.test_scenario("Test", main)
-    cStatus = main.EmplyeeStatus(alice.address, bob.address)
+    cStatus = main.EmployeeStatus(alice.address, bob.address)
     scenario += cStatus
     cStatus.setStatus(sp.variant("Away", sp.timestamp(1000)), _sender = alice) 
     cStatus.invite(sp.variant("Call", "https://call.com/12345"), _sender = bob, _valid = False)
