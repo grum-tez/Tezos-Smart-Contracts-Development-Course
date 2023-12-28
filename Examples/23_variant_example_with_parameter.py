@@ -57,15 +57,14 @@ def main():
         def status(self):
             return self.data.status
     
-@sp.add_test(name = "Worker status")
+@sp.add_test()
 def test():
     alice = sp.test_account("Alice")
     bob = sp.test_account("Bob")
     eve = sp.test_account("Eve")
-    scenario = sp.test_scenario(main)
+    scenario = sp.test_scenario("Test", main)
     cStatus = main.EmplyeeStatus(alice.address, bob.address)
     scenario += cStatus
-    cStatus.setStatus(sp.variant("Away", sp.timestamp(1000))).run(sender = alice) 
-    cStatus.invite(sp.variant("Call", "https://call.com/12345")).run(sender = bob, valid = False)
-    cStatus.invite(sp.variant("Call", "https://call.com/12345")).run(sender = bob, now = sp.timestamp(1100), valid = True)
-
+    cStatus.setStatus(sp.variant("Away", sp.timestamp(1000)), _sender = alice) 
+    cStatus.invite(sp.variant("Call", "https://call.com/12345"), _sender = bob, _valid = False)
+    cStatus.invite(sp.variant("Call", "https://call.com/12345"), _sender = bob, _now = sp.timestamp(1100), _valid = True)
