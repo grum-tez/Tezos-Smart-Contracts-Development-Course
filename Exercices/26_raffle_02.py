@@ -54,12 +54,13 @@ def main():
             player = self.data.players[id_player]
             assert player.revealed
             user = player.address
-            amountToShare = self.data.total_deposits
-            idWinner = sp.mod(self.data.total, self.data.nb_players)
-            if self.data.players.contains(idWinner):
-                if not self.data.players[idWinner].revealed:
-                    amountToShare += self.data.total_bids
-            amount = sp.split_tokens(amountToShare, 1, self.data.nb_revealed)
+            amount_to_share = self.data.total_deposits
+            id_winner = sp.mod(self.data.total, self.data.nb_players)
+            assert id_player != id_winner
+            if self.data.players.contains(id_winner):
+                if not self.data.players[id_winner].revealed:
+                    amount_to_share += self.data.total_bids
+            amount = sp.split_tokens(amount_to_share, 1, self.data.nb_revealed)
             sp.send(user, amount)
             del self.data.players[id_player]
 
