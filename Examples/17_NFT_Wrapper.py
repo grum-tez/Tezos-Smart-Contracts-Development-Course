@@ -64,9 +64,9 @@ def test():
    bob = sp.test_account("bob").address
    eve = sp.test_account("eve").address
    dan = sp.test_account("dan").address
+   scenario = sp.test_scenario("Test", main)
    c1 = main.NftForSale(owner = alice, metadata = "My first NFT", price = sp.mutez(5000000))
    c2 = main.NftWrapperContract(allowSales = sp.bool(True), price = sp.mutez(5000000), owner = bob)
-   scenario = sp.test_scenario("Test", main)
    scenario +=c1
    scenario +=c2
    scenario.h3("Testing set_price entrypoint")
