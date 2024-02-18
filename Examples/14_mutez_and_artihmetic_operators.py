@@ -31,8 +31,8 @@ def main():
 
 @sp.add_test()
 def test():
-    c1 = main.ComputingTez()
     sc = sp.test_scenario("Test", [sp.utils,main])
+    c1 = main.ComputingTez()
     sc += c1
     c1.add(x = 5, y = 3)
     c1.sub(x = 5, y = 3)
