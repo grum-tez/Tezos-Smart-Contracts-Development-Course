@@ -26,14 +26,14 @@ def main():
             self.data.items.push(drink)
             
 
-@sp.add_test(name = "Restaurant Time")
+@sp.add_test()
 def test():
+    scenario = sp.test_scenario("Test", main)
     c1 = main.Restaurant()
-    scenario = sp.test_scenario(main)
     scenario += c1
     scenario.h3("J'ai faim")
     c1.orderDrink(sp.variant("Water", ()))
-    c1.orderDrink(sp.variant("Coca", ())).run(valid = False)
-    c1.orderDrink(sp.variant("Coca", ())).run(amount = sp.tez(1), valid = True)    
-    c1.orderDrink(sp.variant("Fanta", ())).run(valid = False)
-    c1.orderDrink(sp.variant("Fanta", ())).run(amount = sp.tez(2), valid = True)
+    c1.orderDrink(sp.variant("Coca", ()), _valid = False)
+    c1.orderDrink(sp.variant("Coca", ()), _amount = sp.tez(1), _valid = True)    
+    c1.orderDrink(sp.variant("Fanta", ()), _valid = False)
+    c1.orderDrink(sp.variant("Fanta", ()), _amount = sp.tez(2), _valid = True)
