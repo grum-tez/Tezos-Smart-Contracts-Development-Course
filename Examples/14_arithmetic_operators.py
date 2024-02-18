@@ -48,8 +48,8 @@ def main():
 
 @sp.add_test()
 def test():
-    c1 = main.Calculator()
     sc = sp.test_scenario("Test", main)
+    c1 = main.Calculator()
     sc += c1
     c1.add(x = 5, y = 3)
     c1.sub(x = 5, y = 3)
