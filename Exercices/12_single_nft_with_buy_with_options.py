@@ -22,13 +22,13 @@ def main():
            self.data.owner = sp.sender
            self.data.price = None
     
-@sp.add_test(name = "Testing Update Price")
+@sp.add_test()
 def test():
     alice = sp.test_account('alice').address
     bob = sp.test_account('bob').address
-    c1 = main.NftForSale(owner=alice, metadata = "Gwen's NFT", price=sp.some(sp.mutez(5000000)))
-    scenario = sp.test_scenario(main)
+    scenario = sp.test_scenario("Test", main)
+    c1 = main.NftForSale(owner=alice, metadata = "My NFT", price = sp.Some(sp.mutez(5000000)))
     scenario +=c1
-    c1.set_price(sp.some(sp.mutez(7000000))).run(sender=alice)
-    c1.buy().run(sender=bob, amount=sp.mutez(7000000))
+    c1.set_price(sp.some(sp.mutez(7000000)), _sender = alice)
+    c1.buy(_sender = bob, _amount = sp.mutez(7000000))
     #scenario.verify(c1.data.owner == alice)
