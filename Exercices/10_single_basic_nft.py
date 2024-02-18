@@ -18,8 +18,8 @@ def test():
     alice = sp.test_account("alice").address
     bob = sp.test_account("bob").address
     eve = sp.test_account("eve").address
-    c1 = main.SingleBasicNFT(alice)
     scenario = sp.test_scenario("Test", main)
+    c1 = main.SingleBasicNFT(alice)
     scenario += c1
     scenario.h3("Testing transfer entrypoint")
     c1.transfer(bob, _sender = alice)
