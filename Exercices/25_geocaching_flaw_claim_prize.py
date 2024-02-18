@@ -36,7 +36,8 @@ def main():
         @sp.entrypoint
         def claim_prize(self):
             assert sp.now >= self.data.deadline
-            sp.send(sp.sender, sp.balance)
+            assert sp.sender == self.data.owner
+            sp.send(self.data.current_winner, sp.balance)
                    
 @sp.add_test()
 def test():
@@ -55,6 +56,6 @@ def test():
     geocaching.discover_treasure(id = 3, password = sp.pack("secret password 3"), _sender = carl, _now = sp.timestamp(200))
     geocaching.claim_prize(_sender = carl, _now = sp.timestamp(100), _valid = False)
     geocaching.claim_prize(_sender = bob, _now = sp.timestamp(1000), _valid = False)
-    geocaching.claim_prize(_sender = carl, _now = sp.timestamp(1000))
+    geocaching.claim_prize(_sender = alice, _now = sp.timestamp(1000))
 
         
