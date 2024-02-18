@@ -6,8 +6,9 @@ def main():
     class MultipleNftSingleContract(sp.Contract):
         def __init__(self, owner):
             self.data.next_id = 1
+            self.data.owner = owner
             self.data.tokens = sp.big_map({})
-            self.data.ledger = sp.big_map({})                        
+            self.data.ledger = sp.big_map({})                     
        
         @sp.entry_point
         def buy(self, token_id):
@@ -44,8 +45,8 @@ def test():
     alice = sp.test_account('alice').address
     bob = sp.test_account('bob').address
     eve = sp.test_account('eve').address
-    c1 = main.MultipleNftSingleContract(alice)
     scenario = sp.test_scenario("Test", main)
+    c1 = main.MultipleNftSingleContract(alice)
     scenario += c1
     c1.mint("First NFT", _sender = author)
     c1.buy(1, _sender = bob, _amount = sp.tez(1))
