@@ -61,9 +61,9 @@ def main():
             return self.data.food_order
 
 
-@sp.add_test(name = "OrderMenu")
+@sp.add_test()
 def test():
-    scenario = sp.test_scenario(main)
+    scenario = sp.test_scenario("Test", main)
     cMenu = main.OrderMenu()
     scenario += cMenu
         
@@ -72,19 +72,22 @@ def test():
         sauce_type = "Mayonnaise", 
         sauce_quantity = 2,
         side = sp.variant("Fries", ())
-    ))).run(sender=sp.address("tz1TestAddress"), amount=sp.tez(8))
+    )), _sender=sp.address("tz1TestAddress"), _amount = sp.tez(8))
         
-    scenario += cMenu
+    cMenu2 = main.OrderMenu()
+    scenario += cMenu2
     scenario.h3("Vanilla ice cream with extra toppings")
-    cMenu.place_food_order(sp.variant("Icecream", sp.record(
+    cMenu2.place_food_order(sp.variant("Icecream", sp.record(
         flavour = "Vanilla", 
         extra_topping = True
-    ))).run(sender=sp.address("tz1TestAddress"), amount=sp.tez(6))
+    )), _sender=sp.address("tz1TestAddress"), _amount=sp.tez(6))
         
-    scenario += cMenu
+    cMenu3 = main.OrderMenu()
+    scenario += cMenu3
     scenario.h3("Buy a coca")
-    cMenu.place_food_order(sp.variant("Drink", "Coca")).run(sender=sp.address("tz1TestAddress"), amount=sp.tez(3))
+    cMenu3.place_food_order(sp.variant("Drink", "Coca"), _sender = sp.address("tz1TestAddress"), _amount = sp.tez(3))
 
-    scenario += cMenu
+    cMenu4 = main.OrderMenu()
+    scenario += cMenu4
     scenario.h3("Brownie")
-    cMenu.place_food_order(sp.variant("Brownie", ())).run(sender=sp.address("tz1TestAddress"), amount=sp.tez(5))
+    cMenu4.place_food_order(sp.variant("Brownie", ()), _sender = sp.address("tz1TestAddress"), _amount=sp.tez(5))
