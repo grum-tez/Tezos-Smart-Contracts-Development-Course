@@ -30,7 +30,7 @@ def main():
     class Purchaser(sp.Contract):
         def __init__(self, admin):
             self.data.admin = admin
-            self.data.ledger_address = admin
+            self.data.ledger = admin
             self.data.offers = sp.big_map()
             self.data.escrow = sp.big_map()
             self.data.nb_offers = 1
