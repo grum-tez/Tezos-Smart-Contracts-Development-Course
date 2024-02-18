@@ -21,8 +21,8 @@ def main():
 
 @sp.add_test()
 def test():
-   c1 = main.StoreValue()
    scenario = sp.test_scenario("Test", main)
+   c1 = main.StoreValue()
    scenario += c1
    scenario.h3("Testing add entrypoint")
    c1.add(5)
