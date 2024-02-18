@@ -12,7 +12,6 @@ def main():
         def transfer(self, source, destination, amount):
 
             # TODO: check if the transfer is allowed, and update allowances
-            
             assert self.data.balances[source] >= amount
             self.data.balances[source] = sp.as_nat(self.data.balances[source] - amount)
             if not self.data.balances.contains(destination):
@@ -26,6 +25,8 @@ def main():
 
         @sp.entrypoint
         def allow(self, operator, amount):
+            sp.cast(operator, sp.address)
+            sp.cast(amount, sp.nat)
             # TODO: allow this operator to spend this amount in the name of the caller
 
     class EndlessWall(sp.Contract):
