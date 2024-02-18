@@ -6,6 +6,7 @@ def main():
     	pass
 
     def upgraded_verify_message(message):
+        sp.cast(message, sp.string)
         assert sp.len(message) <= 30, "Wall v2 requires message lengths under 30"
         
     
@@ -34,17 +35,17 @@ def main():
            self.data.verify = new_verify_message
 
 
-@sp.add_test(name = "add my name")
+@sp.add_test()
 def test():
     alice=sp.test_account("Alice")
     bob=sp.test_account("Bob")
     eve=sp.test_account("Eve")
-    sc = sp.test_scenario(main)
+    sc = sp.test_scenario("Test", main)
     endless_wall = main.EndlessWall(owner = alice.address)
     sc += endless_wall
-    endless_wall.write_message("Message with the old version can be very long").run(sender = bob)
-    endless_wall.set_verify(main.upgraded_verify_message).run(sender = alice)
-    endless_wall.write_message("Long messages aren't allowed anymore").run(sender = bob, valid = False)
-    endless_wall.write_message("Short messages are ok").run(sender = bob)    
+    endless_wall.write_message("Message with the old version can be very long", _sender = bob)
+    endless_wall.set_verify(main.upgraded_verify_message, _sender = alice)
+    endless_wall.write_message("Long messages aren't allowed anymore", _sender = bob, _valid = False)
+    endless_wall.write_message("Short messages are ok", _sender = bob)    
     
     
