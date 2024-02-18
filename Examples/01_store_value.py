@@ -1,4 +1,4 @@
-import SmartPy as sp
+import smartpy as sp
 
 @sp.module
 def main():
