@@ -32,8 +32,8 @@ def test():
    alice=sp.test_account("Alice").address
    bob=sp.test_account("Bob").address
    eve=sp.test_account("Eve").address
-   c1 = main.EndlessWall(initial_text = "Axel on Tezos forever")
    scenario = sp.test_scenario("Test", main)
+   c1 = main.EndlessWall(initial_text = "Axel on Tezos forever")
    scenario += c1
    scenario.h3(" Testing write_message is ok ")
     #scenario write_message ok
