@@ -14,6 +14,7 @@ def main():
 
         @sp.entrypoint
         def mint(self, metadata):
+            sp.cast(metadata, sp.string)
             self.data.tokens[self.data.next_token_id] = sp.record(owner = sp.sender, metadata = metadata)
             self.data.next_token_id += 1
 
@@ -58,24 +59,24 @@ def main():
 
             del self.data.offers[idOffer]    
        
-@sp.add_test(name = "testing truly endless wall")
+@sp.add_test()
 def test():
     alice = sp.test_account("Alice")
     bob = sp.test_account("Bob")
     eve = sp.test_account("Eve")
     axel = sp.test_account("Axel")
-    scenario = sp.test_scenario(main)
+    scenario = sp.test_scenario("Test", main)
     marketplace = main.Marketplace()
     scenario += marketplace
     ledger1 = main.Ledger(marketplace.address)
     scenario += ledger1
     ledger2 = main.Ledger(marketplace.address)
     scenario += ledger2
-    ledger1.mint("Alice NFT 1").run(sender = alice)
-    ledger2.mint("Alice NFT 2").run(sender = alice)
-    ledger1.mint("Bob NFT 1").run(sender = bob)
-    ledger2.mint("Bob NFT 2").run(sender = bob)
-    ledger2.mint("Bob NFT 3").run(sender = bob)
+    ledger1.mint("Alice NFT 1", _sender = alice)
+    ledger2.mint("Alice NFT 2", _sender = alice)
+    ledger1.mint("Bob NFT 1", _sender = bob)
+    ledger2.mint("Bob NFT 2", _sender = bob)
+    ledger2.mint("Bob NFT 3", _sender = bob)
     
     marketplace.new_offer(sold_tokens = [
                             sp.record(contract_address = ledger1.address, token_id = 1),
@@ -85,6 +86,6 @@ def test():
                             sp.record(contract_address = ledger1.address, token_id = 2),
                             sp.record(contract_address = ledger2.address, token_id = 2),
                             sp.record(contract_address = ledger2.address, token_id = 3),
-                          ]
-                         ).run(sender = alice)
-    marketplace.accept_offer(1).run(sender = bob)
+                          ],
+                         _sender = alice)
+    marketplace.accept_offer(1, _sender = bob)
