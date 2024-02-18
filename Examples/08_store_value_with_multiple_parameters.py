@@ -22,8 +22,8 @@ def main():
             
 @sp.add_test()
 def test():
-        c1 = main.StoreValue(min_value = 0, max_value = 5)
         scenario = sp.test_scenario("Test", main)
+        c1 = main.StoreValue(min_value = 0, max_value = 5)
         scenario += c1
         scenario.h3(" Setting Min and Max")
         c1.set(new_min_value = 5, new_max_value = 10)
