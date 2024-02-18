@@ -36,8 +36,8 @@ def main():
 def test():
     admin = sp.test_account("admin").address
     attacker = sp.test_account("attacker").address
-    charityFund = main.CharityFund(admin)
     scenario = sp.test_scenario("Test", main)
+    charityFund = main.CharityFund(admin)
     scenario += charityFund
     charityFund.deposit(_sender = admin, _amount = sp.tez(10000))
 
