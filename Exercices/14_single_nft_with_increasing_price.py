@@ -22,8 +22,8 @@ def test():
     alice = sp.test_account("alice").address
     bob = sp.test_account("bob").address
     eve = sp.test_account("eve").address
-    c1 = main.NftForSale(owner = alice, metadata = "My nft", price=sp.mutez(5000000))
     scenario = sp.test_scenario("Test", main)
+    c1 = main.NftForSale(owner = alice, metadata = "My nft", price=sp.mutez(5000000))
     scenario +=c1
     scenario.h3(" Testing increasing price")
     c1.buy(_sender = bob, _amount = sp.mutez(5000000))
