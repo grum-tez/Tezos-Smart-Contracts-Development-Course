@@ -24,24 +24,28 @@ def main():
             assert sp.sender == self.data.author, " not your money "
             sp.send(self.data.author, sp.balance)
 
-@sp.add_test(name = "Testing")
+@sp.add_test()
 def test():
        alice = sp.test_account("alice").address
        bob = sp.test_account("bob").address
        eve = sp.test_account("eve").address
        author = sp.test_account("author").address
-       c1 = main.NftForSale(owner = alice, metadata = "Gwen's nft", 
-       price=sp.mutez(5000000), author = author, author_rate = sp.mutez(1000000))
-       scenario = sp.test_scenario(main)
-       scenario +=c1
+       
+       scenario = sp.test_scenario("Test", main)
+       c1 = main.NftForSale(owner = alice,
+                            metadata = "My nft",
+                            price = sp.mutez(5000000),
+                            author = author,
+                            author_rate = sp.mutez(1000000))
+       scenario += c1
        scenario.verify(c1.data.price == sp.mutez(5000000) )
        scenario.h3(" Testing increasing price")
-       c1.buy().run(sender = bob, amount = sp.mutez(5000000))
+       c1.buy(_sender = bob, _amount = sp.mutez(5000000))
        scenario.verify(c1.data.price == sp.mutez(5500000) )
        scenario.verify(c1.balance == sp.mutez(250000) )
-       c1.buy().run(sender = eve, amount = sp.mutez(5500000))
-       c1.buy().run(sender = alice, amount = sp.mutez(6000000), valid = False)
+       c1.buy(_sender = eve, _amount = sp.mutez(5500000))
+       c1.buy(_sender = alice, _amount = sp.mutez(6000000), _valid = False)
        scenario.verify(c1.data.price == sp.mutez(6050000))
        scenario.h3("Testing author fee claim")
-       c1.claim_author_rate().run(sender = alice, valid = False)
-       c1.claim_author_rate().run(sender = author)
+       c1.claim_author_rate(_sender = alice, _valid = False)
+       c1.claim_author_rate(_sender = author)
