@@ -59,22 +59,22 @@ def main():
 
 
 
-@sp.add_test(name = "add my name")
+@sp.add_test()
 def test():
     alice=sp.test_account("Alice")
     bob=sp.test_account("Bob")
     eve=sp.test_account("Eve")
-    sc = sp.test_scenario(main)
+    sc = sp.test_scenario("Test", main)
     endless_wall = main.EndlessWall(owner = alice.address)
     sc += endless_wall
-    endless_wall.write_message("Message with the old version can be very long").run(sender = bob)
+    endless_wall.write_message("Message with the old version can be very long", _sender = bob)
 
     endless_wall_v2 = main.EndlessWall_v2(owner = alice.address, old_contract = endless_wall.address)
     sc += endless_wall_v2
-    endless_wall_v2.write_message("Long messages are not allowed anymore").run(sender = eve, amount = sp.tez(1), valid=False)
-    endless_wall_v2.write_message("Short messages are ok").run(sender = eve, amount = sp.tez(1))
-    endless_wall_v2.transfer_old_messages().run(sender = bob)
-    endless_wall_v2.write_message("New short message from bob").run(sender = bob, amount = sp.tez(1))
+    endless_wall_v2.write_message("Long messages are not allowed anymore", _sender = eve, _amount = sp.tez(1), _valid = False)
+    endless_wall_v2.write_message("Short messages are ok", _sender = eve, _amount = sp.tez(1))
+    endless_wall_v2.transfer_old_messages(_sender = bob)
+    endless_wall_v2.write_message("New short message from bob", _sender = bob, _amount = sp.tez(1))
 
     
     
