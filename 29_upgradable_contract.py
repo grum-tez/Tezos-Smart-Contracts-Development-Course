@@ -70,23 +70,23 @@ def main():
             sp.transfer(new_contract, sp.tez(0), wall_update_owner)
 
 
-@sp.add_test(name = "add my name")
+@sp.add_test()
 def test():
     alice=sp.test_account("Alice")
     bob=sp.test_account("Bob")
     eve=sp.test_account("Eve")
-    sc = sp.test_scenario(main)
+    sc = sp.test_scenario("Test", main)
     innerWall = main.DataEndlessWall(alice.address)
     sc += innerWall
     endlessWallV1 = main.UpgradableEndlessWall(wall_contract = innerWall.address, owner = alice.address)
     sc += endlessWallV1
-    innerWall.update_owner(endlessWallV1.address).run(sender = alice)
-    endlessWallV1.write_message("Message with the old version can be very long").run(sender = bob)
+    innerWall.update_owner(endlessWallV1.address, _sender = alice)
+    endlessWallV1.write_message("Message with the old version can be very long", _sender = bob)
     endlessWallV2 = main.UpgradableEndlessWallV2(wall_contract = innerWall.address, owner = alice.address)
     sc += endlessWallV2
-    endlessWallV1.upgrade(endlessWallV2.address).run(sender = alice)
-    endlessWallV2.write_message("Long messages aren't allowed anymore").run(sender = eve, valid=False)
-    endlessWallV2.write_message("Short messages are ok").run(sender = eve)
+    endlessWallV1.upgrade(endlessWallV2.address, _sender = alice)
+    endlessWallV2.write_message("Long messages aren't allowed anymore", _sender = eve, _valid = False)
+    endlessWallV2.write_message("Short messages are ok", _sender = eve)
     
     
     
