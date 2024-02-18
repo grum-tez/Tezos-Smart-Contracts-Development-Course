@@ -59,8 +59,8 @@ def test():
     voting_powers = {
         delegate.public_key_hash: 0,
     }
-    c1 = main.YieldFarming(owner = owner, lender = alice, annual_yield_rate = 4, ramp_up_duration = 3600*24*21)
     scenario = sp.test_scenario("Test", main)
+    c1 = main.YieldFarming(owner = owner, lender = alice, annual_yield_rate = 4, ramp_up_duration = 3600*24*21)
     scenario += c1
     scenario.h3("Testing default entrypoint")
     c1.default(_sender = owner, _amount = sp.tez(5))
