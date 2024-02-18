@@ -4,7 +4,8 @@ import smartpy as sp
 def main():
 
     class MultipleNftSingleContract(sp.Contract):
-        def __init__(self):
+        def __init__(self, owner):
+            self.data.owner = owner
             self.data.next_id = 1
             self.data.tokens = sp.big_map({})
     
@@ -35,11 +36,10 @@ def test():
     alice = sp.test_account("alice").address
     bob = sp.test_account("bob").address
     eve = sp.test_account("eve").address
-    c1 = main.MultipleNftSingleContract()
     scenario = sp.test_scenario("Test", main)
+    c1 = main.MultipleNftSingleContract(author)
     scenario += c1
     c1.mint("second contract", _sender = alice)
     c1.buy(1, _sender = bob, _amount = sp.tez(1))
     scenario.verify(c1.balance == sp.tez(0))
-
 
