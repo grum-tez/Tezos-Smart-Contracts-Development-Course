@@ -21,8 +21,8 @@ def main():
 def test():
    alice = sp.test_account("Alice").address
    bob = sp.test_account("Bob").address
-   contract = main.StoreValue(owner = alice)
    scenario = sp.test_scenario("Test", main)
+   contract = main.StoreValue(owner = alice)
    scenario += contract
    scenario.h3("Testing add entrypoint")
    contract.add(5)
