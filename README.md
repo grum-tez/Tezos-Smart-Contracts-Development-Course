@@ -589,24 +589,7 @@ This also means storing the address of each user from lesson 19 inter-contract c
 
 
 
-  
 
- 
- 
-```
-
-##Todos: Missing: Exercise Records : Add a login that the user can change at most once a year
-This also means storing the address of each user from lesson 19 inter-contract call ##
-##Todos: missing the exercise community contract from lesson 20##
-##Missing Lesson 25 example and exercise for Views##
-##Missing example and exercise for custom types##
-##Missing Simple Variant Example##
-##Missing Simple Variant Exercise##
-##Missing Example: When to Use Simple Variants##
-##Missing Example: Variants with parameters##
-##Revoir Nouvelle syntaxe [exercise variant with parameters](https://github.com/AxelRoffi/Tezos_smart_contracts_development_course/blob/main/Exercices/28_01_variant_with_parameters.py)##
-
-```
 
 
 
