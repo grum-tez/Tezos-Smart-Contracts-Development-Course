@@ -374,7 +374,7 @@ Get ready to unlock the power of Tezos and redefine what's possible in the world
 This also means storing the address of each user from lesson 19 inter-contract call ##
 
 ### Lesson: 🌐💻 Local Setup
-* [SmartPy codespace installation](https://github.com/AxelRoffi/smartPyDC)
+* [SmartPy codespace installation](https://github.com/TezDevContainers/smartpy-dc)
   
 ### Lesson: 🌐📱🔗🏛️🚀 Decentralized Applications (dApps)
 
